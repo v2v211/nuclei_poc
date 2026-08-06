@@ -20,7 +20,7 @@ info:
     shodan-query: http.component:"TeamCity"
     product: teamcity
     vendor: jetbrains
-  tags: misconfig,teamcity,jetbrains,vuln
+  tags: misconfig,teamcity,jetbrains
 
 http:
   - raw:
@@ -40,4 +40,4 @@ http:
       - type: status
         status:
           - 302
-# digest: 4b0a00483046022100ec113870575d05f190f1dabee1be4b9e1129b41ffa240467072b7f74900523eb022100995ec72ffb22e84671720568ab327c08559237da6bada1e1e83736b0185178ca:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220475d17499b6b734c93a50dbbf54cdf9acdf96340729bba84152c9148c69d2194022100848f0a791a0ad2b15a93efb426d2975808a20586c924bfd48d0af48121a987de:922c64590222798bb761d5b6d8e72950
