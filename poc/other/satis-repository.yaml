@@ -5,18 +5,17 @@ info:
   author: FlorianMaak
   severity: info
   description: |
-     Satis composer repository was detected
+    Satis composer repository was detected
   reference:
     - https://github.com/composer/satis
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
     cwe-id: CWE-200
   metadata:
-    max-request: 1
     verified: true
+    max-request: 1
     shodan-query: html:"<a href=\"https://github.com/composer/satis\">Satis</a>"
-  tags: exposure,composer,satis
+  tags: panel,exposure,composer,satis
 
 http:
   - method: GET
@@ -41,3 +40,4 @@ http:
         part: body
         regex:
           - '\d+\.\d+\.\d+-dev'
+# digest: 4a0a00473045022100af67990a928daa5c59d5af235ecb6cc685922c3bfef7b808d2474225e65b4d5302204f176d3900b578bc4420a212b608d1fa84bbf21b9c567d56bc60b9ed0a349285:922c64590222798bb761d5b6d8e72950
