@@ -10,7 +10,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: clojars,exposure,tokens,vuln
+  tags: clojars,exposure,tokens
 
 http:
   - method: GET
