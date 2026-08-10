@@ -13,10 +13,21 @@ info:
     cpe: cpe:2.3:a:apache:airflow:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    product: airflow
-    shodan-query: title:"Sign In - Airflow"
     vendor: apache
-  tags: panel,apache,airflow,admin
+    product: airflow
+    shodan-query:
+      - title:"Sign In - Airflow"
+      - http.title:"airflow - dags" || http.html:"apache airflow"
+      - http.title:"sign in - airflow"
+      - product:"redis"
+    fofa-query:
+      - apache airflow
+      - title="airflow - dags" || http.html:"apache airflow"
+      - title="sign in - airflow"
+    google-query:
+      - intitle:"airflow - dags" || http.html:"apache airflow"
+      - intitle:"sign in - airflow"
+  tags: panel,apache,airflow,admin,discovery
 
 http:
   - method: GET
@@ -37,4 +48,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100eb0dd6f900e0a25540a87511757830536aff2963facff3165c0ffb3b04e26dcd022100b862fb6a05ed472db0f7a913c1f26bfa3a8325cda393d7e4a393d84f97d032c9:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d139d05928425d38c26595d1997eb27f054fb08d6045d52b028256cc8bc968e602210086399c2e5fcfb7e1fd6fe70ff9a81e51dc66defb6ae2d29444bc7d76ee7b4776:922c64590222798bb761d5b6d8e72950
