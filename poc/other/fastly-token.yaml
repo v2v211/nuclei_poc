@@ -10,7 +10,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: fastly,exposure,tokens,vuln
+  tags: fastly,exposure,tokens
 
 http:
   - method: GET
