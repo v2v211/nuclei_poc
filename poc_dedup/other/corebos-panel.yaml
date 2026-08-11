@@ -10,12 +10,11 @@ info:
     cwe-id: CWE-200
     cpe: cpe:2.3:a:corebos:corebos:*:*:*:*:*:*:*:*
   metadata:
-    verified: true
     max-request: 1
-    vendor: corebos
     product: corebos
     shodan-query: http.html:"corebos"
-    fofa-query: body="corebos"
+    vendor: corebos
+    verified: true
   tags: panel,corebos
 
 http:
@@ -33,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402200ffaa882290d53eacb492c8a83dd371025f57b0533f8abe32ed73b4ab4f2a9d302201c0b6abf74eddd69a93a8b274ba27c54b2c78df163c3278b087d6a63ffa164cb:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204d65eece451a675cc7b41015e41f30a28358f3f23bb9deed0a323f019c26f18e02207246f8e0416a2c536637eedf70e9538132f8920027637f9b1e249081e68ff5c9:922c64590222798bb761d5b6d8e72950
