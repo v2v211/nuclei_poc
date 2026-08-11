@@ -3,10 +3,7 @@ id: jira-unauthenticated-adminprojects
 info:
   name: Jira Unauthenticated Admin Projects
   author: TESS
-  severity: critical
-  metadata:
-    max-request: 1
-    shodan-query: http.component:"Atlassian Jira"
+  severity: info
   tags: atlassian,jira
 
 http:
