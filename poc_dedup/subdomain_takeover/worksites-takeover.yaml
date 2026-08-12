@@ -10,7 +10,7 @@ info:
   metadata:
     verified: true
     max-request: 2
-  tags: takeover,dns,vuln
+  tags: takeover,dns
 
 dns:
   - name: "{{FQDN}}"
@@ -48,4 +48,4 @@ http:
       - type: dsl
         dsl:
           - cname
-# digest: 4b0a00483046022100a173c7dcbbb73bd7ce48d8067d2f8d368cf9d714ad390eeedc4722da52dfb7ea022100c535acf3abd79a552be49c0d1757c6d0e7d4f9ef40c84d5af621955a74111c19:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203d7ff8f0bc643ef971aecf4234c610dc104acd170978f53ceaa26e53651c0025022070fc726709fdd4512ff4b7e05c02a56d53ad2262853b6a66ab563843a02bd89d:922c64590222798bb761d5b6d8e72950

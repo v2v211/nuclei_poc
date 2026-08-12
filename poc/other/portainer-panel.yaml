@@ -18,7 +18,7 @@ info:
       - http.title:"portainer"
     fofa-query: title="portainer"
     google-query: intitle:"portainer"
-  tags: panel,portainer,detect,discovery
+  tags: panel,portainer,detect
 
 http:
   - method: GET
@@ -45,4 +45,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450221009bf69f360332e32771a92cdccfcf96674342f651c6b19f13f3c9b794bcae011d0220294571618c7460d83ad9c80370815424275e806e1ae1805181c11a31ad537a8e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201032ae4b6022575150503dbce90d4a4e2cbb0b5192a342d244c92e06813e8339022100945267841c495032e837b584e3ad4885a3ee67e3ece7901c6db6d7fecd1a242a:922c64590222798bb761d5b6d8e72950

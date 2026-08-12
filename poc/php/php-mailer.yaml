@@ -15,7 +15,7 @@ info:
     shodan-query: http.title:"PHP Mailer"
     product: phpmailer
     vendor: phpmailer_project
-  tags: panel,php,mailer,discovery
+  tags: panel,php,mailer
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100bc624984ebc6de48c6a783c75a727654e8b04acb9588da4496ba7ff22bd2aa73022079b06a085450bc77daeaaabc687277638c029b251251df2a667de2f2167d001e:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008e9c629af7483695f33dfa2b99877ba197c4c9a94bdca9eadd33642b3a7708a7022100de42b72d61a39bab37d7f523d253277fe357fe897eb833fb1c746bb686848f7c:922c64590222798bb761d5b6d8e72950

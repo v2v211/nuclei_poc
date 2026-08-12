@@ -14,7 +14,7 @@ info:
     max-request: 1
     vendor: alfresco
     product: alfresco
-  tags: alfresco,tech,panel,discovery
+  tags: alfresco,tech,panel
 
 http:
   - method: GET
@@ -41,4 +41,4 @@ http:
           - 'Enterprise v.*([0-9]\.[0-9]+\.[0-9]+)'
           - 'Community v.*([0-9]\.[0-9]+\.[0-9]+)'
           - 'Community Early Access v.*([0-9]\.[0-9]+\.[0-9]+)'
-# digest: 4b0a00483046022100ebfa5e0b3d0cb800e5d9e3b86c2b7e747a79905b8861d3e6d298761a2b2929710221009d1d0880d6869d78e71dcf0ac23b32be6d8b088bcb5595cf6eea62c372113a6d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022006c2000b6a0a543ec1a9658e068cfc76947be534354939a17e1deda23c33d25d022100e6f2d8ee69c3dfc86a6b0d5a640bd186d53d95a5a2764c6397f003e5292de853:922c64590222798bb761d5b6d8e72950

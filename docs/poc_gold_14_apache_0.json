@@ -1,1 +1,1 @@
-["APACHE-Ambari-weakPass.yaml","apache-path-traversal-check.yaml","apache-server-info.yaml","apache-spark-enviroment-exposure.yaml"]
+["APACHE-Ambari-weakPass.yaml","apache-server-info.yaml","apache-solr-file-read.yaml"]

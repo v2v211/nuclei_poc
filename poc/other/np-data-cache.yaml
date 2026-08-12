@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"NP Data Cache"
-  tags: np,panel,cache,discovery
+  tags: np,panel,cache
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100d8ea523ace086971bd45f210ef3da6f0a5f436048ea252a18f737c5d3b23bd16022100bd637150d70e2a8f2ccbf90da11ab09f4a6b1a313856440651354bf9a8248ee6:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220190029349b2ebf1b76a4d26ad3d0cc9ee775df22cdc450dc1578f17d9b3cb48602201160f8dc081e5463b609374e7c738220814258fc12888ba881f37411e805e0e5:922c64590222798bb761d5b6d8e72950

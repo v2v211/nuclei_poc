@@ -19,7 +19,7 @@ info:
       - http.title:"fortinac"
     fofa-query: title="fortinac"
     google-query: intitle:"fortinac"
-  tags: panel,fortinet,fortinac,login,discovery
+  tags: panel,fortinet,fortinac,login
 
 http:
   - method: GET
@@ -44,4 +44,4 @@ http:
         part: body
         regex:
           - '"version":"([0-9.]+)"'
-# digest: 4a0a0047304502210080df9d0a1b449eeda4038209956a0f6280838ca2cc13318562465f4fc530edd90220138c39d1e205e7de999a6d685aebd1c8014f6514418a5285fc5dce290f15f37b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220083d27546d79531c618c4b0b2747fdb098b2f4d7f01c3c32d2413811367e93e9022100ff138ffa2525d7f07801194ddca44ddc6883e1f6a0254f3bb9f3c91f71515b6d:922c64590222798bb761d5b6d8e72950

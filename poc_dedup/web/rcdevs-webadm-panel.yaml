@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 4
     shodan-query: http.html:"WebADM"
-  tags: panel,rcdevs,webadm,login,detect,discovery
+  tags: panel,rcdevs,webadm,login,detect
 
 http:
   - method: GET
@@ -45,4 +45,4 @@ http:
         group: 1
         regex:
           - '(?i)webadm\s+(free|enterprise)\s+edition'
-# digest: 4a0a0047304502205e0e9a4aaefd901113456305cfe03446b854f96b5ccca45c5253c7f8aa998864022100b23908b23e6586511b3d1963d06235b73be262ef26fd425ca842fa770d0e55d8:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022060fba1815f17546583c2befde165cfecad22f5774bf7838f9d34ad94b3c9e5ce022076e2d3e118a5b6ba3e9f66ace5494cb6147f479814e5b4c444aadc7a7b51b894:922c64590222798bb761d5b6d8e72950

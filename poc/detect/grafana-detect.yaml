@@ -7,30 +7,21 @@ info:
   description: Grafana login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 2
+    max-request: 1
     vendor: grafana
     product: grafana
-    shodan-query:
-      - title:"Grafana"
-      - cpe:"cpe:2.3:a:grafana:grafana"
-      - http.title:"grafana"
+    shodan-query: title:"Grafana"
     category: devops
-    fofa-query:
-      - title="grafana"
-      - app="grafana"
-    google-query: intitle:"grafana"
   tags: panel,grafana,detect
 
 http:
   - method: GET
     path:
       - "{{BaseURL}}/login"
-      - "{{BaseURL}}/graph/login"
 
-    stop-at-first-match: true
     matchers:
       - type: word
         part: body
@@ -49,4 +40,5 @@ http:
       - type: kval
         kval:
           - version
-# digest: 4b0a00483046022100fddd84ce9eb38e4df06cbf935a40f9870ff619b5eb526e28bba4d3760244b62a022100e46e856723e03c2c561608bb6862b3b6490bd24854779174968eb7f448246dbe:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022007536053f52444ca4ccea8b018464a891575f81760a541a83635496b19983fca02210097f60c0c45dfa0b7c93a31a53284ad763b326f8cfa6270609e23ab1c0b3352fd:922c64590222798bb761d5b6d8e72950

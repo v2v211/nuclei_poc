@@ -17,7 +17,7 @@ info:
     shodan-query: http.title:"openvpn connect"
     fofa-query: title="openvpn connect"
     google-query: intitle:"openvpn connect"
-  tags: panel,openvpn,connect,vpn,discovery
+  tags: panel,openvpn,connect,vpn
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
           - 'content="OpenVPN Connect'
           - '<title>OpenVPN Connect</title>'
         condition: or
-# digest: 4b0a00483046022100e6c1327151cc9a648d9a4855578fc514b9e8174bb6336ddcee29392eac7c546e022100945f4b1b11c6abf208301d9f1d9f104dfd0534cf0453da73bb80c750873363e2:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d34ba8aedafb1bf33a7df58ad6485419727ebe4e86093dc16702546be7088962022100a40454d4805589b005e2fc0cf383228099f91898f9ef9cd523d951be63b9c7a7:922c64590222798bb761d5b6d8e72950

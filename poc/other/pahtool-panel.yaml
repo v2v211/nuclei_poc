@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"PAHTool"
-  tags: panel,pahtool,login,detect,discovery
+  tags: panel,pahtool,login,detect
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
         group: 1
         regex:
           - 'id="appVersion"\s+value="([0-9\.]+)"'
-# digest: 490a0046304402205daef817ee06762accb9ce821c946b8aa931a2308c6a69c6fa093c06f4dba6c002207c68c951d72ce1273707f1ae50731ae722bcfd1620f3c06433d73f22b5db226d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210093f00d3cf98dfb9bd051dfc15350990a82bf0a0f34f07292b441f675d435cb5b02201e8d33aa96f5d82bc59d66f97a720a09a4bf71eddb96d799437742bf2505c993:922c64590222798bb761d5b6d8e72950

@@ -17,7 +17,7 @@ info:
     vendor: changedetection
     product: changedetection
     shodan-query: title:"Change Detection"
-  tags: panel,changedetection,detect,discovery
+  tags: panel,changedetection,detect
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100eca53c10fa41c4ff004fcd3a4ceabd1c210a89148eaab2da100b64ca139784df02201afa7f7786e7e1bd25a96932a45d706da3b2427479b907fd62b841bff221a471:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b50c9e93d2ee4a78f74689a408016341f2658aa040ac4f1811f9aeb55b53834f022100890f9d1ebd7b6358044db17d08178de75632e80b89ac4323f5efc4f632133177:922c64590222798bb761d5b6d8e72950

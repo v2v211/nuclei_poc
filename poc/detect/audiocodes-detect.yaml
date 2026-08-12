@@ -15,7 +15,7 @@ info:
     shodan-query: http.html:"Audiocodes"
     product: 420hd_ip_phone_firmware
     vendor: audiocodes
-  tags: panel,audiocodes,discovery
+  tags: panel,audiocodes
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
       - type: status
         status:
           - 203
-# digest: 490a0046304402200ddfd21d7661ef7aa0a14851e408a998aaf9496fb22d1c3995358076f7e6b59e02201002c524c5d467df1841af24c5487667b295198283861282a00bd4f4aff1a1f0:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502205c546d62f4939f1fac2eb9c8ada6f554035acc7b545657bf8eeae93e3ab9ce1d0221009829b2aeda53571dccc6999dbd5d58ea9fceb9fa83fe042f51d09963cd223680:922c64590222798bb761d5b6d8e72950

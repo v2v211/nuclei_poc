@@ -25,7 +25,7 @@ info:
     fofa-query:
       - body="/remote/login" "xxxxxxxx"
       - icon_hash=945408572
-  tags: panel,fortinet,fortios,discovery
+  tags: panel,fortinet,fortios
 
 http:
   - raw:
@@ -48,4 +48,4 @@ http:
       - type: status
         status:
           - 403
-# digest: 4a0a0047304502207ee850d8b7f92048051139dd5f166b834909f81f62e2264617147fb5cb2f7bf2022100b1e3d647b89c43c5a1310812824ed046ec5999162905c3e23a556e1d371655bc:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022077af45ba7c1eb4aa6bcde664ed1406f6ab8a752ba4094291dc4dea11c451f2c7022100873af0ddfcd8ab43687ae65bd0742cb3b3c8230cef067e35f97eb2babef4ccba:922c64590222798bb761d5b6d8e72950

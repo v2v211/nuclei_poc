@@ -17,7 +17,7 @@ info:
     shodan-query: http.title:"posthog"
     fofa-query: title="posthog"
     google-query: intitle:"posthog"
-  tags: panel,posthog,discovery
+  tags: panel,posthog
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100aec216736113016c69dfed00427be1a8ab410ff9678f25a00524019528a545de022069c39cfdf953138f757ae34705ada95c6b926e2a5743337f8275c53670a8c929:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210096229a08d30b93f76ab40aa42561a013cb4e81fed422a385d4a88825fea2b45b0221009f1bcb9aa0f2e66b3262b45a07fe1d643b4a4a7c7227108371c20ae959e23057:922c64590222798bb761d5b6d8e72950

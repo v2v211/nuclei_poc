@@ -19,7 +19,7 @@ info:
       - http.title:"xeams admin"
     fofa-query: title="xeams admin"
     google-query: intitle:"xeams admin"
-  tags: panel,xeams,admin,console,synametrics,discovery
+  tags: panel,xeams,admin,console,synametrics
 
 http:
   - method: GET
@@ -41,4 +41,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402201da53a2eb83c7e1c1e2402ffbb6b15754cb84a7b104f91879bc35af7ab2fdebb022027b567154de0eb2020453dec606a8743c2d8bd557f561e33f429ad332c6c07a9:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e571ba138aa33d052d9807a0ad5d8df22f8ccbeb7d81782b98abb05ac465dd3802201d3799dda9e8cacdb87e727bd0b2748f4e6652468e7917212e068139f4740513:922c64590222798bb761d5b6d8e72950

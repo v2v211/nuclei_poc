@@ -13,7 +13,7 @@ info:
     verified: true
     max-request: 1
     fofa-query: Overseerr account
-  tags: panel,overseerr,detect,discovery
+  tags: panel,overseerr,detect
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220170f2125c5549d05d318d62fd4cf31c0298673731f4b42f37955a8192493bd48022006e093b3bc6f3167d93d67bcea80da4d13f160ffb1befa35b19463ae547b5259:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402206f72ec821655072a4ddeb6c3f96e15c9e6806c558a4f93da5926c13cbf94ff2402200abcbdda260f615f03a77b1e73f36c229821c92976170ec691d092830f033617:922c64590222798bb761d5b6d8e72950

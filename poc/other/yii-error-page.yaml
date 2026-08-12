@@ -13,7 +13,7 @@ info:
     vendor: yii_software
     product: yii
     shodan-query: html:"yii\base\ErrorException"
-  tags: exposure,yii,logs,vuln
+  tags: exposure,yii,logs
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 500
-# digest: 490a0046304402202a9eaf82ec101084357b54523da680ee20f37d7f70c93337394e00ba0380b221022058a45b9754183c52c11363ad4f9e83e67039df55775932d07ffda119b8d3c139:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022003a0256b6311ec1d3b2b465ac8a88edc86ce9c5548c2b194e4f7d1e342a3a80b02204e8a99aae260c4aa6fc11ed4fcda7bcb18aa2b606847a2eb706afccfc116d0b1:922c64590222798bb761d5b6d8e72950

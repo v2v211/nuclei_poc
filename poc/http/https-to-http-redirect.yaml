@@ -9,7 +9,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: misconfig,http,https,vuln
+  tags: misconfig,http,https
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
           - 'status_code == 200'
           - 'contains(tolower(body), "<meta http-equiv=\"refresh\" content=\"0; url=http://")'
         condition: and
-# digest: 4a0a00473045022100af267acf31f3d4b364239ce21496f7a323a5cde1081731c9e191bdfa57bf149e02206c565f5564ae57d4df09e14dbe0646e43d63dc70b098c5656c42a8ab4b8ff76e:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402201ebc2a7d3ff9de891f5ecc6240683d2ca327aeaa7b9bc901e59ef1667735185f0220691a10ba9255d331c965f9e24b766805177d22ca175adfc7097d6b73f336bc14:922c64590222798bb761d5b6d8e72950

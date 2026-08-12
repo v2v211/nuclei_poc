@@ -24,7 +24,7 @@ info:
       - title="fortiwlm"
       - body="fortiwlm"
     google-query: intitle:"fortiwlm"
-  tags: panel,fortinet,fortiwlm,login,discovery
+  tags: panel,fortinet,fortiwlm,login
 
 http:
   - method: GET
@@ -45,4 +45,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502202ca4ec8e9c96291b5abbf19faf09dfbaf02722cdb0e48068dbfeef5e82a46e6f022100ab125e02c4dcf7596662ae11ae7e004f28993142730f96ebfef8696346d3407e:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203d9f285fd2af285bb1cc90dbbd68957ab2c3a39c39b0768051c71d20d215e57a02203c4386c11e77b2aab57ca30fab6630ecfecd2e49fbc2897da0aaff1ce11fb595:922c64590222798bb761d5b6d8e72950

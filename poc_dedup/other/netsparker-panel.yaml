@@ -15,7 +15,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"Sign in to Netsparker Enterprise"
-  tags: panel,netsparker,discovery
+  tags: panel,netsparker
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220127402bfa1a3e4ac46aaa187b2ec4bf1bc67830c1fa88be21c8a269a0a176bfc022100a2bc5e2790db202a96aaa424935ca034ceb3ad134cb00ad833d2738166dead90:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d45a12b8b6ce0286e6dad00c69a7d9d7f1e4bce3ab5c3d77b48a552a441d85e7022100869931bbbf86f57966400af59394d573a693e6aaa9a2c4fa8d5cafc4aa393923:922c64590222798bb761d5b6d8e72950

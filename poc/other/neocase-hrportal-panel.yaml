@@ -12,7 +12,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: panel,neocase,login,detect,discovery
+  tags: panel,neocase,login,detect
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
         group: 1
         regex:
           - 'name="version"\s+content="([0-9\.]+)"'
-# digest: 4a0a00473045022100aad4a0382ff4f4e46044841d86ef05137b24784abf4262a16a34e28c86ed62d9022056e1644191dcd92f1183b66a0dd4725b611dca48c67cf35478f8860f98665ecb:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205a9bff0cec6da439f03fb6887343dacdb9b42919a8a1004c02147b6f4ba6198a022046025bf065ebd8979ab9daa94d59b929717ad3753b91386639330367cc0ac2e6:922c64590222798bb761d5b6d8e72950

@@ -19,7 +19,7 @@ info:
       - http.title:"opencats"
     fofa-query: title="opencats"
     google-query: intitle:"opencats"
-  tags: panel,opencats,discovery
+  tags: panel,opencats
 
 http:
   - method: GET
@@ -40,4 +40,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100d915111b14fc131dc9634599bdccf91bfacdb116a5dd04070b25c9c7b5dac8d202206998a044912b79b5fc9fe7673db8e4d00d93b2897671a8b5008cdc63b653e780:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c1ca709a1ed843eb0a22fbd8680f1b773360b78cf5ca8dc8d331a20443f1b437022100e352e0927c2a23b869d8128aec66f38fbad4a5eb21232417428b66a4dc3adb2d:922c64590222798bb761d5b6d8e72950

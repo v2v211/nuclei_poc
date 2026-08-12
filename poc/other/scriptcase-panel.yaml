@@ -15,7 +15,7 @@ info:
     vendor: scriptcase
     product: scriptcase
     shodan-query: title:"ScriptCase"
-  tags: panel,scriptcase,discovery
+  tags: panel,scriptcase
 
 http:
   - method: GET
@@ -45,4 +45,4 @@ http:
         group: 2
         regex:
           - '(Vers&atilde;o|Version|Versão)\b.*\s(\d.*\d)'
-# digest: 4a0a0047304502205d29d08bee727635a8417ae9528a7c49c68fc0a858e687ba939ca542cfbf3874022100c1c5ec326a267d98f53502bd96ca8e678bae193e9a262679dc7937361b42e510:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202a0f4a22873284f7f87bd36b43e01ac94daa09998f7231c182fe420260201082022100ea7864629f1f473a15d0b2f76a42cc7bb8c25d20b997176f1abb31993d1c594f:922c64590222798bb761d5b6d8e72950

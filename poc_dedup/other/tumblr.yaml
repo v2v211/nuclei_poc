@@ -11,12 +11,12 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: osint,osint-images,tumblr,discovery
+  tags: osint,osint-images,tumblr
 
 self-contained: true
 
 variables:
-  valid_username: "{{replace(user, '.', '')}}"
+  - valid_username: "{{user | regex_search('^[^\\.]+$')}}"
 
 http:
   - method: GET
@@ -33,4 +33,3 @@ http:
         part: body
         words:
           - "avatar"
-# digest: 4a0a00473045022100b8351df680fe3447ac2f0c6563e3373525f67ed506f472a8fb6c30e5fa035a2602201ed5316cc5e94e3b74f8ef9656d0df05790e17dfe26de3486c65958dbaff6c6c:922c64590222798bb761d5b6d8e72950

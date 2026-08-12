@@ -25,7 +25,7 @@ info:
     google-query:
       - intitle:"apache solr"
       - intitle:"solr admin"
-  tags: panel,solr,apache,admin,discovery
+  tags: panel,solr,apache,admin
 
 http:
   - method: GET
@@ -48,4 +48,4 @@ http:
         group: 1
         regex:
           - 'favicon\.ico\?_=([0-9.]+)'
-# digest: 4a0a0047304502205dd9acb2c6cb51cb7d7b7ddf19ac947fdbae3ea918c06c41674020372ea75695022100cf8efce80dd2498f321ff4f72e9858c464b362ec311e04b1ea82e40011f7311a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221009e133832d9b41b94b369d8de07d0ae12fc1fe3bb07a63e32fac89aabaa5a5de002204dfee6c11057a252468ed17e459da24e1bd027a264e33e577112accfcad9f6c2:922c64590222798bb761d5b6d8e72950

@@ -1,25 +1,22 @@
 id: php-fpm-config
 
 info:
-  name: PHP-FPM Configuration Page - Detect
+  name: PHP-FPM Config file disclosure
   author: sheikhrishad
-  severity: info
-  description: PHP-FPM configuration page was detected.
-  reference:
-    - https://www.php.net/manual/en/install.fpm.php
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
-    cwe-id: CWE-200
-  metadata:
-    max-request: 1
-  tags: config,exposure,php,vuln
+  severity: low
+  tags: config,exposure,php
 
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/php-fpm.conf"
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET /php-fpm.conf HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
     matchers-condition: and
     matchers:
       - type: word
@@ -31,4 +28,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022055354ad3f17ca7db34912c1b6d3979e6f08409a6c5e07c9027fad6224a0b61f80220666f75b47b36d1610dbd11fd617f8ca90e962d62cb13e986db7a01d4cf04c238:922c64590222798bb761d5b6d8e72950

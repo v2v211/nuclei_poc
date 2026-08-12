@@ -15,7 +15,7 @@ info:
     shodan-query: html:"CasaOS"
     product: casaos
     vendor: icewhale
-  tags: panel,casaos,login,detect,discovery
+  tags: panel,casaos,login,detect
 
 http:
   - method: GET
@@ -38,4 +38,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100e79391b92d245f8ec83d9550a8505de1c15f323e10edcca3efdab1f3cf9a8bd502210098e3b3fd841097ed1337c4c806216b3673f41eb89f4d9911852f5db4ed478f4f:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c0ea76b799702e62cfd7f171847c96e0c243bf8c821b6a93c7237d154bf0d211022100c6c63d8388b6832d1276529ae7ed8ae0d60702aea1b0ee2c97335435fc1d5e7c:922c64590222798bb761d5b6d8e72950

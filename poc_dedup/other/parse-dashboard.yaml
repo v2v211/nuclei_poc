@@ -19,7 +19,7 @@ info:
       - http.title:"parse dashboard"
     fofa-query: title="parse dashboard"
     google-query: intitle:"parse dashboard"
-  tags: panel,parse,exposure,parseplatform,discovery
+  tags: panel,parse,exposure,parseplatform
 
 http:
   - method: GET
@@ -38,4 +38,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220012b22e3fc97a96fcdba7019589f81345c527cb333d4aef7135c624952f444ad02204b4689ab798a3486929fb30ddb72899a1ace74ab089728e0b4466f68a8205db9:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402206dbf1cdc4554ba894adc0b0e430cfb509ed872f2f5ded0d975021a4b1c7d64a8022079637757ee2803eb8c2a085452e5f575b9b80c0ea4c986c5ac6723db6835c762:922c64590222798bb761d5b6d8e72950

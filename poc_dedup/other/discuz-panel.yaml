@@ -13,7 +13,7 @@ info:
     product: discuz\\!
     shodan-query: title:"Discuz!"
     fofa-query: title="Discuz!"
-  tags: panel,discuz,detect,login,discovery
+  tags: panel,discuz,detect,login
 
 http:
   - method: GET
@@ -39,4 +39,4 @@ http:
         group: 1
         regex:
           - '<em>X([0-9.]+)<\/em><\/p>'
-# digest: 4b0a004830460221009c1c133563a7b94fd5cc8ac7558644f2c53966fda42b8775ce7f7b35f508e734022100cf94baa03ab1d7ba2e0c8b4cbeea92c39ecea34f4fe2f03277edb6af552515f3:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022023bf094f6e7ee8dc7ff17a1b43f345985373ae0c278197af66a013ebe205ec4d02205b2ee7d73c940b49c4f578f6122eaa784b98f7fc4ba75f29aee791c96a11000f:922c64590222798bb761d5b6d8e72950

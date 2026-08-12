@@ -15,7 +15,7 @@ info:
     shodan-query: title:"WAMPSERVER Homepage"
     product: wampserver
     vendor: wampserver
-  tags: panel,wampserver,discovery
+  tags: panel,wampserver
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100bd7d0abef803731f6143ddf449671d000e476639d1efc2a3824552a15bf1afd20220677c32a06fd56b573540806ec46708e0858d92da40b099abcc5530a8c4f86d3c:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c10826492e92f356d775cdaa2fb9c72b7a497f4b6179b60e2b2c63b0a3e770980221009a195992701fb3f9e11664fb96690f950adf268aa7f397dc696986a71f37f317:922c64590222798bb761d5b6d8e72950

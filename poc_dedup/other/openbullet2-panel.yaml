@@ -12,7 +12,7 @@ info:
     verified: "true"
     max-request: 1
     shodan-query: http.favicon.hash:-1264095219
-  tags: openbullet,panel,login,discovery
+  tags: openbullet,panel,login
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502204b16b551ee46201a4b6762ce55f1f50067ff24dd755f0673cca0b6b782c7bef002210085910d266509dbff9be98af0e85820a82ed976f60dea607cad58f4ee7e1bd4e6:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d5995d9f2e8ad5f72df89214cc57e39fb9654dec757a79c18e53eb6e1702f9140220743f91f48a3a4686b14885ab768fbc2a358d91c3ebcc6302d03aaca52e208319:922c64590222798bb761d5b6d8e72950

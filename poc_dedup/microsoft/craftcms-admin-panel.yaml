@@ -11,13 +11,10 @@ info:
     cpe: cpe:2.3:a:nystudio107:seomatic:*:*:*:*:craft_cms:*:*:*
   metadata:
     max-request: 1
-    vendor: nystudio107
     product: seomatic
-    shodan-query:
-      - 'X-Powered-By: Craft CMS'
-      - "x-powered-by: craft cms"
-      - 'x-powered-by: craft cms html:"seomatic"'
-  tags: panel,craftcms,nystudio107,discovery
+    shodan-query: 'X-Powered-By: Craft CMS'
+    vendor: nystudio107
+  tags: panel,craftcms,nystudio107
 
 http:
   - method: GET
@@ -35,4 +32,4 @@ http:
         part: body
         words:
           - '<a id=\"poweredby\" href=\"http:\/\/craftcms.com\/\"'
-# digest: 490a0046304402202bf23dced3e45ba7beac73eb3acaf5ea52fd7c9ba0d766e35f3f664646309dad0220610fa355939068719c2d5bc099fe41ae996da52c03fe69ceb9c7b34b00268d9d:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ae1a57dc0ee5e876a1fd0812f841c4388eda03f3501ccdf15141dbba0f57c49c022100aa229d1e73120668abbbadac3a72497b32eca1eea1bece95e93c9aeb71cecabd:922c64590222798bb761d5b6d8e72950

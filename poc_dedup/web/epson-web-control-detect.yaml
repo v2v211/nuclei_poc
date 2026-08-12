@@ -1,5 +1,4 @@
 id: epson-web-control-detect
-
 info:
   name: Epson Printer
   author: pussycat0x
@@ -9,13 +8,11 @@ info:
     - https://www.exploit-db.com/ghdb/6873
   classification:
     cwe-id: CWE-200
-  tags: panel,unauth,epson,edb,iot,printer
-
+  tags: iot,printer,panel,unauth,epson
 requests:
   - method: GET
     path:
       - "{{BaseURL}}/cgi-bin/home"
-
     matchers-condition: and
     matchers:
       - type: word
@@ -24,7 +21,6 @@ requests:
           - "Basic Control"
           - "Advanced"
         condition: and
-
       - type: status
         status:
           - 200

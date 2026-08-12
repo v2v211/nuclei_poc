@@ -13,7 +13,7 @@ info:
     vendor: smartstore
     product: smartstore
     shodan-query: http.html:'content="Smartstore'
-  tags: tech,smartstore,oss,discovery
+  tags: tech,smartstore,oss
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
         group: 1
         regex:
           - '<meta name="generator" content="Smartstore (.*)" />'
-# digest: 4a0a00473045022068558bdfc1dbf708276ee9f5bc34a1072397a570b4d2efa4d1d54e718b26f4bd022100a4fe87e02f8b047a5e76d06fb52b79c8f45138a7a4231b92b1365916b673b351:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008479d660eeb545bb024a0517487d2721b6d9548be86afd9f52c415da6293e4b4022100ac53cc4e148fd2b04444fba06730f47019290f71bf353688a523cd3323b8c004:922c64590222798bb761d5b6d8e72950

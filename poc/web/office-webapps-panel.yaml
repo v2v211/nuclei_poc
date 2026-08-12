@@ -20,7 +20,7 @@ info:
       - html:"Provide a link that opens Word"
       - http.html:"provide a link that opens word"
     fofa-query: body="provide a link that opens word"
-  tags: panel,office-webapps,login,microsoft,discovery
+  tags: panel,office-webapps,login,microsoft
 
 http:
   - method: GET
@@ -45,4 +45,4 @@ http:
           - "_OFUError"
           - "Wrong file type"
         condition: and
-# digest: 490a0046304402201e1cb00b45bee90f8fab6978c5de99446d08eec40b223521d3b4dcc5caac35580220223ac3d9b655ae52f51e47d952bf493490d40077ac77e164a459c1aa827d0410:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220109cdc1d0f1f58e1a6c965ef4cbf27601e0543b4655db33da264e2603d80631002201b9c9c744ac32a888fd09e05f2a58a46992e18fb5a98b828d766d2989ffaa158:922c64590222798bb761d5b6d8e72950

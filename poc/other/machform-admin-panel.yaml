@@ -17,7 +17,7 @@ info:
     shodan-query: title:"MachForm Admin Panel"
     product: machform
     vendor: machform
-  tags: panel,machform,admin,discovery
+  tags: panel,machform,admin
 
 http:
   - method: GET
@@ -39,4 +39,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220495367301bde32b9c62e3d3a412e85b6b446c3fcff8a682b98112a89268cd8a8022100c43b24322229f3da1e15040b30f662f1d8cf67cd67b9fb00d70ee789b70c875f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202ab5d25a09b0d515062e70c90ab3c6bee0b3b90f829b8b436392ce2d7be770d902210090adb162a2ac7b710c55a1e2b77930ef0d9de64ad5a7aece03faca6ddf27c803:922c64590222798bb761d5b6d8e72950

@@ -19,7 +19,7 @@ info:
       - html:"RD Web Access"
       - http.html:"rd web access"
     fofa-query: body="rd web access"
-  tags: panel,login,rdp,web-access,Microsoft,detect,microsoft,discovery
+  tags: panel,login,rdp,web-access,Microsoft,detect,microsoft
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
           - "<rdp-client-top-view>"
           - "Microsoft Remote Desktop"
         condition: and
-# digest: 4a0a00473045022100a30b64f20b677789296efb4c89a32ac33e94b1f580145249c8736611606d7ec602200c30902ab1a6fc8ccb8d3d196965f97cd9c22679bc2659ede83b1a0f56a53b91:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402201cfe415e9f095eef283b802c98feb3be12170893459a94167bb9bbf0a662cb3a02203ec46f713fc9c2217c1442672610a13b3218abb15e4c7d3a47dd50955e0961b7:922c64590222798bb761d5b6d8e72950

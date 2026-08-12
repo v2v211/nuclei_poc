@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"myStrom"
-  tags: panel,mystrom,iot,discovery
+  tags: panel,mystrom,iot
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402205c98c28c2a0dd64b7345ad5218a64a6d22f9f4cf57a03c566fc6e135cc82683e02206e654c51b6d332bdfc06558942430e929c956a5768321b97ecc0571ea4a1bd7b:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a529948918a5bd194d2489ff64be410a7ae5544de19c583aaf3da6a81fe5348f022100f4acac2482da0dac20fc7a97097b3f15dac555839d356a6491f4be787e6409d8:922c64590222798bb761d5b6d8e72950

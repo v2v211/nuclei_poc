@@ -18,7 +18,7 @@ info:
     product: shellinabox
     shodan-query: http.favicon.hash:-629968763
     fofa-query: icon_hash=-629968763
-  tags: shell,emulator,detect,panel,login,shellinabox_project,discovery
+  tags: shell,emulator,detect,panel,login,shellinabox_project
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402206aca7086371fa04a42c2f355a44906e7ded2414326b2c06c13d732d7645f93a20220252473179b4a8f239bc8287b73fee768ce976576eb83f24adca697ea7c09c074:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e319536c0574201f272fb35486b22c358a851c08b63b81673a34e6ce633e0288022073494e268c66e617b168d42e1b81a2f5c4cde17afe382cdca49bde1801b17d93:922c64590222798bb761d5b6d8e72950

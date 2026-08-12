@@ -18,7 +18,7 @@ info:
     product: monstra_cms
     shodan-query: http.favicon.hash:419828698
     fofa-query: icon_hash=419828698
-  tags: panel,monstra,discovery
+  tags: panel,monstra
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
         group: 1
         regex:
           - 'Version ([0-9.]+)'
-# digest: 4b0a00483046022100c2767aa7754c64554dad4040b83e6e7b3c9881dee9a2ad2041a2056a7bcccdf0022100fe8a5496f08b2c9b8cbcffddf5a34ba16ac0f13d4cf95fa2077a95916a75b51a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210090932c758ee1ef22ab38c396a8b7e4cd2b3f687534c324344ed18724dde7193402204c37a3ff588e10a3ee43a6a7c0fefd9718c7db7a2991df735f421b8e61196a5a:922c64590222798bb761d5b6d8e72950

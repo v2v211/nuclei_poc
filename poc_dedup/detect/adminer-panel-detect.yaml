@@ -23,7 +23,7 @@ info:
       - app="adminer" && body="4.7.8"
     hunter-query: app.name="adminer"&&web.body="4.7.8"
     google-query: intitle:"login - adminer"
-  tags: panel,fuzz,adminer,login,sqli,discovery
+  tags: panel,fuzz,adminer,login,sqli
 
 http:
   - raw:
@@ -53,4 +53,4 @@ http:
         group: 1
         regex:
           - '<span class="version">([0-9.]+)'
-# digest: 490a0046304402206dd4fc0206f66a5045afc28d922f887c17597f3a9375e417cd49f35061538517022022cda9cbfb4704b6f11c337c32b19061659bdcab49d85ccb29aa1be0c0dce0b0:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100916f8911d4df2f79d56199029dca3d19567a9b235fa2d1aad0add32cfaaba48e022100a335c716f2fe9668aff599a7a89415f5838906520e0519dcd07a4f70676fd805:922c64590222798bb761d5b6d8e72950

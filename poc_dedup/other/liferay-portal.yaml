@@ -21,7 +21,7 @@ info:
       - http.favicon.hash:129457226
       - cpe:"cpe:2.3:a:liferay:liferay_portal"
     fofa-query: icon_hash=129457226
-  tags: panel,liferay,portal,discovery
+  tags: panel,liferay,portal
 
 http:
   - method: GET
@@ -54,4 +54,4 @@ http:
         group: 2
         regex:
           - '(i?)Liferay-Portal:.*?(\d+\.?.*?)\s'
-# digest: 490a0046304402204642334199c112e35f3e3e70499ba2a839eef294819505337bdc7d13e9c9f4f6022026b250aec0ae8791da03f12fd008022a5afdd1d0086be398069b3c1f300f13d4:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100eb266b3de7b0f06cd6df0f7ee4ba53b2fbb62524f64f3d6dfeffe1d7a16dcd48022100aa22889cb968e616dd08f6464f529f969b519584913df6c879da130792e526f7:922c64590222798bb761d5b6d8e72950

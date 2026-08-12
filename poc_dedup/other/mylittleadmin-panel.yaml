@@ -18,7 +18,7 @@ info:
     shodan-query: http.html:"myLittleAdmin"
     product: mylittleadmin
     vendor: mylittletools
-  tags: panel,mylittleadmin,login,discovery
+  tags: panel,mylittleadmin,login
 
 http:
   - method: GET
@@ -35,4 +35,4 @@ http:
           - "status_code == 200"
           - "contains(body, '<title>myLittleAdmin for SQL Server')"
         condition: and
-# digest: 4a0a004730450221009906dc64c498d2abf8a8ab472ff215527d544dc6b7daad882ced7cb78133260102205000751f5eed5e05ca827b1b528e1bd2972528305129aba89146131719b66c40:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e3f25768c994ecc6025cb2c7d3875010fb1524342ef6feeee9e554f591c3afcf022100eb87bf85a7dfff9a09e20e92ac6e55655ff5034bdaaf928a79acd42a419a974a:922c64590222798bb761d5b6d8e72950

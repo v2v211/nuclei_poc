@@ -9,7 +9,7 @@ info:
     - https://github.com/EdOverflow/can-i-take-over-xyz/pull/107
   metadata:
     max-request: 1
-  tags: takeover,jetbrains,vuln
+  tags: takeover,jetbrains
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: dsl
         dsl:
           - cname
-# digest: 490a00463044022026304b014e8073fdc7fbda754c891346394029974b24d72efb5d9966a1b01273022053291a8af21d3e6765966ae248d321dde903544ffc6e163709965ba7c5ab79f9:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022039c274dcdc0c7c8b204e3d3529636ff47152cb4b32f6cb7c50cb7271679ae37b022100eb13ab1776d89bf6c48bea5c81dd1118f29c96a1bccd5185e2349e850570c3a7:922c64590222798bb761d5b6d8e72950

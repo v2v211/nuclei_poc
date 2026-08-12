@@ -18,7 +18,7 @@ info:
       - http.title:"qbittorrent"
     fofa-query: title="qbittorrent"
     google-query: intitle:"qbittorrent"
-  tags: panel,qbittorrent,detect,discovery
+  tags: panel,qbittorrent,detect
 
 http:
   - method: GET
@@ -40,4 +40,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100a8d0018f5dc8c6e18396070a957f3daab54e4a69d23a3eda5c0382f3c2b3b8340220494b8ec5fd25ab92fb5133dab6793b3dbce1ec4748d617833ebb6e459470cc47:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022036a48dfa78adafae56848e7e1f17b4f19f90737022e8fa1cb5cd622a40309945022100e00c4dcc9bcc8c6744cdf2d70f0f4626a4845e0d9beb373cd1ccf0b848177fa5:922c64590222798bb761d5b6d8e72950

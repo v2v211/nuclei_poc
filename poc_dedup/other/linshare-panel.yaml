@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 3
     shodan-query: http.title:"LinShare"
-  tags: panel,linshare,login,detect,discovery
+  tags: panel,linshare,login,detect
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
           - 'status_code == 200'
           - 'contains_any(body, "<title>LinShare", "x-ng-app=\"linshareAdminApp")'
         condition: and
-# digest: 490a0046304402203df8ab8fa72d26b59cb4386dffa680ef854ac99e5e9d0dfd1bdae95ae5c266fb02203f5d094c74f9775cc33ec31ce3058496655b16f98c098c1a709df40ed412658a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220009b68922b5f4bee494724850faffe89af3164b2ce6490581856af6e5078405e0221009d8a5c7296d8a503bf6abe8c5df9363b11baad8ba9a52326758abb36de2579b6:922c64590222798bb761d5b6d8e72950

@@ -14,7 +14,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"nginx admin manager"
-  tags: panel,nginx,admin,discovery
+  tags: panel,nginx,admin
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
           - 401
           - 200
         condition: or
-# digest: 4a0a00473045022054d941a65ae3015c25d52be0db662df3cecd6e87728d84833f31c72cb0da4110022100b788558bed301df8d5f4716bc9215b80e2ce3a1e95af3baff7620eb1e7cd7570:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c4f3a2aae5aed81dcaa0f4a2e143755a642d9dbb1967eea4bc4a9cdbf36b168d022072c3e508c768b011b64b5eadd423e35bdbf95bd09574f85becacfb7cb1c59006:922c64590222798bb761d5b6d8e72950

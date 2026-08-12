@@ -15,7 +15,7 @@ info:
     shodan-query: 'Server: httpd/2.0 port:8080'
     product: rt-n53
     vendor: asus
-  tags: panel,asus,router,iot,discovery
+  tags: panel,asus,router,iot
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200bbedad18a6c17d5d340044df0c328688bde2d6bb1f4d5f560baaa71137e5abf022100b4a0a187cca940e75a33230903bcc7f387b40254c36949c201d65d1f443a7c49:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d6a0d305db10c162d4f50751bfb95341091d65909d21f048011e54cc23bc6f13022100ae70b963f154ffb8c4b24f2e0169336f717a13a99cf8f22cfd211c255c4d6c37:922c64590222798bb761d5b6d8e72950

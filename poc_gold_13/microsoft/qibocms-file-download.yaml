@@ -5,12 +5,10 @@ info:
   author: theabhinavgaur
   severity: high
   description: Qibocms is vulnerable to arbitrary file download vulnerability.
-  classification:
-    cwe-id: CWE-200,CWE-552
   metadata:
     verified: true
     max-request: 1
-  tags: qibocms,lfr,vuln
+  tags: qibocms,lfr
 
 http:
   - method: GET
@@ -34,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220263512b6b2e31b66e869bf4f47cec97eecaa7bdfcb52ac9a5920211ba2e8a50c0221008991476dd785576d7d2a1aa29223dfa683bda50fba6014a8606725ea1839f54e:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a7efeb910c29dd65e99bdc9f2faa45679f8f83ec8f5e1d29c4c1d978da137fb4022100ab1aa6476f780c0077965ff3119b56d2bd1e5d039434d1f348edef39e1e21d84:922c64590222798bb761d5b6d8e72950

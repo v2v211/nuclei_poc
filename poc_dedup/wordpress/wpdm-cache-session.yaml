@@ -9,7 +9,7 @@ info:
     - https://www.exploit-db.com/ghdb/7004
   metadata:
     max-request: 1
-  tags: wordpress,edb,vuln
+  tags: wordpress,edb
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100d441aa915d512a7f5f8d120dee975274f9f39c61b124726d0f8296e5612f82e702206c59fd25263b3e257e37f35487993df83018c7694d5d13c7bc0fac5a6e3766ac:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100fdae09e5d58300ccd2089293df9df51a203a2dfac650f4c90c7b94d35fbf23210220785cfdae2e321c8e845bd0795ba90b77e6f88ebe774473143930c4748c24a824:922c64590222798bb761d5b6d8e72950

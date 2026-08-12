@@ -29,7 +29,7 @@ info:
       - icon_hash=-74348711
       - body="qlik"
     google-query: intitle:"qlik-sense"
-  tags: panel,qlik,discovery
+  tags: panel,qlik
 
 http:
   - method: GET
@@ -57,4 +57,4 @@ http:
         group: 1
         regex:
           - 'qliksenseserver:((\d+\.)?(\d+\.)?(\*|\d+))'
-# digest: 4a0a00473045022004ee05c1305c5cffd37f09fe1ba71711d911fd1278f698ee98519269d968541b022100f78b25d6344c222f9b234a1ebcf964d5db38e5ed47b2499e864f4fa762ddb977:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022067dcedf0a5313cda5c379b0abb2d38856ff26898b9fd44b73d56f9d485b80feb02207dfc712e91dd7abe99f892a9f8782c5b851e03df35ab0ce35602c741fba136a8:922c64590222798bb761d5b6d8e72950

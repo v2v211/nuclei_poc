@@ -8,13 +8,11 @@ info:
     Array VPN Arbitrary File Reading Vulnerability
   reference:
     - https://github.com/wy876/POC/blob/main/Array%20VPN%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md
-  classification:
-    cwe-id: CWE-23,CWE-73
   metadata:
     verified: true
     max-request: 1
     fofa-query: product="Array-VPN"
-  tags: lfi,vpn,arrayvpn,vuln
+  tags: lfi,vpn,arrayvpn
 
 http:
   - raw:
@@ -39,4 +37,4 @@ http:
       - type: status
         status:
           - 401
-# digest: 4b0a00483046022100b0d28b8426f2b607f5cdabd8a73edac420f8bcf86715c56f99af43d739235751022100b6b5f7a38b2c01aa936005bdceb834a99f4ab885cd053a9936fbe02b758ec4b7:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100b1d98f6fd5c102f4bedf812acbde29778d44aaa2d55363c2176c3da8c2ad813a02205c9c68925ea4ebd664956d34620ed8705d9f1979175ffc3938fcff8c95802e9a:922c64590222798bb761d5b6d8e72950

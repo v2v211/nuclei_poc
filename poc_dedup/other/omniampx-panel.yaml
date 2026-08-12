@@ -15,7 +15,7 @@ info:
     shodan-query: http.html:"Omnia MPX"
     product: omnia_mpx_node
     vendor: telosalliance
-  tags: panel,omnia,omniampx,discovery
+  tags: panel,omnia,omniampx
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100959b50567776c943faa7b1820a7b3dfe6e4b97e084b3fb8adc1d4012bb13cb5c022100d3260d6967deec91242a5bccba2d507d1a0fb2c5d554f090491dcb8e9178b47a:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022067f94cadc240d2b246d3bd0303d2c27605d7a70fd5dcac4dd388f5203842356302200c38a511ffdb7de1a26b8c48ba2faa429856b359e0ccc41e60c15964c8d1e1e5:922c64590222798bb761d5b6d8e72950

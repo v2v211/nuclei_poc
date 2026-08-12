@@ -16,7 +16,7 @@ info:
     vendor: openvas
     product: openvas_manager
     shodan-query: http.favicon.hash:1606029165
-  tags: panel,openvas,admin,login,discovery
+  tags: panel,openvas,admin,login
 
 http:
   - method: GET
@@ -36,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502210087c5f30f54d7b195380779fa380e482579b4d861b70c92caa164460236e5953f02201bfe6bebfda710533e69974f92c0bd3d9b57c0fb9c7097937cf1de9a57f6cfca:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022010b8531b0acceedb2067724f9c9f3446ffd2d6b394d2c3013a6b6b62243acebc022042a55fbd76e7c4787f64aafaa49a08a9e437f8ccf5756568767176857cf41218:922c64590222798bb761d5b6d8e72950

@@ -21,7 +21,7 @@ info:
       - http.title:"fortiap"
     fofa-query: title="fortiap"
     google-query: intitle:"fortiap"
-  tags: panel,fortinet,fortiap,discovery
+  tags: panel,fortinet,fortiap
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100ed5a30558ba83c15a3f54d9f92061dc7c3e59acdd99ebea0bd11500214b43146022100b866df9dd5474247f422c5db87d399a80d4e6718ad7a453068d3bf9a615248e2:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100edd7f0c7fa44e0b8558b22b490872f0d9eec4bfbf5424c3333de3f908c333599022100d8f9e2f40eefa9626dc7c9888f84a7da5afdd0aace69301c92803781e778a975:922c64590222798bb761d5b6d8e72950

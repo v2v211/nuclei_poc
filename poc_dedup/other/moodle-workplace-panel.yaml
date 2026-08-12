@@ -16,7 +16,7 @@ info:
     vendor: moodle
     product: moodle
     shodan-query: http.html:"moodle"
-  tags: panel,moodle,login,detect,discovery
+  tags: panel,moodle,login,detect
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
           - 'status_code == 200'
           - 'contains_any(body, "content=\"moodle", "\"name\":\"moodle\"") && contains(body, "workplace")'
         condition: and
-# digest: 4a0a00473045022100883a6a4d54954b9292cd620568047aeaf1b6a922fc232218fbcc76c5e0c609300220089df2cd62d6aa3df365a554f131eb5163ada032b1c3fca1afc2db5762254df2:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203cf623dc9fc7983cd84b2d8b9053b252650405e0fc131e3c030eb19e7392de49022100a3922570768ccdf4805633b3f3cdc4a70424df0e44168fc28327d2816919860f:922c64590222798bb761d5b6d8e72950

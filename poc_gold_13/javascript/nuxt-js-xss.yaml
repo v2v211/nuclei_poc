@@ -10,14 +10,12 @@ info:
     - https://huntr.dev/bounties/70ac720d-c932-4ed3-98b1-dd2cbcb90185/
     - https://bryces.io/blog/nuxt3
     - https://twitter.com/fofabot/status/1669339995780558849
-  classification:
-    cwe-id: CWE-80
   metadata:
     verified: true
     max-request: 1
     shodan-query: html:"buildAssetsDir" "nuxt"
     fofa-query: body="buildAssetsDir" && body="__nuxt"
-  tags: huntr,xss,nuxtjs,vuln
+  tags: huntr,xss,nuxtjs
 
 variables:
   payload: "<script>alert(document.domain)</script>"
@@ -40,4 +38,4 @@ http:
         part: header
         words:
           - "text/html"
-# digest: 4a0a004730450220014429c035bf335959ad6015ee0b14baae26f5349944af9e844ffd9b6436c598022100e6506a27ff7cf777d1db191b99106bf6ebfc0bf11dbea78aeb169cad448be9a0:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e184ac245cc42774284e2fda8f4ffd559e46ffb273b587dfab98c576f73b92fa022100931427a4621c57da048aa4fdc2981b8ad64512cf8d4894e3dc3f1ce607d0b090:922c64590222798bb761d5b6d8e72950

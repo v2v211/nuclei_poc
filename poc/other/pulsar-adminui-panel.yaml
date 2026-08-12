@@ -24,7 +24,7 @@ info:
     google-query:
       - intitle:"pulsar admin ui"
       - intitle:"pulsar admin console"
-  tags: panel,pulsar,pulsarui,admin,apache,discovery
+  tags: panel,pulsar,pulsarui,admin,apache
 
 http:
   - method: GET
@@ -41,4 +41,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220110f54d7a405ff5722fdc4901402363f3c96174397907c5836c40a5cd4e3d3e8022008b96abc4232bfeb0f1ea5728a69458f341a69d71d7fb5ba610f490a89cdeb7c:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100883d276f10cce84214351833f21cd8dd5e9a66cd833a1ba75e5de471b44b701a022100d8995758f201ec1129d8c3538c978913c6c8a344a7650ce793f425ea8ae89b4d:922c64590222798bb761d5b6d8e72950

@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"AdminLogin - MPFTVC"
-  tags: panel,mpftvc,admin,discovery
+  tags: panel,mpftvc,admin
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200ae8743318e5982cea6c5028dcf5ace0351af32e160ef32f27274e2230f17f73022100d8679d4f70b6762f7a06faca8d4cbbe7e6bba3a1adfe6597fd9e20bae5431c51:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100f1f9269d6b3364b8374deeb9fd271f52bf8b3665369e4bb95ec5001a1d2afdda022100a72a12109ed5a149bf79b600572ad7cc34370f11c886db4e9d4205f053f38111:922c64590222798bb761d5b6d8e72950

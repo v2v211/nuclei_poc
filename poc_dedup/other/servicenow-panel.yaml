@@ -22,7 +22,7 @@ info:
       - icon_hash=1701804003
       - title="servicenow"
     google-query: intitle:"servicenow"
-  tags: panel,servicenow,login,detect,discovery
+  tags: panel,servicenow,login,detect
 
 http:
   - method: GET
@@ -50,4 +50,4 @@ http:
         group: 1
         regex:
           - '(?i)g_builddate\s+=\s+"([0-9._-]+)"'
-# digest: 4b0a00483046022100a2fb9ff814f3c91054cdbc132272d30e2cd0af76ae4565a2c7a98e00cff4cabe022100c993e07d7c3bee52db5bef13204779a2fc1d2ec18dbf2f6d72b6ac9b78da8f0b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ae4ce710264aa6f96a254bbe5a55821ec3cc78245fb052c292a380d1d8e3e7d202204686477c5674e9a8be89477fa4be0f9ca1e586f847bb664804a9cf2c5d14efdc:922c64590222798bb761d5b6d8e72950

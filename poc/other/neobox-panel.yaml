@@ -13,7 +13,7 @@ info:
     max-request: 1
     shodan-query: http.html:"NeoboxUI"
     fofa-query: app="neobox-Web-Server"
-  tags: panel,neobox,webserver,discovery
+  tags: panel,neobox,webserver
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100c1c76065f5af5162b376a3b01fe9ef20c4484b36c4f3bb43ed3973e133c3d0c4022100efbe35558b2799f2773cee10b77c3e50e990fd623945088341cfbcea840a3c5a:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022100b8f5fc99469fca3fbae582c9410de47a91417b3a08530135ddc3cbf8f9054e6a021f20a53876612da3802540d83421a481cfdb53a9f843aad0e4ca377e3733cb50:922c64590222798bb761d5b6d8e72950

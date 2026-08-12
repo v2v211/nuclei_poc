@@ -14,7 +14,7 @@ info:
     vendor: librephotos_project
     product: librephotos
     shodan-query: title:"LibrePhotos"
-  tags: panel,librephotos,detect,login,discovery
+  tags: panel,librephotos,detect,login
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
         status:
           - 200
           - 404
-# digest: 4a0a004730450220761a2fac14f14df936eadbff96c195f0d56317e79ff9c04f130969fef058f6360221009182bb74b8f0dd31a454d2ff085739bf1acf15def12ec26c64910640e2e3ca75:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100be8b6c086a8267824e324eb4eb499714a1bcbb2636c69d1292a45f4fda276c8e022100e5a642b3d78bb5c5ed61d0de8977b8fcb49bfe2302439b89ba40ae8d011c3f18:922c64590222798bb761d5b6d8e72950

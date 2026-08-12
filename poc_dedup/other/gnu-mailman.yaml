@@ -21,7 +21,7 @@ info:
       - cpe:"cpe:2.3:a:gnu:mailman"
     fofa-query: title="mailing lists"
     google-query: intitle:"mailing lists"
-  tags: exposure,mailman,panel,gnu,discovery
+  tags: exposure,mailman,panel,gnu
 
 http:
   - method: GET
@@ -44,4 +44,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100fbd8d4d1b237085f9d0430ebf98c469dbe37cdf38a0c0dbba2a340565750d85d022100ea9211aae99a26d80518d241a51f5463517573b264ffa999f48e4a1ffe06d1d1:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008dc933a6732e207925671b019b046660f42a268dae72b777cf708c76585e71a1022100b1ec9e1582e6e8dae3a6157dac6704c3c72437c8712066614fc8e1a70b8c1ce2:922c64590222798bb761d5b6d8e72950

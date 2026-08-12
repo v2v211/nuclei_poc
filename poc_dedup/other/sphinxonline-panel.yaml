@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"Connection - SphinxOnline"
-  tags: panel,sphinxonline,login,detect,discovery
+  tags: panel,sphinxonline,login,detect
 
 http:
   - method: GET
@@ -39,4 +39,4 @@ http:
         group: 1
         regex:
           - 'Sphinxonline ([a-f0-9.]+)</a>'
-# digest: 4a0a0047304502207e7afbd0d7b2657b46ce2f8f5d4f496447db2666f15d36514c9fb481c81d82af022100a474f724c2a1d7923cca0e651902be179d8d8e8869d5d02b4f5f510ae65b0205:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100925eda91deec86fca8b6515ab46ed7ed5027877f0d9c9723611b99d0029fbf7e022100e0482d512de0c7ed2c66f8af79b217c88714bf25636e1e74eafd6d0670228482:922c64590222798bb761d5b6d8e72950

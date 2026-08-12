@@ -17,7 +17,7 @@ info:
     product: kiteworks
     shodan-query: http.favicon.hash:-1215318992
     fofa-query: icon_hash=-1215318992
-  tags: panel,kiteworks,login,detect,accellion,discovery
+  tags: panel,kiteworks,login,detect,accellion
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100c603b72a63ec75339558b04053c657578465929774cfa475f305e34f974c8ad6022071c898fce1d0d7aa7f783e133b3d7cbb4ef2dec4be490782d78f55f0caf1fd2e:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d3fa960988d83fb86fcf6f5badbce3ea5e620f833738947989a75319d59e706f022100c9d624f0b04b3862b08b375a168d4225596b97684be18acc046be3692eec97f8:922c64590222798bb761d5b6d8e72950

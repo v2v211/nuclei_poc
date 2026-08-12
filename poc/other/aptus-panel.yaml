@@ -14,7 +14,7 @@ info:
     shodan-query: http.title:"Aptus Login"
     product: aptus
     vendor: intelliantech
-  tags: panel,aptus,discovery
+  tags: panel,aptus
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220364424355c3180bbd0504fed01a38194f2085e158770b57090bf66f4fbd5bc120220738b94ec36e4f2978899c8145e9794cb0320f7e3281e3557ca51bfadd2583f4f:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100941acb5433349dd4232d41fcc4e2ec216dd5b4cc411483eeece8964199c9b0c4022100b2447c587ccf5ed3ad3fc58fda5bbc7f3f365d983da3b81b81a141287ff99043:922c64590222798bb761d5b6d8e72950

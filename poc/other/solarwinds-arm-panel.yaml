@@ -22,7 +22,7 @@ info:
       - services.http.response.html_title="Solarwinds Access Rights Manager"
       - services.http.response.html_title="solarwinds access rights manager"
     fofa-query: icon_hash=-1416464161
-  tags: panel,solarwinds,discovery
+  tags: panel,solarwinds
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402207080905da2c9f71f12a2dee5551db1e132fac4e88c17c604a51cd107aa561a5302203eeafbb359bdb308f2fe07c59028dfbce40f3af0a8551bf5a6a2a1fd544497e5:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a10b39ded7a6034f9adf592dd9598a52fe3bef43a50f67cfc385a7d6a8f81b2f022064a4fad9bb3592007a7483443ad559dae1906308853607863df1e671d12e5f8a:922c64590222798bb761d5b6d8e72950

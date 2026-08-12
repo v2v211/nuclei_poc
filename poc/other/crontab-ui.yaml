@@ -10,7 +10,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"Crontab UI"
-  tags: exposure,crontab,ui,panel,discovery
+  tags: exposure,crontab,ui,panel
 
 http:
   - method: GET
@@ -27,4 +27,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100854a69e746852518b166c2a21d1014b03dbb025b5b3fe9c823c0c2e586cd0c3102210099619cfded89e0515736b20359489a5c82a6e3dbd6e7472f78c22307a0f7d474:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022031d0ccb1541a1934d069d8ea04e46f2790e98d755dda622c9e8266f3997ab3fb0220589fc5755f23facb0064fb9d8ccca4c939eaabf165f9b65192150d3b2288a082:922c64590222798bb761d5b6d8e72950

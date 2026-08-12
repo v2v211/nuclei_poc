@@ -9,7 +9,7 @@ info:
     max-request: 1
     shodan-query: title:"EVlink Local Controller"
     fofa-query: title="EVlink Local Controller"
-  tags: panel,evlink,login,detect,discovery
+  tags: panel,evlink,login,detect
 
 http:
   - method: GET
@@ -26,4 +26,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220251ac73e117a9cdeb3833bd6bb8485128e6f28374be7fad4761f5f8c2d6c43be0221008e63171edd35e41ab6e1672da91724f13ee5ed0fd42f38129f6fea598ba570d7:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022061003a4e26c95f5da5958225caafa1c0d2d48f62b31437b1b64b6a3e3bdc5c8d02200fadac700ad80d621097127ef71da6a297119483e0140da47b188009423ce529:922c64590222798bb761d5b6d8e72950

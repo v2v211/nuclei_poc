@@ -6,15 +6,14 @@ info:
   severity: medium
   description: |
     A CSV injection detection template to identify and prevent CSV injection vulnerabilities by using various payloads that could be interpreted as formulas by spreadsheet applications.
-  tags: dast,csv,oast,vuln
+  tags: dast,csv,oast
 
 http:
   - pre-condition:
       - type: dsl
         dsl:
           - 'method == "GET"'
-          - 'method == "POST"'
-          - 'method == "PUT"'
+
     payloads:
       csv_fuzz:
         - "class.module.classLoader.resources.context.configFile=http://{{interactsh-url}}"
@@ -29,9 +28,7 @@ http:
         - '=IMAGE("https://{{interactsh-url}}/images/srpr/logo3w.png")'
 
     fuzzing:
-      - parts:
-          - query
-          - body
+      - part: query
         type: replace # replaces existing parameter value with fuzz payload
         mode: multiple # replaces all parameters value with fuzz payload
         fuzz:
@@ -50,4 +47,4 @@ http:
           - "text/csv"
           - "application/csv"
           - "application/vnd.ms-excel"
-# digest: 4a0a00473045022047de9a9ade28a139a37de842b237ae72a42ccfed58a24a2166c1191da3ca847d022100a321d8f99e99bba547fcc6cdb6db36a15392eeceaf24cb7f7a4f72478899ded5:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204637711c31973ca215ff678049acd7760fb780a0ea7094bd8ad65b080710868b0220553b6b7eb287d6ac7283b9b177cc5596847c8a0bc09bfb88c4d3abc79384151e:922c64590222798bb761d5b6d8e72950

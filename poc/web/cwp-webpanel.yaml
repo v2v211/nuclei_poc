@@ -14,7 +14,7 @@ info:
     fofa-query: title=="CWP |用户" || title=="Login | CentOS WebPanel" || body="CentOS WebPanel"
     product: webpanel
     vendor: control-webpanel
-  tags: panel,centos,discovery
+  tags: panel,centos
 
 http:
   - method: GET
@@ -39,4 +39,4 @@ http:
         part: header
         words:
           - "cwpsrv"
-# digest: 4a0a00473045022100a4f124e94d42da56562dbf4fd821c81a466f0a47283517c3f9634d3727ef0ad4022043c3094bc6f3c4452cfbbc0658c59d46f09d986e43e38f01f854db47d4fe98e3:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221009449aba8e628044a775ad008475d4436fa0e876b3ed7eac373f7378081f5f67802201d4c69aa31d25509774806b777e3d66d2f2458871bc2fc50de5b5fdafbc153c5:922c64590222798bb761d5b6d8e72950

@@ -15,7 +15,7 @@ info:
     shodan-query: title:"ToolJet - Dashboard"
     product: tooljet
     vendor: tooljet
-  tags: panel,tooljet,discovery
+  tags: panel,tooljet
 
 http:
   - method: GET
@@ -36,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022007b3f01fdda6b63bd6864c8496738a5adcbabba673b1278689b371e2ee0a05ac022100b63d99a715fa4f8e71025c87190108ea4953ec3e73be7afbbd7ec9eac685c8b2:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204cbdff6a3591f0c4e444b304710bd2c70be903e0c139b467eb11b59c01aa26ff022100806f43aaa3c1d872a198ae7935dcbdb29e9d6cc0fe85f22e4dbfb897a65ba4b0:922c64590222798bb761d5b6d8e72950

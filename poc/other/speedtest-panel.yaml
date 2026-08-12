@@ -17,7 +17,7 @@ info:
     vendor: speed_test_project
     product: speed_test
     shodan-query: title:"Speedtest Tracker"
-  tags: speedtest,tracker,panel,login,discovery
+  tags: speedtest,tracker,panel,login
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402202eebed3f96091598699461888e28e879e2b381d754da96ae3752c2b68439007a02204de33afe2db041daacbd112dd7ee2f0d12fafed21db6b327d705fb2f3c5de8f7:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100cfd5aa4f4d713f78da729ee225221446d0acfb9014cb25985624b245f2afd48e022100b99ed575df9970446a771db9095723522f880c59e08b9301324000ea4549a365:922c64590222798bb761d5b6d8e72950

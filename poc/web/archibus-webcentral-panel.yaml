@@ -18,7 +18,7 @@ info:
     product: web_central
     shodan-query: http.favicon.hash:889652940
     fofa-query: icon_hash=889652940
-  tags: panel,archibus,discovery
+  tags: panel,archibus
 
 http:
   - method: GET
@@ -46,4 +46,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100e3ae5a5d603ba24d43e549363d6f0fe5362fb20195b6132e0aa7fbb533c89759022100b98d85b8d594b1151888127a534c9bd1b88d7c72fcf9a2f964f00c95d3e7b269:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c2c0c4234287774d9ea4b1054f8a1805fdee61fdaa69bf1ea65ee2a3aedf2fc3022100ca0720ccb3c0c1e297745a5f318f26e16407fb1bc56940d1042022b5d685b2e9:922c64590222798bb761d5b6d8e72950

@@ -18,7 +18,7 @@ info:
       - title="EVSE Web Interface"
       - title="evse web interface"
     google-query: intitle:"evse web interface"
-  tags: panel,evlink,evse,login,detect,schneider-electric,discovery
+  tags: panel,evlink,evse,login,detect,schneider-electric
 
 http:
   - method: GET
@@ -40,4 +40,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220623b60d722a583e4d81eca7cffbe4ee750ba3880e6936ecc194b7782c8eedf7d0221008adba1df3d113a306865e8cdfed44194564832d12532f1f9561909452d777257:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220037dd6a4012c33cebf2ac9dd296c82b83bdeb9f61482aee1313ce8cc2dd50b8702210081cb4998878ae1666b34dcf2194aeb08480d91267f0ee0ab3b06fe674cccdfc1:922c64590222798bb761d5b6d8e72950

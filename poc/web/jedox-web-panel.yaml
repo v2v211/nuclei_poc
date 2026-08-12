@@ -26,7 +26,7 @@ info:
     fofa-query:
       - title="jedox web login"
       - title="jedox web - login"
-  tags: panel,jedox,detect,discovery
+  tags: panel,jedox,detect
 
 http:
   - method: GET
@@ -50,4 +50,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100c582e42f3a7b22a592e5fd6f18d41b49f530ee0d08a623d29475af83144b66680220218b8682220fc6f158208d9e7d79cbbe74633bc101bf559f805ed29f03503ea4:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203cf23789598c04a08c7f9a17ff88a866b7140e49007861ae1f1d2c1874bec9a9022100fcd111c96ee0269229089ba2f69f76a91ac79c3533dd2b3ab9d31145d982f447:922c64590222798bb761d5b6d8e72950

@@ -1,19 +1,22 @@
 id: phalcon-framework-source
 
 info:
-  name: Phalcon Framework - Source Code Leakage
+  name: Phalcon Framework Source Code leakage
   author: philippedelteil
   severity: high
-  description: Phalcon Framework source code was discovered.
-  metadata:
-    max-request: 1
-  tags: exposure,debug,phalcon,vuln
+  tags: exposure,debug,phalcon
 
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/anything_here"
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET /anything_here HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
     matchers-condition: and
     matchers:
       - type: word
@@ -26,4 +29,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200a3a93bff904f4450e6dbe1327400fc9365ccd697749713e95f38b664c570d16022100e28d923ab6f6ecfb5fe9e0989088e82cd4fbc0739e049ed6c71d0f14189aada2:922c64590222798bb761d5b6d8e72950

@@ -13,7 +13,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: product:"MS .NET Remoting httpd"
-  tags: network,detect,microsoft,dotnet,detection,tcp,discovery
+  tags: network,detect,microsoft,dotnet,detection,tcp
 tcp:
   - inputs:
       - data: "\n"
@@ -32,4 +32,4 @@ tcp:
       - type: regex
         regex:
           - ".NET CLR ([0-9.]+)"
-# digest: 4a0a00473045022065eb78b3ed57ddc99b2d6756f32c0c766bc82fd57e5a7ba257e5fa832645c893022100a15d3f21dcd24a51cad685194499beccdee4cbc06b2bae0fbbcb5b03f1d94e17:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220282ef27a851134f0491bd24bf44b6584ec4ae0b89eed22aa45b491a91f96ddf3022100bc833023ae5152ae6644874fada8df366f9cfbdec4023a9ca1ddd9010b262edd:922c64590222798bb761d5b6d8e72950

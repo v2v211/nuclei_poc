@@ -15,7 +15,7 @@ info:
     vendor: kopano
     product: webapp
     shodan-query: http.title:"Kopano WebApp"
-  tags: panel,kopano,login,detect,discovery
+  tags: panel,kopano,login,detect
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
         group: 1
         regex:
           - '\?kv([0-9.]+)"'
-# digest: 4b0a00483046022100bb806cd7bb69b3f81016726634099c47ad1330af66aeb86342b09b66ae24a94a022100c075b833c8f2187bc76a3382304360094dc4b5c04a3fe4739b4bcf2b80164637:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a8a568e860aed110b8e124440342f1981a478ab6c2f34e5a44d4ab49ad472ea8022030ebc4384fba54e5d879276072b746bf0933e17cb6b9f2e1a3eb2ae06b00b2d9:922c64590222798bb761d5b6d8e72950

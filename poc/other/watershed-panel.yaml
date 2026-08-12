@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"Watershed LRS"
-  tags: panel,watershed,discovery
+  tags: panel,watershed
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200b196e317f8e813b30d8edd458cf9e3c8f237dba26005e411d34c5b5bb94ad15022100ed6f2df0eacbe86f54b39dcf1ab69535f91f116e0f0fec3d5e3081ccd02aae48:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ec71170ff9d2ab7def7add9a7ffcab6969634550059a6d7c63f53e7c72a3e72d02207003006933eb71028799c41cb310cdaf96472a9fa065b50f0d778924bf4124a6:922c64590222798bb761d5b6d8e72950

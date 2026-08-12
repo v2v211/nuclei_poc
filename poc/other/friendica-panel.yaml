@@ -20,7 +20,7 @@ info:
       - http.title:"friendica"
     fofa-query: title="friendica"
     google-query: intitle:"friendica"
-  tags: friendica,panel,login,detect,discovery
+  tags: friendica,panel,login,detect
 
 http:
   - method: GET
@@ -47,4 +47,4 @@ http:
         group: 1
         regex:
           - '(?i)v=([a-z0-9.-]+)'
-# digest: 490a004630440220522f308c7efb787abacbfda8246718e6c11e80535b5c177ec801da0baf5a6f2902202b4f16358c9eefd8a3b2dc63a56e3373c7476d54995d5e13ed1b20b452895bbd:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d8b594d3ac5e378f7b6e6e02d1f15c89c4d11446379ebb2856093698d52d51cd0221008a3a205c2e8014cfbf28bd3fc68d6bd8bae0d537f3e2ac20ad0b897378a93801:922c64590222798bb761d5b6d8e72950

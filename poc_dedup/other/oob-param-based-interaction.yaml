@@ -5,13 +5,8 @@ info:
   author: pdteam
   severity: info
   description: The remote server fetched a spoofed URL from the request parameters.
-  reference:
-    - https://github.com/PortSwigger/collaborator-everywhere
-  classification:
-    cwe-id: CWE-918
-  metadata:
-    max-request: 1
-  tags: oast,ssrf,generic,vuln
+  reference: https://github.com/PortSwigger/collaborator-everywhere
+  tags: oast,ssrf,generic
 
 http:
   - method: GET
@@ -24,4 +19,3 @@ http:
         name: http
         words:
           - "http"
-# digest: 4a0a00473045022100dd0658889aae78c944deed88d5655bc05892f350f1f17eb818a7150d6fe886ef022065eaf6c67cbcbbe55732e8b91feea8cfa0a80e9674cb92b276888f593ed53215:922c64590222798bb761d5b6d8e72950

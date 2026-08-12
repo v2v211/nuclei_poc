@@ -13,7 +13,7 @@ info:
     max-request: 1
     shodan-query: http.html:"chronoslogin.js"
     fofa-query: body="chronoslogin.js"
-  tags: panel,chronos,login,detect,discovery
+  tags: panel,chronos,login,detect
 
 http:
   - method: GET
@@ -41,4 +41,4 @@ http:
         group: 1
         regex:
           - '(?i)chronos\s+([0-9.-]+)'
-# digest: 490a004630440220060dbc568589d60ba639919a2a7e6c8ac0a69b0fa63725e95ea9c748af23c41302205f92aac76cbe14fec6d94b45a40e5c467cd13f86260c111d71be5dcbdedcbcc5:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022009f7438da9d01090973ae8536e098964867b8691a578fe89fb6613124a89f114022100c3107046e922d9da17b81e71a7de12a2eb23c2f6370713c4ea47bc9313a125b4:922c64590222798bb761d5b6d8e72950

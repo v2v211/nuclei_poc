@@ -13,7 +13,7 @@ info:
     vendor: loytec
     product: lvis-3me
     shodan-query: "loytec"
-  tags: iot,loytec,discovery
+  tags: iot,loytec
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220782d286ecc99f978bd7f753905b4cc8c74866502fca579e862d1825e386b17c7022100f944172f0f28e0595fdc0670b7eab4c2c8b76e47ec8f55298ab9bb00391e046d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ae7e651f295e9ea7145086593d5d7f09d0493bfc2034ded0c865774e65dbbc4f02201508f5618a16ea2265afcf87731ad9c7aa9b0ab5bf4eb3371a441bc93547e1e9:922c64590222798bb761d5b6d8e72950

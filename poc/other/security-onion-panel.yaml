@@ -21,7 +21,7 @@ info:
       - http.title:"security onion"
     fofa-query: title="security onion"
     google-query: intitle:"security onion"
-  tags: panel,security,onion,detect,securityonionsolutions,discovery
+  tags: panel,security,onion,detect,securityonionsolutions
 
 http:
   - method: GET
@@ -43,4 +43,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022015d084722a0f7b325ca0d98bccc1356f4816c6bc35c3ed899d355b2db1c7d4040220422b09054189c9ee39040ad5df0121844de96a69170f61fc1ca4e5c1818916b1:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207709f3b23040e411903e5e7e1fc2c392059109a4af2792989e1550a0b5145fb402202349f1b0c0436140c348d6fde159df750991fb7e05beaa073bf7580eab97332e:922c64590222798bb761d5b6d8e72950

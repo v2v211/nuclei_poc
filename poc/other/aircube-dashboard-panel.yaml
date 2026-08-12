@@ -15,7 +15,7 @@ info:
     shodan-query: http.title:"AirCube Dashboard"
     product: aircube
     vendor: ui
-  tags: panel,aircube,discovery
+  tags: panel,aircube
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100ff31111aa627e5cc486fd7cb37aec62cc8b750ddec0671e03cb95aa48f4b4905022074656789eb5772cfc9df220aed8fcc74fc4ad5089c301561b58ffdb09c031f3c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c0a6b8077c1dade4a54f5a18b1925eb0089497914d0a309491dcc1a20000f09f022022e219eb9b82ed187386a837c7124b7661f6d99723828b4ed0c61962883ec320:922c64590222798bb761d5b6d8e72950
