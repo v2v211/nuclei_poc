@@ -8,11 +8,13 @@ info:
   reference:
     - https://github.com/achuna33/MYExploit/blob/8ffbf7ee60cbd77ad90b0831b93846aba224ab29/src/main/java/com/achuna33/Controllers/SeeyonController.java
     - https://github.com/hktalent/scan4all/blob/main/pocs_go/seeyon/SeeyonFastjson.go
+  classification:
+    cwe-id: CWE-94,CWE-502
   metadata:
     verified: true
     max-request: 1
     fofa-query: app="致远互联-OA"
-  tags: seeyon,oa,rce,fastjson,oast
+  tags: seeyon,oa,rce,fastjson,oast,vuln
 
 http:
   - raw:
@@ -34,4 +36,4 @@ http:
         part: body
         words:
           - "com.alibaba.fastjson.JSONException"
-# digest: 4b0a00483046022100fa75bc4796caec09456fb9950680f5f9663ba43be6bdcdafa30a3f22fe526275022100cce2c4f688fda4fdd678cc3cb473cc9c637c0135f7aec5a85df40169c1a2a5b8:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502207a72e2b01f5cd688a8ee63fe9e04dda373a43d015da5d9bfad9e67afbb26ef71022100d9082f532129fb52a0962a804b5915d1e1abb6420d23d484435a618ea9dac75f:922c64590222798bb761d5b6d8e72950

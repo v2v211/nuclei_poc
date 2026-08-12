@@ -1,1 +1,1 @@
-["bitrix-csrf-vulnerabilities.yaml","csrf-double-submit-cookie.yaml","csrf.yaml","insecure-csrf-token-password-change.yaml"]
+["csrf-token-leakage.yaml","insecure-csrf-token-password-change.yaml"]
