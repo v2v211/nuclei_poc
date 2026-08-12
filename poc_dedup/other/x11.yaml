@@ -1,12 +1,14 @@
 id: x11
 info:
-  name: DEC eXcursion X server
+  name: HDS X Server
   author: nmap,cn-kali-team
   tags: detect,tech,x11,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: terminal server
+    operating_system: NetOS
     rarity: 4
+    version: $1
 tcp:
 - name: x11-probe
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: x11
     type: regex
     regex:
-    - (?i)^\x01\x00\x0b\x00\x00.....\x00\x00\x00\x00..\xff\xff\?\x00.\x00\x00..\x00\xff\xff......\x08....\x00DECWINDOWS DigitalEquipmentCorporation, eXcursion
+    - (?i)^\x01\0\x0b\0\0.....\0\0\0\0.*HDS Network Systems, Inc\. \(([^)]+)\)

@@ -24,7 +24,7 @@ http:
         words:
           - "org.springframework.boot.actuate"
           - "beans"
-          - "context"
+          - "contexts"
         condition: and
 
       - type: status
