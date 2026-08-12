@@ -1,5 +1,4 @@
 id: ftpconfig
-
 info:
   name: Atom remote-ssh ftpconfig Exposure
   author: geeknik,DhiyaneshDK
@@ -8,13 +7,11 @@ info:
   metadata:
     verified: true
     shodan-query: html:ftpconfig
-  tags: atom,ftp,config,exposure,files
-
-http:
+  tags: atom,ftp,config,exposure
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/.ftpconfig"
-
     matchers-condition: and
     matchers:
       - type: word
@@ -23,7 +20,6 @@ http:
           - '"host":'
           - '"user":'
         condition: and
-
       - type: status
         status:
           - 200

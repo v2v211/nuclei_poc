@@ -4,7 +4,10 @@ info:
   name: Grafana Public Signup
   author: pdteam
   severity: medium
-  tags: grafana,intrusive
+  metadata:
+    max-request: 1
+    shodan-query: title:"Grafana"
+  tags: grafana,intrusive,misconfig
 
 http:
   - raw:
@@ -15,7 +18,7 @@ http:
         Origin: {{BaseURL}}
         Referer: {{BaseURL}}
 
-        {"username":"nuclei_{{randstr}}","password":"{{randstr_1}}"}
+        {"username":"{{randstr}}","password":"{{randstr_1}}"}
 
     matchers-condition: and
     matchers:
