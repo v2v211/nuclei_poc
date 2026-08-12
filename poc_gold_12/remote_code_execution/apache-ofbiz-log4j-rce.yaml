@@ -16,14 +16,14 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
     cve-id: CVE-2021-44228
-    cwe-id: CWE-77
+    cwe-id: CWE-95
     cpe: cpe:2.3:a:apache:ofbiz:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.html:"Apache OFBiz"
     product: ofbiz
     vendor: apache
-  tags: cve,cve2021,ofbiz,oast,log4j,rce,apache,jndi,kev
+  tags: cve,cve2021,ofbiz,oast,log4j,rce,apache,jndi,kev,vuln
 variables:
   rand1: '{{rand_int(111, 999)}}'
   rand2: '{{rand_int(111, 999)}}'
@@ -63,4 +63,4 @@ http:
         group: 1
         regex:
           - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
-# digest: 490a00463044022077806d02c5b8176c11bd5b8810ff4c715d130d525054b9e4e1e1aa2fc3f8622d022071c416e2ae0ed38bcdb3f579cf3020877782b2addb3adc0858d7e27f35ab4ff2:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100870d7fbbd76720673f5ec4a8a501e4f0dbfdd4ecea25ac7ccb32eff99c5079cf02206b762570e8707e7456e8faa2a7460fa7afa928407e09e9ebaf919a36ffde41dd:922c64590222798bb761d5b6d8e72950
