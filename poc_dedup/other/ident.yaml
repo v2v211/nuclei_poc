@@ -1,6 +1,6 @@
 id: ident
 info:
-  name: Liedentd
+  name: Nullidentd
   author: nmap,cn-kali-team
   tags: detect,tech,ident,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: ident
     type: regex
     regex:
-    - '^GET / HTTP/1\.0 : USERID : UNIX : ([-.\w]+)\r\n$'
+    - '^GET / HTTP/1\.0 : USERID : UNIX : ([-.\w]+)\r\n : USERID : UNIX : [-.\w]+\r\n'

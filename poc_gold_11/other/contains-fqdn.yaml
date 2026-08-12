@@ -1,20 +1,25 @@
 id: contains-fqdn
+
 info:
-  author: mertugur
   name: fqdn Detect
+  author: mertugur
   severity: info
   tags: tech,fqdn
+
 requests:
-- extractors:
-  - part: body
-    regex:
-    - (^.*FQDN.*$)
-    type: regex
-  matchers:
-  - part: body
-    regex:
-    - FQDN:+
-    type: regex
-  method: GET
-  path:
-  - '{{BaseURL}}'
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers:
+
+      - type: regex
+        part: body
+        regex:
+          - "FQDN:+"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "(^.*FQDN.*$)"

@@ -11,11 +11,9 @@ info:
     cpe: cpe:2.3:a:livezilla:livezilla:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: livezilla
     product: livezilla
-    shodan-query: http.html:livezilla
-    fofa-query: body=livezilla
-  tags: panel,livezilla,login,discovery
+    vendor: livezilla
+  tags: panel,livezilla,login
 
 http:
   - method: GET
@@ -31,4 +29,4 @@ http:
       - type: word
         words:
           - 'LiveZilla'
-# digest: 4a0a004730450220065237a30885a0ec530e331d3998c97591e7af51cb1d06352306e3795e71601e0221009020457638a50de9ef01afb48d82e1c1a6460daaf4590c13d21b5bdc11dc783b:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203ed4a7a6629a7c955fcb6e34bb94e631ee25f78a89539dd3c2a1a33728f98c00022034947089fca2cc071145d0ad52b3459ed113be13fd6ef83791be2fb2608fa02f:922c64590222798bb761d5b6d8e72950

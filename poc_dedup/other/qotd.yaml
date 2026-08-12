@@ -5,8 +5,7 @@ info:
   tags: detect,tech,qotd,service
   severity: info
   metadata:
-    info: English
-    operating_system: Windows
+    info: Portuguese
     product: qotd
     rarity: 1
     vendor: microsoft
@@ -22,4 +21,4 @@ tcp:
   - name: qotd
     type: regex
     regex:
-    - ^"(?:My spelling is Wobbly\.|Man can climb to the highest summits,|In Heaven an angel is nobody in particular\.|Assassination is the extreme form of censorship\.|When a stupid man is doing|We have no more right to consume happiness without|We want a few mad people now.|The secret of being miserable is to have leisure to|Here's the rule for bargains:|Oh the nerves, the nerves; the mysteries of this machine called man|A wonderful fact to reflect upon,|It was as true as taxes is\.)
+    - ^"(?:Prazos longos sao f\xa0ceis de subscrever\.|Deus, para a felicidade do homem, inventou a f\x82 e o amor\.|Ao vencido, \xa2dio ou compaixao, ao vencedor, as batatas\.|Quem nao sabe que ao p\x82 de cada bandeira p\xa3blica,|Nao te irrites se te pagarem mal um benef\xa1cio; antes cair|A vida, como a antiga Tebas, tem cem portas\.)

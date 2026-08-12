@@ -1,13 +1,14 @@
 id: vnc-http
 info:
-  name: TigerVNC
+  name: RealVNC
   author: nmap,cn-kali-team
   tags: detect,tech,vnc-http,service
   severity: info
   metadata:
-    product: tigervnc
+    info: 'resolution: $1x$2; VNC TCP port: $3'
+    product: realvnc
     rarity: 1
-    vendor: tigervnc
+    vendor: realvnc
     verified: true
 tcp:
 - name: get-request
@@ -20,4 +21,4 @@ tcp:
   - name: vnc-http
     type: regex
     regex:
-    - '^HTTP/1\.0 200 OK\nContent-Type: text/html\nContent-Length: \d+\nConnection: close\n\n\n<HTML><HEAD><TITLE>Remote Desktop</TITLE></HEAD>\n<BODY>\n<APPLET CODE="com\.tigervnc\.vncviewer\.VncViewer" ARCHIVE="VncViewer\.jar"'
+    - ^HTTP/1\.0 200 OK\n\n<HTML><TITLE>VNC desktop</TITLE>\n<APPLET CODE=vncviewer\.class ARCHIVE=vncviewer\.jar WIDTH=(\d+) HEIGHT=(\d+)>\n<param name=PORT value=(\d+)></APPLET></HTML>\n
