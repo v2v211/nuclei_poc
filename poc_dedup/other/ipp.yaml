@@ -1,12 +1,14 @@
 id: ipp
 info:
-  name: Epson 980N Printer
+  name: PrinterOn Print Delivery Gateway ipp
   author: nmap,cn-kali-team
   tags: detect,tech,ipp,service
   severity: info
   metadata:
-    device_type: printer
+    product: print_delivery_gateway
     rarity: 1
+    vendor: printeron
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ipp
     type: regex
     regex:
-    - ^<HEAD><TITLE>Not Found</TITLE></HEAD><BODY><H1><B>Not Found</B></H1><P>The requested URL \"\"was not found on this server\.</BODY>\r\n
+    - '^HTTP/1\.0 200 OK\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\nreturn_code=FCS9015\?error_text=This server does not support this API\.'

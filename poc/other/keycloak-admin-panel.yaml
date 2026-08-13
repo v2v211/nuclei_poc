@@ -23,7 +23,7 @@ info:
       - body="keycloak"
       - title="keycloak"
     google-query: intitle:"keycloak"
-  tags: panel,keycloak,redhat,discovery
+  tags: panel,keycloak,redhat
 
 http:
   - method: GET
@@ -31,11 +31,8 @@ http:
       - "{{BaseURL}}"
       - "{{BaseURL}}/auth/admin"
       - "{{BaseURL}}/auth/admin/master/console/"
-      - "{{BaseURL}}/admin"
-      - "{{BaseURL}}/admin/master/console/"
 
     stop-at-first-match: true
-
     host-redirects: true
     max-redirects: 2
 
@@ -54,4 +51,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044021f76fb0bec3bbe6499d260c3cce723f779bf7f2813035d44f655c5bc52603c6b022100f3783335c90bde9bcb4d48150627998fb4a6a6190485e28d55d99efcc68c52f1:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d11ae065556e051ea67da8746ca85bcafcf8c78c1344040086c1101289dcca37022011803596066e9e0036008168292f987ba83b3682cba3abe97c441d0f97f22ce1:922c64590222798bb761d5b6d8e72950

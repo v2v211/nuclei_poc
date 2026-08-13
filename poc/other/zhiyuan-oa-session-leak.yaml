@@ -1,28 +1,23 @@
 id: zhiyuan-oa-session-leak
 
 info:
-  name: Zhiyuan Oa Session Leak
+  name: Zhiyuan OA Session Leak
   author: pikpikcu
   severity: medium
-  reference: https://www.zhihuifly.com/t/topic/3345
-  tags: zhiyuan,leak,disclosure
+  description: A vulnerability in Zhiyuan OA allows remote unauthenticated users access to sensitive session information via the 'getSessionList.jsp' endpoint.
+  reference:
+    - https://www.zhihuifly.com/t/topic/3345
+  metadata:
+    max-request: 1
+  tags: zhiyuan,leak,disclosure,seeyon
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/yyoa/ext/https/getSessionList.jsp?cmd=getAll"
 
-    raw:
-      - |
-        GET /yyoa/ext/https/getSessionList.jsp?cmd=getAll HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
     matchers-condition: and
     matchers:
-
       - type: word
         words:
           - "<usrID>"
@@ -32,3 +27,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022100a8160ecd11d5355161f7e01c9f8b89edf434ffe96fa97da7ddcf256802ef76d9022020e6adcffabb2354e18b0b2ceff9c02587c85a92347de649c9ccc6d97d39fd8e:922c64590222798bb761d5b6d8e72950

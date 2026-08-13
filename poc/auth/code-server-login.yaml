@@ -1,35 +1,43 @@
-http:
-- host-redirects: true
-  matchers:
-  - condition: and
-    part: body
-    type: word
-    words:
-    - Welcome to code-server
-    - Please log in below. Check the config file at ~/.config/code-server/config.yaml
-      for the password.
-  - status:
-    - 200
-    type: status
-  matchers-condition: and
-  max-redirects: 2
-  method: GET
-  path:
-  - '{{BaseURL}}/login'
 id: code-server-login
+
 info:
+  name: Code-Server Login Panel - Detect
   author: tess
+  severity: info
+  description: Code-Server login panel was detected.
   classification:
-    cpe: cpe:2.3:a:coder:code-server:*:*:*:*:*:*:*:*
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cwe-id: CWE-200
-  description: Code-Server login panel was detected.
+    cpe: cpe:2.3:a:coder:code-server:*:*:*:*:*:*:*:*
   metadata:
+    verified: true
     max-request: 1
+    vendor: coder
     product: code-server
     shodan-query: http.title:"code-server login"
-    vendor: coder
-    verified: true
-  name: Code-Server Login Panel - Detect
-  severity: info
+    fofa-query: title="code-server login"
+    google-query: intitle:"code-server login"
   tags: panel,detect,misc,coder
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/login"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "Welcome to code-server"
+          - "Please log in below. Check the config file at ~/.config/code-server/config.yaml
+            for the password."
+        condition: and
+
+      - type: status
+        status:
+          - 200
+# digest: 490a0046304402200681ae642a11b2521a945cc54f7a9fc43c489a95f20c938107388ab81d4fc49c02200a3f31d840d41a0937806dd5735a2313fcc7c8df476eacc621babaa592a1cb20:922c64590222798bb761d5b6d8e72950

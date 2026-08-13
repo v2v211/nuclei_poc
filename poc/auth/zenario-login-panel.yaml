@@ -1,22 +1,25 @@
 id: zenario-login-panel
 
 info:
-  name: Zenario Admin login
+  name: Zenario Admin Login Panel - Detect
   author: __Fazal
   severity: info
-  tags: panel,zenario
+  description: Zenario admin login panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+    cpe: cpe:2.3:a:tribalsystems:zenario:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: tribalsystems
+    product: zenario
+  tags: panel,zenario,tribalsystems
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/zenario/admin/welcome.php'
 
-    raw:
-      - |
-        GET /zenario/admin/welcome.php HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko)
     matchers-condition: and
     matchers:
       - type: status
@@ -26,3 +29,4 @@ requests:
       - type: word
         words:
           - "Welcome to Zenario"
+# digest: 4a0a004730450221008628ef5482d91f28f9b28dddccde2475bd62087837b75cb26b25961f048df8a5022070de65d6cf128d6c1da646807f82eba1d8f317af98ebb6c834a444c5ca155246:922c64590222798bb761d5b6d8e72950

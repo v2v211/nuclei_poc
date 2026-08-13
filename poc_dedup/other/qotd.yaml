@@ -5,7 +5,8 @@ info:
   tags: detect,tech,qotd,service
   severity: info
   metadata:
-    info: Portuguese
+    info: French
+    operating_system: Windows
     product: qotd
     rarity: 1
     vendor: microsoft
@@ -21,4 +22,4 @@ tcp:
   - name: qotd
     type: regex
     regex:
-    - ^"(?:Prazos longos sao f\xa0ceis de subscrever\.|Deus, para a felicidade do homem, inventou a f\x82 e o amor\.|Ao vencido, \xa2dio ou compaixao, ao vencedor, as batatas\.|Quem nao sabe que ao p\x82 de cada bandeira p\xa3blica,|Nao te irrites se te pagarem mal um benef\xa1cio; antes cair|A vida, como a antiga Tebas, tem cem portas\.)
+    - ^"(?:L'art de persuader consiste autant|Le peu que je sais, c'est \x85 mon ignorance|Certaines \x83mes vont \x85 l'absolu comme l'eau|Le m\x82rite a sa pudeur comme la chastet|Rien de plus futile, de plus faux, de plus|\xb7 vaincre sans p\x82ril, on triomphe|Le comble de l'orgueil, c'est de se)

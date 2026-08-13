@@ -15,7 +15,7 @@ info:
     shodan-query: http.title:"nconf"
     product: nconf
     vendor: nconf_project
-  tags: panel,nconf
+  tags: panel,nconf,discovery
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502205c9d30c3861e9bf77ddc21f6312ac8136bbd2a818c5a11b9002b668851461e4002210081bd87d371c560f3627d97e00847bc7b4d232a34a570d1ce5df93952fd64c2c4:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008f9d062dd362ace6c787c992ebabb3325a0f2737bcc271cea3ee3f16de751d61022100be0b443ba30dfe193e5b97e53b27e324ae9277ee0f82362933ca9911be1bf33a:922c64590222798bb761d5b6d8e72950

@@ -11,8 +11,8 @@ info:
     cpe: cpe:2.3:a:apache:ambari:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    product: ambari
     vendor: apache
+    product: ambari
   tags: panel,apache,ambari,exposure
 
 http:
@@ -26,4 +26,4 @@ http:
           - '<title>Ambari</title>'
           - 'href="http://www.apache.org/licenses/LICENSE-2.0"'
         condition: and
-# digest: 490a0046304402204acc787ea236f0c2b4073dd4042b4cac95511ea9f6e9ed03d23855b0c1c94aeb02200e69631855bfc6da502fb4eb99f610caa62e18bd66806eec5b1d32a54ece8e59:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220362bb12b26421eb594dd89edeb1041feeff5130cbecd7d1e0fe803531296a5b6022100ec20001ce3e5d9025405c8c19b56814b5ea3872db9bb8a454c446602f5471eb5:922c64590222798bb761d5b6d8e72950

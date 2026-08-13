@@ -16,4 +16,4 @@ tcp:
   - name: clsbd
     type: regex
     regex:
-    - ^\x00\x00\x00\x10ClsBoolVersion 1$
+    - ^\0\0\0\x10ClsBoolVersion 1$

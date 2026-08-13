@@ -1,24 +1,23 @@
 id: shell
 info:
-  name: Windows Services for Unix rsh
+  name: Netapp ONTAP rshd
   author: nmap,cn-kali-team
   tags: detect,tech,shell,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: windows_services_for_unix
-    rarity: 8
-    vendor: microsoft
+    product: data_ontap
+    rarity: 4
+    vendor: netapp
     verified: true
 tcp:
-- name: socks4
+- name: rpccheck
   inputs:
-  - data: \x04\x01\x00\x16\x7f\x00\x00\x01root\x00
+  - data: \x80\0\0\x28\x72\xFE\x1D\x13\0\0\0\0\0\0\0\x02\0\x01\x86\xA0\0\x01\x97\x7C\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
   host:
   - '{{Hostname}}'
-  port: 199,1080,1090,1095,1100,1105,1109,3128,6588,8000,8008,8080,8088,6660-6669
+  port: 81,111,199,514,544,710,711,1433,2049,4045,4999,7000,8307,8333,17007,38978,32750-32810
   extractors:
   - name: shell
     type: regex
     regex:
-    - ^\x00Access is denied\n$
+    - ^\x01Permission denied\.\n$

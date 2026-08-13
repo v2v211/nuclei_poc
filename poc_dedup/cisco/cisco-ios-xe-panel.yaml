@@ -13,11 +13,11 @@ info:
     cwe-id: CWE-200
     cpe: cpe:2.3:o:cisco:ios_xe:*:*:*:*:*:*:*:*
   metadata:
+    verified: "true"
     max-request: 2
+    vendor: cisco
     product: ios_xe
     shodan-query: http.html_hash:1076109428
-    vendor: cisco
-    verified: "true"
   tags: panel,cisco,ssl
 ssl:
   - address: "{{Host}}:{{Port}}"
@@ -38,4 +38,4 @@ http:
       - type: kval
         kval:
           - ssl_issuer_dn
-# digest: 4a0a0047304502202fe35c96fb944e3d037046c1f09ff2f3ed415c0d970e45d4d773e6cf4ae54524022100e9932ba706b8ed5327ed31e38d683ece8904f976e2d79612340df07051645348:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502207cf0cba29c594464e79a9df84ac8fe1a77bd3caa52148e41e6f3e29d6cb6225e022100ce7a73b7cf533945a9f0bebe8a313493cf2a5293116683882705b20e799a4670:922c64590222798bb761d5b6d8e72950

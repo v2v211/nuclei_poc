@@ -19,7 +19,7 @@ info:
       - http.title:"sonicwall analyzer login"
     fofa-query: title="sonicwall analyzer login"
     google-query: intitle:"sonicwall analyzer login"
-  tags: panel,sonicwall,discovery
+  tags: panel,sonicwall
 
 http:
   - method: GET
@@ -36,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402200c582889cea053b61fdf0a7102dbea97db7c07b64e38a509814241c866d7ed41022050cefe17937471cc10634ffef5fb502c712c85a8474ad59492b4b78f8c12abcd:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204adfe549c0cd4e035eba1c1009f5f7cb2106da7645d0fe626ec5641759e62467022055813e45ae2a81ecb7bbbadebc96d44c78ee0914718086dae71a84ace5820fb0:922c64590222798bb761d5b6d8e72950

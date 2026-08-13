@@ -1,12 +1,17 @@
 id: upnp
 info:
-  name: Kodi upnpd
+  name: MiniUPnP
   author: nmap,cn-kali-team
   tags: detect,tech,upnp,service
   severity: info
   metadata:
-    info: UPnP $1; DLNADOC $2
+    device_type: router
+    info: Neuf Box router; UPnP $1
+    product: miniupnpd
     rarity: 1
+    vendor: miniupnp_project
+    verified: true
+    version: $2
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +23,4 @@ tcp:
   - name: upnp
     type: regex
     regex:
-    - '(?i)^HTTP/1\.1 (?:[^\r\n]*\r\n(?!\r\n))*?Server: UPnP/([\d.]+) DLNADOC/([\d.]+) Kodi\r\n'
+    - '(?i)^HTTP/1\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?Server: neufbox UPnP/([\w._-]+) MiniUPnPd/([\w._-]+)\r\n'

@@ -1,1 +1,1 @@
-["Springboot-Httptrace.yaml","apache-httpd-rce.yaml","crystal-live-http-server-lfi.yaml","http-username-password.yaml","spnego-http.yaml"]
+["Springboot-Httptrace.yaml","crystal-live-http-server-lfi.yaml","hidden-http-header-injection.yaml","http-headers-cross-origin-embedder-policy.yaml","http-username-password.yaml","httponly-cookie-detect.yaml","spnego-http.yaml","springboot-httptrace.yaml"]

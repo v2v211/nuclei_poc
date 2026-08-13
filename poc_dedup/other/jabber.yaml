@@ -1,13 +1,13 @@
 id: jabber
 info:
-  name: Prosody Jabber client
+  name: jabberd instant messaging server
   author: nmap,cn-kali-team
   tags: detect,tech,jabber,service
   severity: info
   metadata:
-    product: prosody
+    product: jabberd
     rarity: 1
-    vendor: prosody
+    vendor: jabberd
     verified: true
 tcp:
 - name: get-request
@@ -20,4 +20,4 @@ tcp:
   - name: jabber
     type: regex
     regex:
-    - ^<\?xml version='1\.0'\?><stream:stream xmlns:stream='http://etherx\.jabber\.org/streams' xml:lang='en' xmlns='jabber:client'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
+    - ^<stream:error><invalid-xml xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text xmlns='urn:ietf:params:xml:ns:xmpp-streams' xml:lang='en'>Invalid XML</text></stream:error>
