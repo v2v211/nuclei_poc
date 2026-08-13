@@ -20,4 +20,4 @@ tcp:
   - name: kshell
     type: regex
     regex:
-    - '^\x01rshd ?: [-\d]+ The host name for your address is not known\.\n'
+    - '^\x01rshd: [-\d]+ The remote user login is not correct\.\n'

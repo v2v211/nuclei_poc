@@ -1,15 +1,13 @@
 id: jabber
 info:
-  name: ejabberd
+  name: Prosody Jabber client
   author: nmap,cn-kali-team
   tags: detect,tech,jabber,service
   severity: info
   metadata:
-    hostname: $1
-    info: Protocol $2
-    product: ejabberd
+    product: prosody
     rarity: 1
-    vendor: process-one
+    vendor: prosody
     verified: true
 tcp:
 - name: get-request
@@ -22,4 +20,4 @@ tcp:
   - name: jabber
     type: regex
     regex:
-    - ^<\?xml version='1\.0'\?><stream:stream xmlns='jabber:client' xmlns:stream='http://etherx\.jabber\.org/streams' id='\d+' from='([\w._-]+)' version='([\d.]+)'>
+    - ^<\?xml version='1\.0'\?><stream:stream xmlns:stream='http://etherx\.jabber\.org/streams' xml:lang='en' xmlns='jabber:client'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>

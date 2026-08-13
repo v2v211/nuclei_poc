@@ -17,4 +17,4 @@ tcp:
   - name: flexlm
     type: regex
     regex:
-    - (?i)^W.\0\0\0\0
+    - (?i)^W.-60\0
