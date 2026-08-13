@@ -15,7 +15,7 @@ info:
     shodan-query: http.title:"noVNC"
     product: novnc
     vendor: novnc
-  tags: panel,novnc
+  tags: panel,novnc,discovery
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100c12981cb347d59741b1dd45267cb497efe90022ce26a937ee6009ecc6adecdfc02202f717cd0cd4cedaf01a46852b3e8dd527adaa1a078d0f9632a03f9dc7abfe442:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022055ccb300c0bf28905da3666e72cca9a2d2b1b22307fca05b35bfc5e5e14072c5022100a4315404c90705fa78a7a126774f0c1f22c19437095408e067e9952af3551eb9:922c64590222798bb761d5b6d8e72950
