@@ -1,5 +1,4 @@
 id: gocd-encryption-key
-
 info:
   name: GoCd Encryption Key
   author: dhiyaneshDk
@@ -9,31 +8,24 @@ info:
     - https://blog.sonarsource.com/gocd-pre-auth-pipeline-takeover
     - https://twitter.com/wvuuuuuuuuuuuuu/status/1456316586831323140
   metadata:
-    max-request: 1
     shodan-query: http.title:"Create a pipeline - Go",html:"GoCD Version"
   tags: go,gocd,exposure,misconfig
-
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/go/add-on/business-continuity/api/cipher.aes"
-
     matchers-condition: and
     matchers:
-
       - type: status
         status:
           - 200
-
       - type: regex
         regex:
           - "([a-z0-9]){32}"
-
       - type: word
         part: header
         words:
           - "text/plain"
-
     extractors:
       - type: regex
         regex:

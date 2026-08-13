@@ -6,7 +6,7 @@ info:
   severity: info
   metadata:
     rarity: 1
-    version: 1.6.0 -
+    version: 1.5.2 or earlier
 tcp:
 - name: generic-lines
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: rethinkdb-client
     type: regex
     regex:
-    - '^ERROR: this is the rdb protocol port \(bad magic number\)\n$'
+    - '^ERROR: This is the rdb protocol port! \(bad magic number\)\n$'
