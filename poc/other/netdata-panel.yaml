@@ -14,9 +14,13 @@ info:
     cpe: cpe:2.3:a:netdata:netdata:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    product: netdata
-    shodan-query: http.title:"netdata dashboard"
     vendor: netdata
+    product: netdata
+    shodan-query:
+      - http.title:"netdata dashboard"
+      - "server: netdata embedded http server"
+    fofa-query: title="netdata dashboard"
+    google-query: intitle:"netdata dashboard"
   tags: panel,netdata
 
 http:
@@ -39,4 +43,4 @@ http:
         part: body
         words:
           - "netdata"
-# digest: 4a0a00473045022100a203fc0a8594271aabdc5fe374e73d7d477d8d266a5228aad973bf40c6742bed022070825026dd54a98cdf7cb6df35bb5cf984a1f44e2ed6a02f162197989c185e15:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220107e0c1ce2e2424cd68b93f784568312fe8d84448148720720ea5ed979db99d4022005f922ca23a057fcd5940737054c03f7eba088b631ef2739ca1dff80263b9880:922c64590222798bb761d5b6d8e72950

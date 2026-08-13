@@ -1,43 +1,40 @@
-http:
-- extractors:
-  - dsl:
-    - username
-    - password
-    type: dsl
-  matchers:
-  - part: body
-    type: word
-    words:
-    - pulumiAccessToken
-    - userInfo
-  - status:
-    - 200
-    type: status
-  matchers-condition: and
-  raw:
-  - 'POST https://api.pulumi.com/api/console/email/login HTTP/1.1
-
-    Host: api.pulumi.com
-
-    Content-Type: application/json
-
-    Origin: https://app.pulumi.com
-
-    Referer: https://app.pulumi.com/
-
-
-    {"emailOrLogin":"{{username}}","password":"{{password}}"}
-
-    '
 id: pulmi-login-check
+
 info:
-  author: parthmalhotra,pdresearch
-  description: Checks for a valid github account.
-  metadata:
-    max-request: 1
   name: pulmi.com Login Check
-  reference:
-  - https://owasp.org/www-community/attacks/Credential_stuffing
+  author: parthmalhotra,pdresearch
   severity: critical
-  tags: cloud,creds-stuffing,login-check,pulmi
+  description: Checks for a valid github account.
+  reference:
+    - https://owasp.org/www-community/attacks/Credential_stuffing
+  tags: login-check,pulmi,creds-stuffing
+
 self-contained: true
+http:
+  - raw:
+      - |
+        POST https://api.pulumi.com/api/console/email/login HTTP/1.1
+        Host: api.pulumi.com
+        Content-Type: application/json
+        Origin: https://app.pulumi.com
+        Referer: https://app.pulumi.com/
+
+        {"emailOrLogin":"{{username}}","password":"{{password}}"}
+
+    extractors:
+      - type: dsl
+        dsl:
+          - username
+          - password
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - pulumiAccessToken
+          - userInfo
+
+      - type: status
+        status:
+          - 200

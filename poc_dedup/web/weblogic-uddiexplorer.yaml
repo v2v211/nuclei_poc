@@ -14,8 +14,13 @@ info:
     cpe: cpe:2.3:a:oracle:weblogic_server:*:*:*:*:-:*:*:*
   metadata:
     max-request: 1
-    product: weblogic_server
     vendor: oracle
+    product: weblogic_server
+    shodan-query:
+      - product:"oracle weblogic"
+      - http.title:"oracle peoplesoft sign-in"
+    fofa-query: title="oracle peoplesoft sign-in"
+    google-query: intitle:"oracle peoplesoft sign-in"
   tags: panel,oracle,weblogic,tenable
 
 http:
@@ -33,4 +38,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221009d70794f61fe11b028d54ecd3570a12cddd590e139fabf974a07de2e6082cde8022100c4bf543d2a1223fcb80d066e39a32842f8cb23bb8fc9bfdd0c4a014c34e2cabe:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022018904bc1a86c3839d9a4017a622a8c846c5f0fdf1b3211f92b4d7eade6ebd4be022100cc946e4c236bb72f7b1f3cf4a4508e718eedfeaf0da6e39e6b5cf4f49958e3fe:922c64590222798bb761d5b6d8e72950

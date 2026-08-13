@@ -12,9 +12,9 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cwe-id: CWE-200
   metadata:
+    verified: true
     max-request: 1
     shodan-query: http.favicon.hash:-1898583197
-    verified: true
   tags: panel,openvz
 
 http:
@@ -28,4 +28,4 @@ http:
           - 'status_code == 200'
           - 'contains(body, "Login - OpenVZ Web Panel")'
         condition: and
-# digest: 490a0046304402200ef9480a829630dda7ccee7744075b10051cbc0f08643e40644ea34445c4c49902203fe64e37635fa582a6eb17fd8d611eb85fb1d0a414f5d2d9511c3831a2bd8210:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100cafe199203ce1b525118a9ab4decc39b1eb8a788431fbd3f7d54c21b698dcd8d022060be10dfe93b263005e69bac7f9bface084aa8fa4484631df7dfe5009d9b6baf:922c64590222798bb761d5b6d8e72950

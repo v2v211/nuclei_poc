@@ -1,39 +1,32 @@
 id: odoo-database-manager
-
 info:
-  name: Odoo - Database Manager Discovery
-  author: __Fazal,R3dg33k
-  severity: low
-  description: Odoo database manager was discovered.
-  classification:
-    cpe: cpe:2.3:a:odoo:odoo:*:*:*:*:*:*:*:*
-  metadata:
-    verified: true
-    max-request: 1
-    vendor: odoo
-    product: odoo
-    shodan-query:
-      - title:"Odoo"
-      - http.title:"odoo"
-      - cpe:"cpe:2.3:a:odoo:odoo"
-    fofa-query: title="odoo"
-    google-query: intitle:"odoo"
-  tags: panel,odoo,backup
+  name: Odoo-Database-Manager
+  author:
+  - l0ne1y
+  description: |-
+    Odoo数据库管理页面泄露
+    Odoo（前称OpenERP）是一套企业资源计划（ERP）和客户关系管理（CRM）系统。该系统采用Python语言开发，PostgreSQL作为数据库，并包括了销售管理、库存管理、财务管理等模块，并支持对模块进行卸载、升级等操作。
 
-http:
-  - method: GET
-    path:
-      - '{{BaseURL}}/web/database/manager'
+    Odoo中存在安全漏洞，该漏洞源于程序未能对数据库管理页面做验证，攻击者可能利用此页面操作数据库
+  severity: medium
+  remediation: |-
+    官方修复方案：
+    1、建议用户到官方获取最新补丁或者最新版本程序：
+    https://www.odoo.com/ar/page/download
 
-    matchers-condition: and
-    matchers:
-      - type: word
-        words:
-          - "<title>Odoo</title>"
-          - ".o_database_delete"
-        condition: and
-
-      - type: status
-        status:
-          - 200
-# digest: 4a0a00473045022026e8970b4f335b39199fe60c7e0167539bc10826f12bc777c628d87447dd6c90022100839a5b0aa0da226f6e379ad8da679a2559239a2f7c3e2524bd56da12aa0d40b0:922c64590222798bb761d5b6d8e72950
+    临时修复方案：
+    1、限制页面访问ip，禁止远程用户访问
+requests:
+- matchers:
+  - type: status
+    status:
+    - 200
+  - type: word
+    condition: and
+    words:
+    - <title>Odoo</title>
+    - '{ action: ''database_manager'' }'
+  matchers-condition: and
+  path:
+  - '{{BaseURL}}/web/database/manager'
+  method: GET
