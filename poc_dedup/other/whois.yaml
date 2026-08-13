@@ -1,11 +1,13 @@
 id: whois
 info:
-  name: Uninet whois
+  name: rwhois
   author: nmap,cn-kali-team
   tags: detect,tech,whois,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 1
+    version: $2
 tcp:
 - name: generic-lines
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: whois
     type: regex
     regex:
-    - '(?i)^ -{62}\n \| UNINET WHOIS Server {40}\|\n \| Created by i-DNS\.net\t\t\t\t\t      \|\n.* INFO: This domain name has not been registered\.\n'
+    - ^%rwhois V-[\w:.-]+ ([-\w_.]+) \(by Network Solutions, Inc\. V-([\d.]+)\)\n

@@ -1,12 +1,13 @@
 id: pop3
 info:
-  name: hMailServer pop3d
+  name: ipop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
     rarity: 1
+    version: $2
 tcp:
 - name: generic-lines
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK .*\r\n-ERR Invalid command in current state\.\r\n-ERR Invalid command in current state\.\r\n
+    - ^\+OK POP3 \[([-.+\w]+)\] (\d[-.\w]+) server ready\r\n

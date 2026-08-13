@@ -4,13 +4,10 @@ info:
   name: PinPoint Unauth
   author: dhiyaneshDk
   severity: high
-  reference:
-    - https://github.com/pinpoint-apm/pinpoint
+  reference: https://github.com/pinpoint-apm/pinpoint
   tags: pippoint,unauth
-  metadata:
-    max-request: 1
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}/applications.pinpoint'

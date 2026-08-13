@@ -13,7 +13,7 @@ info:
     vendor: atlassian
     product: bamboo
     shodan-query: title:"Bamboo setup wizard"
-  tags: misconfig,atlassian,bamboo,setup,installer
+  tags: misconfig,atlassian,bamboo,setup,installer,vuln
 
 http:
   - method: GET
@@ -36,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100c63e8179cebce9fd38988fd8a721d2ab3665441d277545540e3f59df921a3d01022100d16971bf5fbcf0832338f2067dfda2d204c0504cbebe365e5e6c9323b9c60b67:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203a9a416142d7d405ef707f80a8afbbd69bc5ef7754383e601e89e2df288b3f7702207af78987af07d7d3e26308628d1443eb8d0a410061f77c60549c6b6aa372f15c:922c64590222798bb761d5b6d8e72950

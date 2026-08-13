@@ -11,8 +11,8 @@ info:
     cpe: cpe:2.3:a:code42:code42:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: code42
     product: code42
+    vendor: code42
   tags: panel,code42
 
 http:
@@ -29,4 +29,4 @@ http:
       - type: word
         words:
           - "<a href=\"https://code42.com\">Code42 homepage</a>"
-# digest: 4a0a0047304502200debadd21b3ce2087a309879ad45197dec10b4657935f89e5b711fa2d6e95f6e022100bf4f3d9ec20e413fbe70d09071b4ec3399e357ac44777f787185fa7b12bf1c97:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203e8b1a2a09bde04f0aa4286d3ff6839ec46cd22b14534f7324821785fc0c15ad02206d7911ddef51d3d2db5dff9d7e15e09fce73602caff4653bd8d9c7ed68154969:922c64590222798bb761d5b6d8e72950

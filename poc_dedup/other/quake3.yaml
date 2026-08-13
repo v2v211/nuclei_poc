@@ -1,6 +1,6 @@
 id: quake3
 info:
-  name: OpenArena game server
+  name: Urban Terror game server
   author: nmap,cn-kali-team
   tags: detect,tech,quake3,service
   severity: info
@@ -19,4 +19,4 @@ tcp:
   - name: quake3
     type: regex
     regex:
-    - ^\xff\xff\xff\xffstatusResponse\n.*\\version\\([^\\]* linux-[^\\]*)(?=\\).*\\gamename\\baseoa(?=\\)
+    - ^\xff\xff\xff\xffstatusResponse\n.*\\version\\([^\\]* linux-[^\\]*)(?=\\).*\\gamename\\q3ut4(?=\\)

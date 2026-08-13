@@ -17,4 +17,4 @@ tcp:
   - name: sentinel-lm
     type: regex
     regex:
-    - ^r\xfe\x1d\x13\0\0\0\0\0\0\0\x02,PSH,'A{\^QOHpe\]\)\]\\\^cRH>%gNQX$
+    - ^r\xfe\x1d\x13\x00\x00\x00\x00\x00\x00\x00\x02,PSH,'A{\^QOHpe\]\)\]\\\^cRH>%gNQX$
