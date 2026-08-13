@@ -24,17 +24,16 @@ info:
   remediation: Disable the proxy or restrict configuration to only allow access to approved hosts/ports. Upgrade to IMDSv2 if possible.
   tags: exposure,proxy,aws,amazon,misconfig,metadata
   metadata:
-    max-request: 2
+  mongoid: 0000
 
-http:
+requests:
   - raw:
       - |+
         GET http://{{hostval}}/latest/meta-data/ HTTP/1.1
         Host: {{hostval}}
-
     payloads:
       hostval:
-        - aws.oast.online
+        - aws.interact.sh
         - 169.254.169.254
     unsafe: true
     matchers:

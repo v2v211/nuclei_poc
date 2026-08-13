@@ -1,1 +1,1 @@
-["APACHE-Ambari-weakPass.yaml","apache-path-traversal-check.yaml","apache-server-info.yaml","apache-solr-ssrf.yaml","apache-tapestry-detect.yaml","apache-tomcat-snoop.yaml","default-apache-test-all.yaml"]
+["APACHE-Ambari-weakPass.yaml","apache-cocoon-detect.yaml","apache-config.yaml","apache-path-traversal-check.yaml","apache-server-info.yaml","apache-spark-enviroment-exposure.yaml","apache-tomcat-snoop.yaml"]

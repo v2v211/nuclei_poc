@@ -1,1 +1,1 @@
-["Express-LFR-GET.yaml","Express-LFR-json.yaml","Node-RED-Traversal.yaml","node-env.yaml","puppet-node-manager-detect.yaml"]
+["Express-LFR-GET.yaml","Express-LFR-json.yaml","Path_traversal_NodeJs.yaml","express-default-page.yaml","expressionalsocial-mastodon-instance.yaml","gradle-cache-node-detect.yaml","node-red-path-traversal.yaml","npm-anonymous-cli.yaml","npm-shrinkwrap-exposure.yaml","npmjs.yaml","npmrc-authtoken.yaml","unauthenticated-mongo-express.yaml"]

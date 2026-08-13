@@ -2,7 +2,7 @@ id: Wordpress-Config-Disclosure
 info:
   name: Wordpress Configuration Disclosure
   description: 'Attacker can view the config file which contains the username and password'
-  author: nithissh
+  author: Hacktify Cyber Security (@hacktifycs)
   severity: high
   tags: wordpress,wp-admin,sde
   reference: |
