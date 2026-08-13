@@ -5,7 +5,7 @@ info:
   author: panch0r3d
   severity: info
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/server/api/admin"
@@ -66,7 +66,6 @@ requests:
           - 405
           - 500
           - 403
-        condition: and
       - type: word
         words:
           - "Content-Type: application/json"

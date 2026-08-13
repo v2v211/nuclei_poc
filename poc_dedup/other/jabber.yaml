@@ -1,13 +1,15 @@
 id: jabber
 info:
-  name: jabberd instant messaging server
+  name: ejabberd
   author: nmap,cn-kali-team
   tags: detect,tech,jabber,service
   severity: info
   metadata:
-    product: jabberd
+    hostname: $1
+    info: Protocol $2
+    product: ejabberd
     rarity: 1
-    vendor: jabberd
+    vendor: process-one
     verified: true
 tcp:
 - name: get-request
@@ -20,4 +22,4 @@ tcp:
   - name: jabber
     type: regex
     regex:
-    - ^<stream:error><invalid-xml xmlns='urn:ietf:params:xml:ns:xmpp-streams'/><text xmlns='urn:ietf:params:xml:ns:xmpp-streams' xml:lang='en'>Invalid XML</text></stream:error>
+    - ^<\?xml version='1\.0'\?><stream:stream xmlns='jabber:client' xmlns:stream='http://etherx\.jabber\.org/streams' id='\d+' from='([\w._-]+)' version='([\d.]+)'>

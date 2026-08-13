@@ -9,7 +9,7 @@ info:
     - https://www.zhihuifly.com/t/topic/3345
   metadata:
     max-request: 1
-  tags: zhiyuan,leak,disclosure,seeyon
+  tags: zhiyuan,leak,disclosure,seeyon,vuln
 
 http:
   - method: GET
@@ -27,5 +27,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402204490af6cf7aa5c4d5d846dfba4eb2620d6d26de89a0bebb254e7c67639983d4f02204b4259f41741e56874d63ac403399db6d7c261f253c79d4776ce2a860fd0f67a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502207f4e643a3c052bcbd818e290c534a35b9ce33fe5c8455f8579dba8e0a10ba8ba022100a2cfec17ab0cb30cd32fe3fbaf0b7eb2a04d92598ae4ebca668e90f88766af47:922c64590222798bb761d5b6d8e72950

@@ -1,10 +1,10 @@
 id: bash-history-exposure
 info:
   name: Bash History Exposure
-  author: Vulnpire
+  author: yourname
   severity: high
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/.bash_history"

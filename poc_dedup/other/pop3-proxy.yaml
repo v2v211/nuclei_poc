@@ -1,14 +1,14 @@
 id: pop3-proxy
 info:
-  name: Astaro firewall pop3 proxy
+  name: Perdition pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    device_type: firewall
-    product: security_gateway_software
+    hostname: $1
+    product: perdition
     rarity: 1
-    vendor: astaro
+    vendor: horms
     verified: true
 tcp:
 - name: generic-lines
@@ -21,4 +21,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK POP3Proxy ready\r\n-ERR Unknown command\r\n-ERR Unknown command\r\n
+    - ^\+OK POP3 Ready ([-\w_.]+) \w+\r\n-ERR Null command, mate\r\n

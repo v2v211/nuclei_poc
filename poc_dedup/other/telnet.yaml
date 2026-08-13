@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: CyberSwitching Dualcom power device rabbit 2000 embedded telnetd
+  name: GigaVUE-420 switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: power-device
+    device_type: switch
     rarity: 1
 tcp:
 - name: generic-lines
@@ -18,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\x1b\[7l\x1b\[\?1l\x1b\[0m\x1b\[2JUsername: \x1b\[7l\x1b'
+    - '^\xff\xfe\x01\xff\xfb\x01\xff\xfc\"\xff\xfd\x1flogin: \r\nlogin: \r\nlogin: '

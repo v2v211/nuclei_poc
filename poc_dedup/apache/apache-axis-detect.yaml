@@ -5,15 +5,11 @@ info:
   author: dogasantos
   severity: info
   description: Axis and Axis2 detection
-  classification:
-    cpe: cpe:2.3:a:apache:axis:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 3
-    vendor: apache
-    product: axis
     shodan-query: http.html:"Apache Axis"
-  tags: tech,axis2,middleware,apache,discovery
+  tags: tech,axis2,middleware,apache
 
 http:
   - method: GET
@@ -39,4 +35,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100b8aa2b5171a66525beaee53f3807c2b70892b8cd07145dd73dcbcdd6a94b50aa022041dc71f58a069f4098ebd66dc60d1bf3885598245c97bf84317e1c3f53bec438:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100c038a9ca3babbe0905c9228f2f6a32ccfc217541f7d6d7fa56694398d76d0936022100afe6237444b76f388682bc2b0beeaa1134ac39be09dcc255402add222228036b:922c64590222798bb761d5b6d8e72950

@@ -1,18 +1,17 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: Microsoft Exchange Internet News Service
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: on Debian; posting ok
-    operating_system: Linux
-    product: inn
+    info: $2
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
-    vendor: isc
+    vendor: microsoft
     verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) InterNetNews NNRP server INN ([\d.]+) .* \(Debian\) ready \(posting ok\)\.\r\n
+    - ^20[01] Microsoft Exchange Internet News Service Version (\d\.\d\.[\d.]+) \((.*)\)\r\n

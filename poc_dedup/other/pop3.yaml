@@ -1,17 +1,12 @@
 id: pop3
 info:
-  name: IBM Notes pop3d
+  name: hMailServer pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $4
-    info: 'domain: $5'
-    product: notes
+    operating_system: Windows
     rarity: 1
-    vendor: ibm
-    verified: true
-    version: $1 FP$2 HF$3
 tcp:
 - name: generic-lines
   inputs:
@@ -23,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK IBM Notes POP3 server version Release ([\d.]+)FP(\d+) HF(\d+) ready on ([^/]+)/(.+)\.\r\n
+    - ^\+OK .*\r\n-ERR Invalid command in current state\.\r\n-ERR Invalid command in current state\.\r\n
