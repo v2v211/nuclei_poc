@@ -7,13 +7,14 @@ info:
   description: VMWare Cloud is vulnerable to Reflected Cross Site Scripting vulnerability.
   classification:
     cpe: cpe:2.3:a:vmware:cloud_foundation:*:*:*:*:*:*:*:*
+    cwe-id: CWE-80
   metadata:
     verified: true
     max-request: 1
     vendor: vmware
     product: cloud_foundation
     shodan-query: title:"Vmware Cloud"
-  tags: vmware,xss,cloud
+  tags: vmware,xss,cloud,vuln
 
 http:
   - method: GET
@@ -37,4 +38,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220357b6d1b927f2e4ca9476dfbaba2a263bafdef886d9dd6b5e31565dc57089455022100db6c40b7c4f3b42177e764b3c3f09f44c25e4e30ae4f9884d906f0bc4c16e303:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100f25baf8d69223f19279a4ba0fee3458b92b26730fdfca75cb5192891b2ee4b57022100f1f9b27c042c48fad1b071c0e2dcae52ff8d8a4b9dfab10ad0556a470707a27e:922c64590222798bb761d5b6d8e72950
