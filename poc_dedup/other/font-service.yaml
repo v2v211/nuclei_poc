@@ -1,14 +1,14 @@
 id: font-service
 info:
-  name: XFree86 X Font Server
+  name: X.Org X Font Server
   author: nmap,cn-kali-team
   tags: detect,tech,font-service,service
   severity: info
   metadata:
     operating_system: Unix
-    product: xfree86
+    product: x.org_x11
     rarity: 4
-    vendor: xfree86
+    vendor: x
     verified: true
 tcp:
 - name: x11-probe
@@ -21,4 +21,4 @@ tcp:
   - name: font-service
     type: regex
     regex:
-    - (?i)^\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0e\x00\x00\x00\x00 \*\x00.\x19\x00\x00The XFree86 Project[-.\w() ]+..\x01\n\x01\x00\x05\x00\x00\x00....\x00\x00..\x00\x00\x00
+    - (?i)^\0\0\x02\0\0\0\0\0\0\0\0\0\x07\0\0\0\0.......The X\.Org Group

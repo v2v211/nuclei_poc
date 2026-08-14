@@ -1,19 +1,20 @@
 id: ceph
 info:
-  name: ceph
-  author: cn-kali-team
-  tags: detect,tech,ceph
+  name: Ceph distributed filesystem
+  author: nmap,cn-kali-team
+  tags: detect,tech,ceph,service
   severity: info
   metadata:
-    product: ceph
-    vendor: 00_unknown
-    verified: false
-http:
-- method: GET
-  path:
-  - '{{BaseURL}}/'
-  matchers:
-  - type: word
-    words:
-    - class="ceph-none-found" rv-hide="rbd_pools
-    case-insensitive: true
+    rarity: 0
+    version: msgr2 protocol
+tcp:
+- name: 'null'
+  inputs:
+  - data: ''
+  host:
+  - '{{Hostname}}'
+  extractors:
+  - name: ceph
+    type: regex
+    regex:
+    - ^ceph v2\n\x10\x00.{16}$

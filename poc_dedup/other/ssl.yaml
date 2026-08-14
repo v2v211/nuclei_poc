@@ -1,16 +1,14 @@
 id: ssl
 info:
-  name: qmail-pop3d behind stunnel
+  name: Cisco IDS SSL
   author: nmap,cn-kali-team
   tags: detect,tech,ssl,service
   severity: info
   metadata:
+    device_type: firewall
     fallback:
     - get-request
-    product: qmail
     rarity: 1
-    vendor: djb
-    verified: true
 tcp:
 - name: sslsession-req
   inputs:
@@ -22,4 +20,4 @@ tcp:
   - name: ssl
     type: regex
     regex:
-    - ^20928:error:140760FC:SSL routines:SSL23_GET_CLIENT_HELLO:unknown protocol:s23_srvr\.c:565:\n
+    - ^\x16\x03\x00\x00\*\x02\x00\x00&\x03\x00\xd10:\xbd\\\x8e\xe3\x15\x1c\x0fZ\xe4\x04\x87\x07\xc0\x82\xa9\xd4\x0e\x9c1LXk\xd1\xd2\x0b\x1a\xc6/p\x00\x00\n\x00\x16\x03\x00\x026\x0b\x00\x022\x00
