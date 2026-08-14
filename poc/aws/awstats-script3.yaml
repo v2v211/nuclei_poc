@@ -1,29 +1,28 @@
 id: awstats-script3
-
 info:
-  name: AWStats script
   author: sheikhrishad
+  name: AWStats script
   severity: info
   tags: config,exposure
-
-
 requests:
-  - raw:
-      - |
-        GET /logs/awstats.pl HTTP/1.1
-        Host: {{Hostname}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
-    matchers-condition: and
-    matchers:
-      - type: word
-        words:
-          - "Do not remove this line"
+- matchers:
+  - type: word
+    words:
+    - Do not remove this line
+  - part: header
+    type: word
+    words:
+    - application/x-perl
+  - status:
+    - 200
+    type: status
+  matchers-condition: and
+  raw:
+  - 'GET /logs/awstats.pl HTTP/1.1
 
-      - type: word
-        words:
-          - "application/x-perl"
-        part: header
+    Host: {{Hostname}}
 
-      - type: status
-        status:
-          - 200
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101
+    Firefox/55
+
+    '

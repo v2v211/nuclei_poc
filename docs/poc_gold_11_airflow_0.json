@@ -1,1 +1,1 @@
-["airflow-debug.yaml","airflow-default-credentials.yaml"]
+["airflow-api-exposure.yaml","airflow-exposure.yaml","airflow-panel.yaml"]

