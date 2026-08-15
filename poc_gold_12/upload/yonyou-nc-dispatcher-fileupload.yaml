@@ -10,13 +10,14 @@ info:
     - https://github.com/lal0ne/vulnerability/blob/c0985107adfd91d85fbd76d9a8acf8fbfa98ed41/YonyouNC/ncDecode/README.md
   classification:
     cpe: cpe:2.3:a:yonyou:ufida-nc:*:*:*:*:*:*:*:*
+    cwe-id: CWE-502
   metadata:
     verified: true
     max-request: 2
     vendor: yonyou
     product: ufida-nc
     fofa-query: icon_hash="1085941792"
-  tags: yonyou,intrusive,fileupload
+  tags: yonyou,intrusive,fileupload,vuln
 
 http:
   - raw:
@@ -38,4 +39,4 @@ http:
           - "status_code_1 == 200"
           - "status_code_2 == 200 && contains(body_2,'just_a_test')"
         condition: and
-# digest: 4a0a00473045022100c74c31770b0e7ab6e5d496e94cd7ae0ff658df60e1e1c14a8ed10c793ab757fd02205d65dffc4d2715bd678794c0081d4248ec9011f49f54811f8546e9ee1de8dffa:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220608f5c01d157ed122fb5a5a62bd8eb76c0f4f9d2be7cae80d1d9be86ce60d8c5022100fda2eae01825abc1f3dd785319adcfaa88cd1aeac1c95093623f4b3d84ab32d4:922c64590222798bb761d5b6d8e72950
