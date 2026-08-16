@@ -1,1 +1,1 @@
-["airflow-default-credentials.yaml"]
+["airflow-debug.yaml","airflow-default-credentials.yaml"]
