@@ -1,31 +1,19 @@
-version: "{build}"
-
-clone_folder: c:\gopath\src\github.com\mholt\archiver
-
+version: "build-{branch}-{build}"
+image: Visual Studio 2015
+clone_folder: c:\gopath\src\github.com\hashicorp\hcl
 environment:
   GOPATH: c:\gopath
-  CGO_ENABLED: 0
-
-stack: go 1.11
-
+init:
+  - git config --global core.autocrlf false
 install:
-  - go get ./...
-  - go get golang.org/x/lint/golint
-  - go get github.com/gordonklaus/ineffassign
-  - set PATH=%GOPATH%\bin;%PATH%
+- cmd: >-
+    echo %Path%
 
-build: off
+    go version
 
-before_test:
-  - go version
-  - go env
+    go env
 
-test_script:
-  - go vet ./...
-  - go test ./...
-  - ineffassign .
+    go get -t ./...
 
-after_test:
-  - golint ./...
-
-deploy: off
+build_script:
+- cmd: go test -v ./...
