@@ -13,12 +13,17 @@ info:
     cpe: cpe:2.3:a:adobe:experience_manager:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
+    vendor: adobe
     product: experience_manager
     shodan-query:
       - http.title:"AEM Sign In"
       - http.component:"Adobe Experience Manager"
-    vendor: adobe
-  tags: panel,aem,adobe,sling
+      - http.component:"adobe experience manager"
+      - http.title:"aem sign in"
+      - cpe:"cpe:2.3:a:adobe:experience_manager"
+    fofa-query: title="aem sign in"
+    google-query: intitle:"aem sign in"
+  tags: panel,aem,adobe,sling,discovery
 
 http:
   - method: GET
@@ -42,4 +47,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450221009ebb04f07ba4604d3d6fe1b930ae1351e6ee34bb6b7f13ce850c1336f4cebc52022013841f057144f9de90e3361a59164c69e741d22c87cd860f7c4bb3d6b6c9b2c4:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022022b3e3af5e427c487851c07f4db36957b067edf3c964d40e3cf5c8d6ec41e267022100d0db9f2f19eab0e6d00dd9c1c39d10b631be3cfddf764995a1f4635c2dc5feb9:922c64590222798bb761d5b6d8e72950
