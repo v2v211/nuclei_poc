@@ -12,7 +12,7 @@ info:
     vendor: grafana
     product: grafana
     shodan-query: title:"Grafana"
-  tags: grafana,intrusive,misconfig
+  tags: grafana,intrusive,misconfig,vuln
 
 http:
   - raw:
@@ -41,4 +41,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022002df65277ad704773a11a11377b60fb72c7b39864f0d9f67f2059b5730098374022052d964e7c701ff9d9305ea24c610541d6ba6034eaefe2b44e6bea7f33249ef27:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207bdb050a0c68124bc27d87ff61e777eb137228c700cabddf7a572b7357b700480220756f3f49dfdb7472d59a2ab21b10530ad659a806b44dcfb913363e01a5a5cc86:922c64590222798bb761d5b6d8e72950
