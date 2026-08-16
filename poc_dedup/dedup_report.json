@@ -1,8 +1,8 @@
 {
   "auto_fixed_files": 0,
-  "cross_id_dup_removed": 44568,
-  "final_count": 144561,
-  "id_dup_removed": 84356,
+  "cross_id_dup_removed": 44632,
+  "final_count": 144508,
+  "id_dup_removed": 84340,
   "id_space_fixes": 0,
   "invalid_pocs": 0,
   "renamed_files": 18745,
@@ -20,8 +20,8 @@
   "severity_empty_fixes": 0,
   "severity_fixes": 0,
   "threshold": 70,
-  "total_files": 273485,
+  "total_files": 273480,
   "total_fixes": 0,
-  "total_removed": 128924,
-  "valid_pocs": 273485
+  "total_removed": 128972,
+  "valid_pocs": 273480
 }

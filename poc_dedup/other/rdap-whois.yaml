@@ -16,7 +16,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: miscellaneous,whois,rdap,osint,misc
+  tags: miscellaneous,whois,rdap,osint,misc,vuln
 
 http:
   - method: GET
@@ -93,6 +93,42 @@ http:
 
       - type: json
         part: body
+        name: registrarIANAId
+        json:
+          - '.entities[] | select(.roles[] | contains("registrar")) | .publicIds[] | select(.type == "IANA Registrar ID") | .identifier'
+
+      - type: json
+        part: body
+        name: registrarName
+        json:
+          - '.entities[] | select(.roles[] | contains("registrar")) | .vcardArray[1].[] | select(.[0] == "fn") | .[-1]'
+
+      - type: json
+        part: body
+        name: registrarOrg
+        json:
+          - '.entities[] | select(.roles[] | contains("registrar")) | .vcardArray[1].[] | select(.[0] == "org") | .[-1]'
+
+      - type: json
+        part: body
+        name: registrarUrl
+        json:
+          - '.entities[] | select(.roles[] | contains("registrar")) | .links[] | select(.rel == "about") | .href'
+
+      - type: json
+        part: body
+        name: registrarEmail
+        json:
+          - '.entities[] | select(.roles[] | contains("registrar")) | .entities[] | select(.roles[] | contains("abuse")) | .vcardArray[1].[] | select(.[0] == "email") | .[-1]'
+
+      - type: json
+        part: body
+        name: registrarPhone
+        json:
+          - '.entities[] | select(.roles[] | contains("registrar")) | .entities[] | select(.roles[] | contains("abuse")) | .vcardArray[1].[] | select(.[0] == "tel") | .[-1]'
+
+      - type: json
+        part: body
         name: nameServers
         json:
           - '.nameservers[] | .ldhName'
@@ -102,4 +138,4 @@ http:
         name: secureDNS
         json:
           - '.secureDNS.delegationSigned // false'
-# digest: 4a0a0047304502205d9a87dc27cb6e27a55ca9bc1f57aa0edc521ebb2fad07de67c07d692547bbdd022100cad43b1f49024e26caa029fdd4bf7ebe10de94118e73dc1a2d0ea3318806b889:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220787061b7c200cca80f91bab07e4a357af4868c42434bf0db5d6c8d8309f65dfb022100ef38f107e5c933ef1d727558f691764eb6a1b8bdacca866523a02a249c9e2622:922c64590222798bb761d5b6d8e72950
