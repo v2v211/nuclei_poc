@@ -1,1 +1,1 @@
-["VmwareVcenter-Arbitrary-FileRead.yaml","vmware-airwatch-version-detect.yaml","vmware-horizon.yaml","vmware-vcenter-lfi-linux-1.yaml","vmware-vcenter-lfi-linux.yaml","vmware-vcenter-lfi.yaml","vmware-vcenter-ssrf.yaml","vmware-vsphere-file-read.yaml"]
+["VmwareVcenter-Arbitrary-FileRead.yaml","vmware-airwatch-version-detect.yaml","vmware-horizon-panel.yaml","vmware-horizon.yaml","vmware-vcenter-lfi-linux-1.yaml","vmware-vcenter-lfi-linux.yaml","vmware-vcenter-lfi.yaml","vmware-vcenter-ssrf.yaml","vmware-vrealize.yaml","vmware-vsphere-file-read.yaml"]

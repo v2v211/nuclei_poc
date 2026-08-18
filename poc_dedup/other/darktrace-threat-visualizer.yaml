@@ -10,14 +10,11 @@ info:
     cwe-id: CWE-200
     cpe: cpe:2.3:a:darktrace:threat_visualizer:*:*:*:*:android:*:*:*
   metadata:
-    verified: true
     max-request: 1
-    vendor: darktrace
     product: threat_visualizer
-    shodan-query:
-      - html:"Darktrace Threat Visualizer"
-      - http.html:"darktrace threat visualizer"
-    fofa-query: body="darktrace threat visualizer"
+    shodan-query: html:"Darktrace Threat Visualizer"
+    vendor: darktrace
+    verified: true
   tags: panel,darktrace
 
 http:
@@ -35,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402204c3105c9fc6d28f2f7eeb62584458dc4ea2722d9a363a23a33940d69ba707c78022001af37c64c3e13cfdbb2d777c96479806090ba1e040621902d517d9747636e25:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009b117d9966e85ca8dc4f53d3ef8857181afa1a939670d2433bacfc689ecc83b8022100fb6ebf975b53c5992928c3b737655a144e6a0af155ec3fc651f9a6f425602b20:922c64590222798bb761d5b6d8e72950
