@@ -8,11 +8,13 @@ info:
   reference:
     - http://wiki.peiqi.tech/wiki/oa/%E8%87%B4%E7%BF%94OA/%E8%87%B4%E7%BF%94OA%20msglog.aspx%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.html
     - https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/main/docs/wiki/oa/%E8%87%B4%E7%BF%94OA/%E8%87%B4%E7%BF%94OA%20msglog.aspx%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.md
+  classification:
+    cwe-id: CWE-89
   metadata:
     verified: true
     max-request: 1
     fofa-query: app="致翔软件-致翔OA"
-  tags: hongfan,oa,sqli
+  tags: hongfan,oa,sqli,vuln
 
 http:
   - raw:
@@ -27,4 +29,4 @@ http:
           - 'contains(body, "43f845fa0c8aef9104f8e1b07625ecf8")'
           - 'contains(header, "text/html")'
         condition: and
-# digest: 4a0a00473045022046cf60411738d4ea3dd4434912beebc1fcd2a9976af92c3d88917aa3b274c2e5022100cda58d712ed2dfecc3a13e9a3a5a88afa001c195ee9c5d06a697c8b75022ea77:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220417d328babf1dc7ef3a901bef49e49fe773d35eb5a94b0eb716c83aa6df2fe8d02201ca21e149437761d5f60d0a3abaacf155c9274ff42d6e01d3eaf217ef5177202:922c64590222798bb761d5b6d8e72950
