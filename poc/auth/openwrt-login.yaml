@@ -10,7 +10,7 @@ info:
   metadata:
     max-request: 2
     shodan-query: http.title:"OpenWrt - LuCI"
-  tags: openwrt,router,panel
+  tags: openwrt,router
 
 http:
   - method: GET

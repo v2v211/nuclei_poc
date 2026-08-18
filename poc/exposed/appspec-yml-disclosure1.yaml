@@ -1,29 +1,29 @@
 id: appspec-yml-disclosure1
+
 info:
-  author: dhiyaneshDk
   name: Appspec Yml Disclosure
-  reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/appsec-yml-disclosure.json
+  author: dhiyaneshDk
   severity: medium
+  reference: https://github.com/detectify/ugly-duckling/blob/master/modules/crowdsourced/appsec-yml-disclosure.json
   tags: exposure,config
+
+
 requests:
-- matchers:
-  - condition: and
-    part: body
-    type: word
-    words:
-    - 'version:'
-    - 'os:'
-    - 'files:'
-  - status:
-    - 200
-    type: status
-  matchers-condition: and
-  raw:
-  - 'GET /appspec.yml HTTP/1.1
+  - raw:
+      - |
+        GET /appspec.yml HTTP/1.1
+        Host: {{Hostname}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "version:"
+          - "os:"
+          - "files:"
+        part: body
+        condition: and
 
-    Host: {{Hostname}}
-
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101
-    Firefox/55
-
-    '
+      - type: status
+        status:
+          - 200

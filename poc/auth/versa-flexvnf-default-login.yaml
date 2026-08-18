@@ -11,14 +11,11 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-    cpe: cpe:2.3:o:versa-networks:versa_operating_system:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 4
     shodan-query: title:"Flex VNF Web-UI"
-    product: versa_operating_system
-    vendor: versa-networks
-  tags: default-login,versa,flexvnf,vuln
+  tags: default-login,versa,flexvnf
 
 http:
   - raw:
@@ -62,4 +59,5 @@ http:
         part: header
         regex:
           - '(?i)Set-Cookie: XSRF-TOKEN=([A-Za-z0-9_.-]+)'
-# digest: 4b0a00483046022100ab753b9a456a58328a08c074727ec0f81b0cedef80deaf31821309416d075da7022100a2c9451e78034ec3164ca34c91b979f89bbfafb0f24e4e0bbc07c4ef92b2b433:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502207fb8a796bb1695b4a06664adbe831afd4c0b0cecfa83a9700cbdc1a4483e63c3022100e2e5ae328c81b82b980008020321c832f7b7c09c42238522c4dee1067104f073:922c64590222798bb761d5b6d8e72950

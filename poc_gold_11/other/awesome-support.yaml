@@ -2,14 +2,14 @@ id: awesome-support
 
 info:
   name: >
-    Awesome Support <= 6.1.4 - Authenticated (Submitter+) Arbitrary File Deletion
+    Awesome Support – WordPress HelpDesk & Support Plugin <= 6.0.13 - Cross-Site Scripting via post_title
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f32cd8e4-51bf-4fdf-ae14-155f8661dbdb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e52f799e-9174-45a2-9ed6-7aedb26b36bd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/awesome-support/"
     google-query: inurl:"/wp-content/plugins/awesome-support/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,awesome-support,low
+  tags: cve,wordpress,wp-plugin,awesome-support,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.1.4')
+          - compare_versions(version, '<= 6.0.13')
