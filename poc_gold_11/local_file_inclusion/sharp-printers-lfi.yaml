@@ -20,7 +20,7 @@ info:
     vendor: sharp
     product: mx-3050v_firmware
     shodan-query: "Set-Cookie: MFPSESSIONID="
-  tags: sharp,printer,lfi,intrusive,vuln
+  tags: sharp,printer,lfi
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100c2215182521a1c424e8045b17000c7b533fe574292e5b297f6938045f37638a4022100d721c0380f96f9c974bbeebcd58a570d552f29bcac7b4179c9261b8072aac4c5:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203619fa51f989715a963ff7b2cc734167e333263b44ba02c46429f406dd7c0c7502201216a416bf28e18e31affb153096005a012e7def2bb9f299376d14f698d8e9f2:922c64590222798bb761d5b6d8e72950

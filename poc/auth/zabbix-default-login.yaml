@@ -12,8 +12,8 @@ info:
     cvss-score: 8.3
     cwe-id: CWE-522
   metadata:
-    max-request: 2
-  tags: zabbix,default-login,vuln
+    max-request: 1
+  tags: zabbix,default-login
 
 http:
   - raw:
@@ -45,4 +45,4 @@ http:
       - type: status
         status:
           - 302
-# digest: 4b0a00483046022100897977d0df9e94f9121482f592f280dacc36fa03722732abcd3bbf504969fc7b022100d378b9567f88a02a630dbb8a6536f25d1cd7262cfc8934df4bff978e45027d9d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206c2b96efb385e67d611c7276844293bc88783570392f427628e2a4c05dd7a3b502210094b16a3c48cce397175fe585743b9e87e3db962d6a73a6ec20ca8c5881c9a8be:922c64590222798bb761d5b6d8e72950
