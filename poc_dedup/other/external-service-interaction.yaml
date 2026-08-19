@@ -10,19 +10,20 @@ info:
     - https://success.qualys.com/support/s/article/000006843
     - https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/17-Testing_for_Host_Header_Injection
   classification:
-    cwe-id: CWE-918
+    cwe-id: CWE-918,CWE-406
   metadata:
     max-request: 1
-  tags: miscellaneous,http,misc,oast,vuln
+  tags: miscellaneous,http,misc,oast
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}/"
+      - "{{BaseURL}}"
+
     headers:
       Host: "{{interactsh-url}}"
-
-    redirects: false
+    redirects: true
+    max-redirects: 1
     matchers:
       - type: word
         part: interactsh_protocol
@@ -30,4 +31,4 @@ http:
           - "http"
           - "dns"
         condition: or
-# digest: 4b0a00483046022100e0953f3d9a159faae147d657208d7011141a36e60a4344e2683d5f0dcc519841022100caae57fd279c8486fce5716c92c6345e08814ed9eea47ed61fd4952ac48ddd0c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ef8fd630962c3be67a19e71e99a88db52250214ccb7b0a652abf1295d8c837af022058d9972ad95f177dce294892537cc157cf8aecb29e44011fe0c261d17263536f:922c64590222798bb761d5b6d8e72950
