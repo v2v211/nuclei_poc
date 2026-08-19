@@ -2,7 +2,7 @@ id: waf-detect
 
 info:
   name: WAF Detection
-  author: dwisiswant0,lu4nx
+  author: dwisiswant0,lu4nx,s4e-io
   severity: info
   description: A web application firewall was detected.
   reference:
@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: waf,tech,misc
+  tags: waf,tech,misc,discovery
 
 http:
   - raw:
@@ -72,6 +72,12 @@ http:
         part: response
 
       - type: regex
+        name: fortiweb
+        regex:
+          - 'Set-Cookie: cookiesession1='
+        part: header
+
+      - type: regex
         name: teros
         regex:
           - '(?i)st8(id|.wa|.wf)?.?(\d+|\w+)?='
@@ -106,7 +112,7 @@ http:
         regex:
           - '(?i)\ATS\w{4,}='
           - '(?i)bigipserver(.i)?|bigipserverinternal'
-          - '(?i)^TS[a-zA-Z0-9]{3,8}='
+          - '(?i)Set-Cookie:\s*TS[a-f0-9]{6,}='
           - '(?i)BigIP|BIG-IP|BIGIP'
           - '(?i)bigipserver'
         condition: or
@@ -679,7 +685,6 @@ http:
         name: securesphere
         regex:
           - '(?i)<h2>error<.h2>'
-          - '(?i)<title>error<.title>'
           - '(?i)<b>error<.b>'
           - '(?i)<td.class="(errormessage|error)".height="[0-9]{1,3}".width="[0-9]{1,3}">'
           - '(?i)the.incident.id.(is|number.is).'
@@ -743,9 +748,9 @@ http:
         name: huaweicloud
         condition: and
         regex:
-          - '(?)content="CloudWAF"'
-          - 'Server: CloudWAF'
+          - '(?i)content="CloudWAF"'
           - 'Set-Cookie: HWWAFSESID='
+          - 'Set-Cookie: HWWAFSESTIME='
 
       - type: word
         name: safe3webfirewall
@@ -801,4 +806,4 @@ http:
         part: header
         words:
           - "X-Protected-By: shieldon.io"
-# digest: 490a00463044022039bf0948c5b4367c6955e389fa039464d3d988e34124e676c1301afd85bd2078022040b67db73df9498cd3e7158ab9ca342099d085958cd8468e8124241d7fc84019:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502200ff46324634d4b40268a8e75c00c0503db307d1575a45e99f8a8ca88b7719931022100d2930441abe8697ebc5d1e666b09289461c59b056e494e8cc3269243922384bb:922c64590222798bb761d5b6d8e72950
