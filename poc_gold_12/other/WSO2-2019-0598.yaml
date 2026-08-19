@@ -16,7 +16,7 @@ info:
     cwe-id: CWE-918
   metadata:
     max-request: 1
-  tags: ssrf,wso2,shindig
+  tags: ssrf,wso2,shindig,vuln
 
 http:
   - method: GET
@@ -32,5 +32,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100c9d304b7771a2bb8d354f82c1bdd20dc71896400353658be7c17738f42e5ccec022036b6b905f824bf4d143ea15fe903d829bdca87c70142be501357f48e82d852cf:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022015641a9b7546f66c8b2e05a6e6aa362b7dfcb505d1642dd0537d3057db62f63002203caa43bb4112288ceffd7741ff09dcac184f98a3991627f0999d2d11fcc07a37:922c64590222798bb761d5b6d8e72950

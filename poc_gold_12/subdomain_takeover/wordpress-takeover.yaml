@@ -10,7 +10,7 @@ info:
     - https://hackerone.com/reports/274336
   metadata:
     max-request: 1
-  tags: takeover,wordpress,hackerone
+  tags: takeover,wordpress,hackerone,vuln
 
 http:
   - method: GET
@@ -38,4 +38,4 @@ http:
       - type: dsl
         dsl:
           - cname
-# digest: 4a0a0047304502210089bf64782d123d37de2505b8087526da645b69700527f561bc080e033bdc642302202f3ac993226cafee5c89fad238076e158343bac55f59348e3271c7df2f6a507a:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e220a42f9ff9b7cd3dafc63a868b2ad63a37bb72cd634317c3ed5bb8af7d08b9022100fe2379f5a580dbfc131648eb2dfe8dd5f5052a331d6bd31471661ae887912eed:922c64590222798bb761d5b6d8e72950
