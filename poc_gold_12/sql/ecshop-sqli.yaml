@@ -15,14 +15,11 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
     cwe-id: CWE-89
-    cpe: cpe:2.3:a:shopex:ecshop:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
     fofa-query: app="ECShop"
-    product: ecshop
-    vendor: shopex
-  tags: sqli,php,ecshop,vuln
+  tags: sqli,php,ecshop
 
 http:
   - raw:
@@ -46,4 +43,4 @@ http:
           - '[0] => Array'
           - 'MySQL server error report:Array'
         condition: and
-# digest: 4a0a00473045022100bf7cd55513b15e347aa3d35997a3810a4cf53e2e2fd159f4b3a453b10aee4d2c022003b88d11c104c6ee633d42ba6d436f1f807428b1e1a75d4a42ad8c57a60829d8:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203ae49378f799b9273219736013b01e956378963294f2c290ca0d9d8f96bfb99f022100d1b025e172f2914639fd88715d7690b6537b8255540d0155162f31e0597eb1df:922c64590222798bb761d5b6d8e72950
