@@ -4,11 +4,16 @@ info:
   name: Bagisto Installer Exposure
   author: ritikchaddha
   severity: high
+  description: Bagisto is susceptible to the Installation page exposure due to misconfiguration.
+  classification:
+    cpe: cpe:2.3:a:webkul:bagisto:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: webkul
+    product: bagisto
     shodan-query: http.title:"Bagisto Installer"
-  tags: misconfig,bagisto,install,exposure
+  tags: misconfig,bagisto,install,exposure,vuln
 
 http:
   - method: GET
@@ -28,5 +33,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402204f916c317905338b948496b9a3efc375c16fac8af7ca4ab03503e107cb936f69022037587ab2c32d07fb3954a5199780701494c34bbb497fa2388e21248b74bd8bf1:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022057aa406c0085a6aa86fbe3adc2d619e2420539ec02c1910fb206b0c9ce461d190220786aad2dd19d9d07821ff826a15a50e7fd37952c80031d81c13eaade293c121f:922c64590222798bb761d5b6d8e72950
