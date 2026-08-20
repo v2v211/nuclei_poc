@@ -30,7 +30,7 @@ info:
       - icon_hash=970132176
       - title="3cx phone system management console"
       - title="3cx webclient"
-  tags: panel,3cx,discovery
+  tags: panel,3cx
 
 http:
   - method: GET
@@ -43,4 +43,4 @@ http:
           - " <title>3CX Webclient</title>"
           - '<meta name="description" content="3CX">'
         condition: or
-# digest: 490a00463044022070074b6ec4261f5cb58a9cd0de5d6bcf7937a0a4ef3ed8d1dc6250633f51fe2002206427df5af4ff71df1787296f871b3bb3687a80dfffbe8d44e274e46be66d992a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502200a5151965ace29d1dafc3469f50c2f7136477a080501769e7a13e5fbafe83117022100968191d985f1a1153be61bb5e77cd24f615b998e60d6c7815f6d87226274a26c:922c64590222798bb761d5b6d8e72950
