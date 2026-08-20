@@ -9,10 +9,12 @@ info:
   reference:
     - https://www.exploit-db.com/exploits/29604
     - https://github.com/OWASP/vbscan/
+  classification:
+    cwe-id: CWE-89
   metadata:
     verified: true
     max-request: 1
-  tags: arcade,php,vbulletin,sqli
+  tags: arcade,php,vbulletin,sqli,vuln
 
 http:
   - method: GET
@@ -31,4 +33,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220033b8ddb1f3108d80a87dea637a99afedafe8190843996f063acce5f589b6c910220281cd39f3dd5511130d754af04128f0fff322572144df63b1458d4288ed804e3:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100abc2db9a695e350524673b69d7ddcf734952048ca336424e2992014b17fe9c09022100e9202bfdc3e85b7ebbaf6bd3f79ac062f6f77be0bf781c53af6bd23f15b25da5:922c64590222798bb761d5b6d8e72950

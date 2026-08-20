@@ -13,7 +13,7 @@ info:
     max-request: 2
     vendor: apache
     product: solr
-  tags: solr,unauth,edb,misconfig,discovery
+  tags: solr,unauth,edb,misconfig
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220044eaa1ac1ef40b6e7d10bc31c5fd786e5991657d13730e7a0a1885860beba5a0220392437c3bb1f2ad646c8251f4f94c5b5bf354345ea1bd33c00ee9a8755b9fd80:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204758899e87974f65a0e5b08f80e73362739e7a758980567ea996869ce8c0553b022100b30247cc4e564f33e6e3e0aede75d54a5a51bed1533cae59759105f405228039:922c64590222798bb761d5b6d8e72950
