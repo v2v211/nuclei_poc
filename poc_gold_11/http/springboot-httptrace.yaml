@@ -2,21 +2,16 @@ id: springboot-httptrace
 
 info:
   name: Detect Springboot httptrace
-  author: that_juan_,dwisiswant0,wdahlenb
-  severity: low
+  author: that_juan_ & dwisiswant0 & wdahlenb
+  severity: medium
   description: View recent HTTP requests and responses
-  metadata:
-    max-request: 2
-  tags: springboot,exposure,misconfig
+  tags: springboot,disclosure
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/httptrace"
       - "{{BaseURL}}/actuator/httptrace"
-
-    stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word
@@ -28,15 +23,14 @@ http:
           - '"session"'
         condition: and
 
+      - type: status
+        status:
+          - 200
+
       - type: word
-        part: header
         words:
           - "application/json"
           - "application/vnd.spring-boot.actuator"
           - "application/vnd.spring-boot.actuator.v1+json"
         condition: or
-
-      - type: status
-        status:
-          - 200
-# digest: 4a0a00473045022100ec8c02255550db8ddafafe71f9402edf4d17e142966a8af163b1d1388d0717a7022003332ebc364f1b8c294131e5350b7699e581f9402ec4b1df40d923e48688a84d:922c64590222798bb761d5b6d8e72950
+        part: header

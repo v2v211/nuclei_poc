@@ -14,7 +14,7 @@ info:
     max-request: 1
     shodan-query: http.title:"Ekoenergetyka-Polska Sp. z o.o - CCU3 Software Update for Embedded Systems"
     google-query: intitle:"Ekoenergetyka-Polska Sp. z o.o - CCU3 Software Update for Embedded Systems"
-  tags: panel,eko
+  tags: panel,eko,discovery
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100a70410d5ca2790a06ac1810c934b1fac4e3876ec33d16e6bb434a2baff0060db02202222125ba9bc9ad0ef94a0be444aa02199f062363a61ee165aa8a6da4df86518:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402200fb665a288480c0430793f297607df65634defd079a7a61af9c5bcc0605183830220774f174223894e1f171b56ca39ec0d849f0ee6e297307e441c9ea4b501130c01:922c64590222798bb761d5b6d8e72950
