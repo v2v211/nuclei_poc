@@ -10,7 +10,7 @@ info:
     - https://eset.com
   metadata:
     max-request: 1
-  tags: phishing,eset,osint,discovery
+  tags: phishing,eset,osint
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"eset.com")'
-# digest: 4a0a00473045022017c08676410905577fdbfddd2491c21300a73361417ef712a25d1dbb43f18f8902210083e96f5c587d464ebca4a67f399f2c37bfb60c796812c7cbcb7519172877ebd4:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009e20997e42b1b35f67fa6ce5fd1b8ca097077770030a7ceb173d26d04796fec7022100dc76ea2a72f32eefd2b03008a92858004b973512f4071d53a3aa95038d8206a7:922c64590222798bb761d5b6d8e72950
