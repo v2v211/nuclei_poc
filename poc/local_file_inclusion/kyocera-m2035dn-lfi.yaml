@@ -14,7 +14,7 @@ info:
     cwe-id: CWE-22
   metadata:
     max-request: 1
-  tags: edb,printer,iot,kyocera,lfi,intrusive,vuln
+  tags: edb,printer,iot,kyocera,lfi
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221009a5576cdb0b55178bf9d77aa7147e5d4065e48b7a9499ae3e085c71bf56f0e910221008126bd9f64e60fb763b67c3fa2ca14e39b0bfb41c505da8f08d91b4111a6bc8d:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207fcf481e60d8758a497f03ea271e68bfbed257d393ff0e9f67f71d95fdfb6b0b022026938cec607b3fa9d3833e5612bed2bb48bf6850e695dbd62017de7775aa8bb9:922c64590222798bb761d5b6d8e72950
