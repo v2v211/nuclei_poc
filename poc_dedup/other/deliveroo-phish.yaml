@@ -10,7 +10,7 @@ info:
     - https://deliveroo.co.uk
   metadata:
     max-request: 1
-  tags: phishing,deliveroo,osint,discovery
+  tags: phishing,deliveroo,osint
 http:
   - method: GET
     path:
@@ -33,4 +33,4 @@ http:
         dsl:
           - '!contains(host,"deliveroo.com")'
           - '!contains(host,"deliveroo.co.uk")'
-# digest: 4b0a004830460221009ca7d5279f670aec9871936bb7fd98343eae99cf6a292181ebc9da58f22d1fda022100d2ec29a2bf0621ddb221566c38fa9d33ba9d25077ce45c46bd4b172df3f68a96:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207056ba428f6cb293ac49913184f44bdf38f1d8026bb2543771e9001888fd4a4f022011b7125a0910ac2d5a2674fb0f8e36c23d6f429046699326942a8db636578981:922c64590222798bb761d5b6d8e72950
