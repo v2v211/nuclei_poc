@@ -1,1 +1,1 @@
-["Express-LFR-GET-2.yaml","Express-LFR-json-2.yaml","Express-LFR-json.yaml","Node-RED-Traversal.yaml","Path_traversal_NodeJs.yaml","mongo-express2.yaml","node-red-path-traversal.yaml","pnpm-lock-yaml.yaml"]
+["Express-LFR-json.yaml","Node-RED-Traversal.yaml","cve-2021-29115-spring-expression-language-rce.yaml","gradle-cache-node-detect.yaml","mongo-express2.yaml","node-red-path-traversal.yaml","pnpm-lock-yaml.yaml"]
