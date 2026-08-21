@@ -9,7 +9,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"Wi-Fi APP Login"
-  tags: exposure,wavlink,unauth,misconfig,router,vuln
+  tags: exposure,wavlink,unauth,misconfig,router
 
 http:
   - method: GET
@@ -44,4 +44,5 @@ http:
         group: 1
         regex:
           - 'var passphraseKey12="(.*)";'
-# digest: 490a0046304402202531afad3f3174b3090147ea3c6993a0c5a71939380d670e7d82ec9b0d75736702203199402b189d6b242b2bccc09bf83a8fd402404ea45cebde27d113c41deb37c7:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022001a73c92e30b7d3d758141d3c02a0556b645c3db302df3ec3d4cdcc924c4a9d70221009cb70454a96ce29bd3cbd76b6c13e1c5d16ec80883c57b37e6178534b653a869:922c64590222798bb761d5b6d8e72950

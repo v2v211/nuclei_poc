@@ -17,7 +17,7 @@ info:
     fofa-query:
       - title="dzzoffice"
       - icon_hash=-1961736892
-  tags: dzzoffice,panel
+  tags: dzzoffice,panel,discovery
 
 http:
   - method: GET
@@ -43,4 +43,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100cb11cfe9200ab3c8e94d354c6cde46b664f689beecd15438c3e4f17e43374dd8022100fe1acb9b15e4c7a1fa788e7dbc48a66a6bd701bf2b68e18adde15842b6c90db2:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a071dc2a5857a8cf50837cfdf72bc88787a7d68dfff0b9ed03874f2cb1d71faf022100af5da12954bae92209c4f35a61600afd93350ea65af70bfad6bab5daeb474623:922c64590222798bb761d5b6d8e72950

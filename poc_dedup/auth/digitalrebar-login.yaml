@@ -14,9 +14,9 @@ info:
     cpe: cpe:2.3:a:rackn:digital_rebar:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    vendor: rackn
     product: digital_rebar
-  tags: rackn,digitalrebar,panel,discovery
+    vendor: rackn
+  tags: rackn,digitalrebar,panel
 
 http:
   - method: GET
@@ -38,4 +38,4 @@ http:
         part: body
         words:
           - 'Digital Rebar'
-# digest: 490a004630440220755d37b88dbbc5f42972bec3649e637eda7d329e7c1b57705d6c8eef86f478d102206c439a0c7379d2c6e99c019bc60c2fc5d76177c4cf032b287280e9e963e72561:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100b7019f931e0fafef9e3ab6a9ca6b4b18a7e78e84002ed960a63b446be12fa0f802204a07e0cb558a25332bae48c53c5d6929e4a06af223cd2a1c0e8e3e8841108a84:922c64590222798bb761d5b6d8e72950
