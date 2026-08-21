@@ -1,1 +1,1 @@
-["fuzz-type.yaml","generic-lfi-fuzzing.yaml","lfi-fuzzing-parameter-path.yaml","lfi-fuzzing-parameter-template.yaml","linux-lfi-fuzzing.yaml","log4j-fuzz.yaml","ssrf-fuzz.yaml","windows-lfi-fuzzing.yaml"]
+["fuzz-type.yaml","generic-lfi-fuzzing.yaml","lfi-fuzzing-parameter-path.yaml","lfi-fuzzing-parameter-template.yaml","linux-lfi-fuzzing.yaml","prestashop-module-fuzz.yaml","windows-lfi-fuzzing.yaml"]

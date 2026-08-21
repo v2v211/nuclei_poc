@@ -7,7 +7,7 @@ info:
   description: Detects the GraphiQL application
   metadata:
     max-request: 1
-  tags: tech,graphiql,graphql
+  tags: tech,graphiql,graphql,discovery
 
 http:
   - method: GET
@@ -24,5 +24,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100b811519114efaba4be39bb3908956899a0970802bc84b96f1ae01df191a4182c0221008c99b36df392e1f60404701a72e04b21740ce8e503ff2276927e29c9d723945f:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022049875c4caae0ee71c52ddb439b0208138daa4bd4c233572679e3832348f0b26902204471d7e7cf13ca2214860a5a51c7b4c4e4b4e611b47384d579cd305d9766e617:922c64590222798bb761d5b6d8e72950

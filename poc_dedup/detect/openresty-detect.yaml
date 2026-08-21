@@ -8,7 +8,7 @@ info:
   metadata:
     max-request: 1
     shodan-query: product:"OpenResty"
-  tags: tech,openresty
+  tags: tech,openresty,discovery
 
 http:
   - method: GET
@@ -26,5 +26,4 @@ http:
         part: header
         regex:
           - 'openresty/[0-9.]+'
-
-# digest: 4a0a00473045022100d8f42464e105b8c2f4eefd55a617484f0150aa1127b129af198b114d4c406d7e02203baca6f7c25f5ce08531052a88c997a578ff41f65cb7469815f0a635b8f6b071:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009fa9da73cd2b6f35fe239fb116234fb2a913a8b4e33c618c29d27f8ed510b3a902210085ee1cbbe6120577284484da1c3bedb68dec7401c1e0d7e332962506f18c71e9:922c64590222798bb761d5b6d8e72950
