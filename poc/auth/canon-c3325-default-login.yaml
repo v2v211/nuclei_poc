@@ -10,7 +10,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"c3325"
-  tags: canon,c3325,default-login,misconfig
+  tags: canon,c3325,default-login,misconfig,intrusive,vuln
 
 variables:
   username: "Administrator"
@@ -39,4 +39,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022066c538ca6c6a1c796e4686aaf6654dea37f29c1341faf75bd5a93d9a5ee55136022006ad8dc07392c7b168dd4067416ba86ae43c7eb76b26b05fd138d7eb456367d9:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100beac58d23835b1b2f822d1547b67d79ec12a692b29828ba53271e1c92e48bae70220611a44abdab5994653092a675823824ad9d678c7679916396610e31d64c53d18:922c64590222798bb761d5b6d8e72950
