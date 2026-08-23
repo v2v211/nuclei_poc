@@ -23,7 +23,7 @@ info:
       - cpe:"cpe:2.3:a:adobe:experience_manager"
     fofa-query: title="aem sign in"
     google-query: intitle:"aem sign in"
-  tags: panel,aem,adobe,sling
+  tags: panel,aem,adobe,sling,discovery
 
 http:
   - method: GET
@@ -47,4 +47,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220018d2e371edac7d420df30d109b501f17b583c682e3af1228780152edf20904b0220669edda0b2f1b358140f2cbb6e9a1e4e8dabd4bce7cd2ee745d5139aebc8313a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022022b3e3af5e427c487851c07f4db36957b067edf3c964d40e3cf5c8d6ec41e267022100d0db9f2f19eab0e6d00dd9c1c39d10b631be3cfddf764995a1f4635c2dc5feb9:922c64590222798bb761d5b6d8e72950
