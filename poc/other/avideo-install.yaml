@@ -17,7 +17,7 @@ info:
     fofa-query: "AVideo"
     product: avideo
     vendor: wwbn
-  tags: panel,install,avideo,misconfig,vuln
+  tags: panel,install,avideo,misconfig
 
 http:
   - method: GET
@@ -40,4 +40,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220389ef5da58dc98feddc942acb18c9e21343e8e03d8ee752e5b0adbf4e3bf44f2022048b03b2b51d3dc7beeec55041edf56716b01eda60a941f73f7898f92409ce1f8:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207382f67d446e79b216f6bddbc1032f24895030891d5e84eb5501db48ec38418202205efe7cd5539401015982673a28bde1c1fda95f8675157561311a2712a2a3305d:922c64590222798bb761d5b6d8e72950
