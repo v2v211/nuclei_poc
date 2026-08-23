@@ -1,4 +1,4 @@
-id: RedCap-Install-Mode
+id: RedCap Install Mode
 info:
   author: Clark
   description: Can redirect site using REDCap base URL.
