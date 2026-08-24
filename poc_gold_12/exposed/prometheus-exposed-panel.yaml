@@ -1,24 +1,23 @@
 id: prometheus-exposed-panel
 info:
   name: Prometheus.io exposed panel
-  author:
-  - l0ne1y
-  description: |-
-    Prometheus时间序列信息泄露
-    通过访问/graph泄露Prometheus时间序列收集、处理服务器等敏感信息
+  author: organiccrap
   severity: low
-  remediation: |-
-    官方修复方案：
-    1、建议用户到官方获取最新补丁或者最新版本程序：
-    https://github.com/prometheus/prometheus/
-    临时修复方案：
-    1、禁止带有敏感数据的Web页面展示，以防止敏感信息泄漏。
-    2、对必须发送的敏感数据或页面请求接口做好严格的权限认证
+  tags: panel,prometheus
 requests:
-- matchers:
-  - type: word
-    words:
-    - <title>Prometheus Time Series Collection and Processing Server</title>
-  path:
-  - '{{BaseURL}}/graph'
-  method: GET
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
+    raw:
+      - |
+        GET /graph HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Accept-Encoding: gzip, deflate
+        Accept: */*
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - '<title>Prometheus Time Series Collection and Processing Server</title>'
