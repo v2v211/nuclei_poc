@@ -15,7 +15,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"ruckus"
-  tags: default-login,router,ruckus,vuln
+  tags: default-login,router,ruckus
 
 http:
   - raw:
@@ -47,4 +47,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022071c23a5a9b774961b7f7067f5c890af834cf01b511cf43768083d441a38e52a602210081722cd30b9e48330c00e05c0e4c4c548d197eacc9d9377ce5799f74ca39d92f:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a004830460221008c14281d5a07956f89b05f9f624dc535ddffd79083a987dc5e418f5861d7028c022100c0c5d24e6b9013ec5f12abd0c8b9a0d7c0908a05126309d3d061911d6e3771ca:922c64590222798bb761d5b6d8e72950
