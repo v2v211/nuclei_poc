@@ -1,28 +1,27 @@
 id: sitecore-debug-page
+
 info:
   name: SiteCore Debug Page
   author: dhiyaneshDK
   severity: low
+  description: SiteCore debug page is exposed.
   metadata:
-    shodan-query: 'http.title:"Welcome to Sitecore"'
-  tags: debug,sitecore
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
-    raw:
-      - |
-        GET /sitecore/ HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
+    max-request: 1
+    shodan-query: http.title:"Welcome to Sitecore"
+  tags: debug,sitecore,misconfig
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/sitecore/'"
+
     matchers-condition: and
     matchers:
       - type: word
         words:
           - 'extranet\Anonymous'
+
       - type: status
         status:
           - 404
+# digest: 4b0a0048304602210094dddf9d0418c7b0eef27f6f9d253bb1caf5c636d8b98cd7882f4d5d07705b21022100feb93304ae495cddf82e449c22cb7cfef398687df2d0b91884aa32876ad09a52:922c64590222798bb761d5b6d8e72950
