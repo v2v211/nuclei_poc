@@ -9,9 +9,11 @@ info:
     - https://blog.melbadry9.xyz/fuzzing/nuclei-cache-poisoning
     - https://portswigger.net/research/practical-web-cache-poisoning
     - https://portswigger.net/web-security/web-cache-poisoning
+  classification:
+    cwe-id: CWE-80
   metadata:
     max-request: 2
-  tags: cache,generic,xss
+  tags: cache,generic,xss,vuln
 variables:
   cache_key: "{{to_lower(rand_base(6))}}"
   cache_header: "{{to_lower(rand_base(6))}}"
@@ -35,4 +37,4 @@ http:
           - contains(body_2, cache_header)
           - contains(body_2, xss_payload)
         condition: and
-# digest: 490a00463044022064537a8b328d0bfa78c7ea621fc7ee914de3b3ce51ba7f4041e5127a748f78910220455d06d1cd04523e367f623bf39902232b90f3f6b426030a56ca6eca4f79a6fd:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202f5b2caf9db4ba1220a65841267c6f924def021b30d94c0a968f4572c55f6e11022100fdf972bd46c225d7e5957f5566eb4323fb6636017902afbc6f213b35ba9c2916:922c64590222798bb761d5b6d8e72950
