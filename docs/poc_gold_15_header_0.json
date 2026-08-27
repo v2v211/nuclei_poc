@@ -1,1 +1,1 @@
-["header-blind-ssrf.yaml","header-command-injection.yaml"]
+["header-blind-ssrf.yaml","header-command-injection.yaml","host-header-injection.yaml"]
