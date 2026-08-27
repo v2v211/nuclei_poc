@@ -11,10 +11,10 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
-    cwe-id: CWE-79
+    cwe-id: CWE-80
   metadata:
     max-request: 1
-  tags: xss,acme
+  tags: xss,acme,vuln
 
 http:
   - method: GET
@@ -31,5 +31,4 @@ http:
         words:
           - "/xml"
           - "/html"
-
-# digest: 4a0a0047304502203dd1e78138abdcb11458df6497089b1232c5ec8f429da1e504786ce6e180c311022100f2c5e21e37c88c7db45d50a91564b14cf9e10142f8cf80bc0edd322cbb70cc41:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e9ab335842544693117e1866a4cfb97a15ed5f6a2d931d97a275b71a4793d2cd0221008a935ff82b9ec710d569a1d06bba8cf27900059f4f66bb12449521e9acd2b438:922c64590222798bb761d5b6d8e72950
