@@ -22,7 +22,7 @@ info:
       - app="adobe-coldfusion"
       - title="coldfusion administrator login"
     google-query: intitle:"coldfusion administrator login"
-  tags: panel,coldfusion,adobe,discovery
+  tags: panel,coldfusion,adobe
 
 http:
   - method: GET
@@ -38,4 +38,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200967fe971acb3d73e47f22f0358ff563ce89e07cabd0c5d9e395eb80204f7dab022100d3dfecd34b991b1b69fc8748687fa528778d0ec25c8069c486fdaf640d8d70dd:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e90d4d2afd339ab50370a9a0f3f07c7cfa80b6a388c6227cbe40df2ffcc2145302203461f75bc5f90f436bc602113c2cd524e4b9020b3a8848c31e1bcb432b5d7da3:922c64590222798bb761d5b6d8e72950

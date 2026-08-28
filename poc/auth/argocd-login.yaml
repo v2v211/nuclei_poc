@@ -1,33 +1,61 @@
-id: argocd-detect
+id: argocd-login
 
 info:
   name: Argo CD Login Panel
-  author: Adam Crosser,daffainfo
+  author: Adam Crosser,daffainfo,aringo,righettod
   severity: info
-  description: An Argo CD login panel was discovered.
+  description: |
+     ArgoCD was detected - A declarative, GitOps continuous delivery tool for Kubernetes.
   reference:
     - https://argoproj.github.io/cd/
   classification:
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:argoproj:argo_cd:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 1
+    max-request: 2
     shodan-query: http.title:"Argo CD"
-  tags: panel,argocd,login,kubernetes
+    product: argo_cd
+    vendor: argoproj
+  tags: panel,argocd,login,kubernetes,discovery
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}/login"
+      - "{{BaseURL}}"
+      - "{{BaseURL}}/swagger.json"
+      - "{{BaseURL}}/api/v1/settings"
+      - "{{BaseURL}}/api/version"
 
-    matchers-condition: and
+    stop-at-first-match: true
+
+    matchers-condition: or
     matchers:
-      - type: word
-        part: body
-        words:
-          - '<title>Argo CD</title>'
+      - type: dsl
+        dsl:
+          - contains(to_lower(body_1), '<title>argo cd</title>')
+          - status_code_1 == 200
+        condition: and
 
-      - type: status
-        status:
-          - 200
+      - type: dsl
+        dsl:
+          - contains(to_lower(body_2), 'argocd control plane')
+          - status_code_2 == 200
+        condition: and
 
-# digest: 4a0a00473045022025f2ab21b49fc17ae34bd50a0f30ed72e31716e58078dc235b23768dc6d432340221009523088dadc3d7fa9ae5505145ec7af57fda9a31b89849b0cdb295a13802b849:922c64590222798bb761d5b6d8e72950
+      - type: dsl
+        dsl:
+          - contains(to_lower(body_3), 'argocd.argoproj.io')
+          - status_code_3 == 200
+        condition: and
+
+      - type: dsl
+        dsl:
+          - contains(to_lower(header_4), 'grpc-metadata-content-type')
+          - status_code_4 == 200
+        condition: and
+
+    extractors:
+      - type: json
+        json:
+          - .Version
+# digest: 4b0a00483046022100c36ca31848e38eda3096905b44b9ddca8ac1a59e5421d6a3f9d3a20654cdbfca02210096d184e6f905b8db2fe9cdecaa37b2644ba0f2840ff3c76e86e45e4fcebf457f:922c64590222798bb761d5b6d8e72950

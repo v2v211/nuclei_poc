@@ -7,7 +7,7 @@ info:
   description: Joomla! configuration.php-dist file was detected.
   metadata:
     max-request: 1
-  tags: config,exposure,joomla,vuln
+  tags: config,exposure,joomla
 
 http:
   - method: GET
@@ -31,4 +31,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022005e0497f7a05c9b64579e7b2b4eed0efbe463c6c1fb54131802879382a661a34022100dd3f783d24611dc9ea9a56c167673aaa426c0ee2f251ec9a4e722cdb3b135053:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450221008d2729d95e7cf854a8508eac469bb502578e21d995edf32f4f5ef7bde53d9f0c022017c6322f4341b3e22ff27e4dff407d6fd7299c6bb9dfc053cb22982504851ebb:922c64590222798bb761d5b6d8e72950
