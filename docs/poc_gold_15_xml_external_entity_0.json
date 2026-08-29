@@ -1,1 +1,1 @@
-["bitrix-xxe-vulnerabilities.yaml","yongyou_soapFormat_xxe.yaml","yongyou_xxe.yaml"]
+["fuzz-xxe.yaml","springboot-actuators-jolokia-xxe-1.yaml","springboot-actuators-jolokia-xxe-2.yaml","springboot-actuators-jolokia-xxe.yaml","yongyou_soapFormat_xxe.yaml","yongyou_xxe.yaml"]
