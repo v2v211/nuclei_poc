@@ -1,1 +1,1 @@
-["ampache-debug-page.yaml","jboss-seam-debug-page.yaml","soap-ajax-debugshell.yaml"]
+["CodeIgniter-Debug-Exceptions.yaml","ampache-debug-page.yaml","debug-vars.yaml","debug_log.yaml","jboss-seam-debug-page.yaml","larvel-debug-error.yaml","pyramid-debug-toolbar.yaml","rails-debug-mode.yaml","yii-debugger.yaml"]

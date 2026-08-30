@@ -1,35 +1,32 @@
 id: sap-netweaver-info-leak
-
 info:
   name: SAP NetWeaver ICM Info page leak
   author: randomstr1ng
-  severity: medium
   description: Detection of SAP NetWeaver ABAP Webserver /public/info page
-  reference:
+  severity: medium
+  tags: sap
+  reference: |
     - https://www.acunetix.com/vulnerabilities/web/sap-icf-sap-public-info-sensitive-information-disclosure/
     - https://github.com/Jean-Francois-C/SAP-Security-Audit
-  metadata:
-    max-request: 1
-    shodan-query: http.favicon.hash:-266008933
-    product: content_server
-    vendor: sap
-    fofa-query: icon_hash=-266008933
-  tags: sap,misconfig
-
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/sap/public/info"
-
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
+    raw:
+      - |
+        GET /sap/public/info HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Accept-Encoding: gzip, deflate
+        Accept: */*
     matchers:
       - type: regex
         part: body
         regex:
           - "RFC_SYSTEM_INFO.Response"
-
     extractors:
       - type: regex
         part: body
         regex:
           - "<RFCDEST>.*</RFCDEST>"
-# digest: 4b0a00483046022100a2cca5939ed03f4021cd2bcef3bb046fe453a20cbead4b85869508b1bf4f2c6c022100a6cf7b604b23339578e1ca56f50968dec72258cff12d52b4c91600947d2028e8:922c64590222798bb761d5b6d8e72950

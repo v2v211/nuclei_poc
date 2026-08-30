@@ -11,11 +11,8 @@ info:
     cpe: cpe:2.3:a:apache:couchdb:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: apache
     product: couchdb
-    shodan-query:
-      - product:"couchdb"
-      - cpe:"cpe:2.3:a:apache:couchdb"
+    vendor: apache
   tags: panel,couchdb,apache
 
 http:
@@ -35,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502205b10df07f924a43419156eaeddc9c95f96a0d8227a4135b6300d5828b04f56b5022100cfa6303b459b6ef74c1802f1f08eb8de5c8f8cfee00ece29dcbbd092bbb5e118:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202460dc58be10e57f100b410c936566550b450b09ba63c9bae5f1d4154febff0d022100933ab91c370c6a865a941d02ada1ad45639d3eb05571de02ffeb974402aae792:922c64590222798bb761d5b6d8e72950
