@@ -9,7 +9,7 @@ info:
     - https://twitter.com/Wh11teW0lf/status/1295594085445709824
   metadata:
     max-request: 1
-  tags: exposure,lotus,files,vuln
+  tags: exposure,lotus,files
 
 http:
   - method: GET
@@ -28,4 +28,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022048509af3b25c403bf03778d76b1ba63ce0a52d64c3e3fdc175c3851560d78915022100beafbd3ad68f2b299d24d259da95c8779330fba5963471207d6e6b1ae1f6c945:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100b6c2b1222636d8d601a92179dcf9887808cc2bce6bd144114b406de146eaf23802207556cd57256a98d3061b872b46dee6cafe8c28e254a898b1c674612815581ae5:922c64590222798bb761d5b6d8e72950
