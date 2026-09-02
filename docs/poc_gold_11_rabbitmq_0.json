@@ -1,1 +1,1 @@
-["rabbitmq-default-admin.yaml","rabbitmq-exporter-metrics.yaml"]
+["rabbitmq-amqp-default-login.yaml","rabbitmq-dashboard.yaml","rabbitmq-default-admin.yaml","rabbitmq-default-login.yaml","rabbitmq-exporter-metrics.yaml","rabbitmq-management-unauth.yaml"]

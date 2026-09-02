@@ -10,11 +10,15 @@ info:
   classification:
     cpe: cpe:2.3:a:appspace:appspace:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 3
-    product: appspace
-    shodan-query: title:"Appspace"
-    vendor: appspace
     verified: true
+    max-request: 3
+    vendor: appspace
+    product: appspace
+    shodan-query:
+      - title:"Appspace"
+      - http.title:"appspace"
+    fofa-query: title="appspace"
+    google-query: intitle:"appspace"
   tags: appspace,panel,detect
 
 http:
@@ -44,4 +48,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100d0756e6e209352ea0ac90827c785e76a43448ce465c4a17674774cc59afecdff022100c126685413b98a7d183497b337ff43ddc5a39fa1bb9ea5b12f356761517fe22b:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203726266babb53bbc229633ddace1006e41a88ef2252206b251ce93a19056aab902203cf97b3dddc0baf349a560fda171bb03a6d53c4a7e21a3f2f62cf94343c0b59d:922c64590222798bb761d5b6d8e72950

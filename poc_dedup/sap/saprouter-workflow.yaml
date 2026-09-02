@@ -1,10 +1,13 @@
 id: saprouter-workflow
+
 info:
+  name: SAProuter Security checks
   author: randomstr1ng
   description: A simple workflow that runs all checks related to SAProuter.
-  name: SAProuter Security checks
   tags: workflow
+
 workflows:
-- subtemplates:
-  - template: vulnerabilities/saprouter-information-leak.yaml
-  template: network/saprouter-detect.yaml
+
+  - template: network/saprouter-detect.yaml
+    subtemplates:
+      - template: vulnerabilities/saprouter-information-leak.yaml

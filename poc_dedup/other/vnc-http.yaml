@@ -1,14 +1,13 @@
 id: vnc-http
 info:
-  name: TigerVNC
+  name: Android VNC Server
   author: nmap,cn-kali-team
   tags: detect,tech,vnc-http,service
   severity: info
   metadata:
-    product: tigervnc
+    hostname: $1
+    info: 'resolution: $2x$3; VNC TCP port $4'
     rarity: 1
-    vendor: tigervnc
-    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: vnc-http
     type: regex
     regex:
-    - '^HTTP/1\.0 200 OK\nContent-Type: text/html\nContent-Length: \d+\nConnection: close\n\n\n<HTML><HEAD><TITLE>Remote Desktop</TITLE></HEAD>\n<BODY>\n<APPLET CODE="com\.tigervnc\.vncviewer\.VncViewer" ARCHIVE="VncViewer\.jar"'
+    - '(?i)^HTTP/1\.0 200 OK\r\n.*<!-- index\.vnc - default html page for Java VNC viewer applet\..*<TITLE>\n\?''s Android desktop \(([\w._-]+):1\)\n</TITLE>\n<APPLET CODE=VncViewer\.class ARCHIVE=VncViewer\.jar\n        WIDTH=(\d+) HEIGHT=(\d+)>\n<param name=PORT value=(\d+)>.*Further help: <BR>\n<A href=\"http://onaips\.blogspot\.com/\">oNaiPs Blog</A><BR>\n<A href=\"http://www\.tightvnc\.com/\">www\.TightVNC\.com</A>\n</HTML>\n$'

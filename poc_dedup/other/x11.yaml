@@ -1,13 +1,16 @@
 id: x11
 info:
-  name: HDS X Server
+  name: XFree86
   author: nmap,cn-kali-team
   tags: detect,tech,x11,service
   severity: info
   metadata:
-    device_type: terminal server
-    operating_system: NetOS
+    info: Mandrake Linux
+    operating_system: Linux
+    product: xfree86
     rarity: 4
+    vendor: xfree86
+    verified: true
     version: $1
 tcp:
 - name: x11-probe
@@ -20,4 +23,4 @@ tcp:
   - name: x11
     type: regex
     regex:
-    - (?i)^\x01\0\x0b\0\0.....\0\0\0\0.*HDS Network Systems, Inc\. \(([^)]+)\)
+    - (?i)^\x01\x00\x0b\x00\x00\x00.....\x02\x00\x00.*Mandrake Linux \(XFree86 (\d[^\)]+)\)\x00\x00

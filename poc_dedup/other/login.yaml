@@ -1,12 +1,13 @@
 id: login
 info:
-  name: Siemens HiPath logind
+  name: LSI Logic Series SCSI RAID rlogin
   author: nmap,cn-kali-team
   tags: detect,tech,login,service
   severity: info
   metadata:
     fallback:
     - dnsversion-bind-req
+    info: Serial $1; Network name $2
     rarity: 3
 tcp:
 - name: dnsversion-bind-req-tcp
@@ -19,4 +20,4 @@ tcp:
   - name: login
     type: regex
     regex:
-    - '^\x01UX:in\.rlogind: Permission denied\.\r\n'
+    - '^\x00\^A\^@\^@\^@\^@\^@\^@\^Gversion\^Dbind\^@\^@\^P\^@\n\r\n\r\n\r\n\r#################################################\n\r###                                           ###\n\r###  LSI Logic Series 4 SCSI RAID Controller  ###\n\r###      Copyright \d+, LSI Logic Inc\.       ###\n\r###                                           ###\n\r###      Series 4 Disk Array Controller       ###\n\r###        Serial number:  (\w+)         ###\n\r###        Network name:  ([-\w_.]+) *###'
