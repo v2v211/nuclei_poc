@@ -1,1 +1,1 @@
-["SAP-Path-Traversal.yaml","sap-hana-xsengine-panel.yaml","sap-netweaver-portal.yaml","sap-nw-abap-info-leak.yaml","sap-recon-detect.yaml","sap-spartacus-detect.yaml","sapfiori-panel.yaml"]
+["sap-nw-abap-icm-detection.yaml","sap-nw-abap-info-leak.yaml","sap-recon-detect.yaml"]
