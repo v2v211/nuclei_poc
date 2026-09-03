@@ -1,1 +1,1 @@
-["ec2-unrestricted-ssh.yaml","iam-ssh-keys-rotation.yaml","ssh-known-hosts.yaml"]
+["azure-nsg-ssh-unrestricted.yaml","ec2-unrestricted-ssh.yaml","iam-ssh-keys-rotation.yaml"]

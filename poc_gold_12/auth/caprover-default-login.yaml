@@ -10,7 +10,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.favicon.hash:988422585
-  tags: caprover,default-login,misconfig,vuln
+  tags: caprover,default-login,misconfig
 
 variables:
   password: captain42
