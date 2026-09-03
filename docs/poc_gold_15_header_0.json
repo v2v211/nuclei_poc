@@ -1,1 +1,1 @@
-["Header-Blind-SQL-Injection.yaml","SQLI-HEADER.yaml","clockwork-php-header.yaml","header-based-blind-sqli3.yaml","header-blind-xss-injection.yaml","header-reflection.yaml","header-sqli-1.yaml","header-time-sqli.yaml","host-header-injection.yaml","reflect-xss-header.yaml"]
+["based_sqli_header_injection.yaml","header-blind-xss-injection.yaml","header-reflection.yaml","header-sqli-1.yaml","header-time-sqli.yaml","xss-deprecated-header-detect.yaml"]
