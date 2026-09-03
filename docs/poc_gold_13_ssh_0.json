@@ -1,1 +1,1 @@
-["ec2-unrestricted-ssh.yaml"]
+["ec2-unrestricted-ssh.yaml","ssh-known-hosts.yaml","unrestricted-ssh-access.yaml"]
