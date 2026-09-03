@@ -1,1 +1,1 @@
-["Django-Debug-Disclosure-96151134.yaml","TopApp-AD_enable_tool_debug_php-RCE.yaml","coldfusion-debug-xss-2.yaml","coldfusion-debug-xss1.yaml","django-debug-v2.yaml"]
+["CodeIgniter-Debug-Exceptions.yaml","Django-Debug-Disclosure.yaml","TopApp-AD_enable_tool_debug_php-RCE.yaml","debug-vars.yaml","django-debug-exposure.yaml","event-debug-server-status.yaml","laravel-debug-enabled.yaml","larvel-debug-error.yaml","pyramid-debug-toolbar.yaml","yii-debugger.yaml"]
