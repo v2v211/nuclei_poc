@@ -1,1 +1,1 @@
-["atlassian-bamboo-build.yaml","jira-servicedesk-signup.yaml","jira-setup.yaml"]
+["atlassian-login-default.yaml","bitbucket-auth-bypass.yaml","bitbucket-oauth-exposure.yaml","bitbucket-takeover.yaml","confluence-dashboard.yaml","confluence-installer.yaml","jira-login-check.yaml","jira-plugin-sqli.yaml","jira-servicedesk-signup.yaml","jira-setup.yaml","poc-yaml-Confluence-ognl-rce.yaml"]

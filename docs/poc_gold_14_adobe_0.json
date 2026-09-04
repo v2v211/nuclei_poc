@@ -1,1 +1,1 @@
-["aem-anonymous-write.yaml","aem-list-custom.yaml","aem-querybuilder-internal-path-read-3.yaml","aem-querybuilder-internal-path-read2.yaml","servudaemon-ini.yaml"]
+["aem-anonymous-write.yaml","aem-fuzz.yaml","aem-xss.yaml","servudaemon-ini.yaml"]

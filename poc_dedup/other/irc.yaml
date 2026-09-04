@@ -1,6 +1,6 @@
 id: irc
 info:
-  name: ircu ircd
+  name: ircu ircd inter-server port
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
@@ -21,4 +21,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Checking Ident\r\n:([-\w_.]+) 451 \*  :Register first\.\r\n
+    - ^:([-\w_.]+) 451 \*  :Register first\.\r\n

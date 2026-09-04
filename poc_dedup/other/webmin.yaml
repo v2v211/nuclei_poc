@@ -1,11 +1,11 @@
 id: webmin
 info:
-  name: https on $1:$2 ($3)
+  name: https on TCP port $1 ($2)
   author: nmap,cn-kali-team
   tags: detect,tech,webmin,service
   severity: info
   metadata:
-    info: https on $1:$2 ($3)
+    info: https on TCP port $1 ($2)
     rarity: 1
 tcp:
 - name: rpccheck
@@ -18,4 +18,4 @@ tcp:
   - name: webmin
     type: regex
     regex:
-    - ^([^:]*):(\d+):1:(.+)$
+    - ^0\.0\.0\.0:(\d+):1:(.+)$

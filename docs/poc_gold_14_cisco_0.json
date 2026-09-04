@@ -1,1 +1,1 @@
-["Cisco-ASA-XSS.yaml","cisco-vpn-FileRead.yaml"]
+["cisco-broadworks-log4j-rce.yaml","cisco-cloudcenter-suite-log4j-rce.yaml","cisco-unified-communications-log4j-rce.yaml","cisco-vpn-FileRead.yaml","cisco-webex-log4j-rce.yaml"]

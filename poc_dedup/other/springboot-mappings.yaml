@@ -5,15 +5,18 @@ info:
   author: that_juan_,dwisiswant0,wdahlenb
   severity: low
   description: Additional routes may be displayed
-  tags: springboot,exposure
+  metadata:
+    max-request: 2
+  tags: springboot,exposure,misconfig
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/mappings"
       - "{{BaseURL}}/actuator/mappings"
 
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: word
@@ -35,3 +38,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4b0a004830460221008790875bbe7e44316e87dd222ce35fe3cfdb098cf380873e0533973722dfb831022100e09e892a23960f0d3e85b18b312380c655ceb7deb1bd2da2c58c514c43cab236:922c64590222798bb761d5b6d8e72950

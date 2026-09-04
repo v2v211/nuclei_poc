@@ -1,5 +1,4 @@
 id: scriptcase-prod-login
-
 info:
   name: ScriptCase Production Environment Login
   author: Ricardo Maia (Brainfork)
@@ -8,17 +7,14 @@ info:
     - https://www.scriptcase.com.br
     - https://www.scriptcase.net
   metadata:
-    max-request: 2
     verified: true
     shodan-query: title:"ScriptCase"
   tags: panel,scriptcase
-
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/prod/lib/php/"
       - "{{BaseURL}}/scriptcase/prod/lib/php/"
-
     stop-at-first-match: true
     matchers-condition: and
     matchers:
@@ -28,11 +24,9 @@ http:
           - '(?i)(NetMake)'
           - '(?i)(Login)'
         condition: and
-
       - type: status
         status:
           - 200
-
     extractors:
       - type: regex
         name: version

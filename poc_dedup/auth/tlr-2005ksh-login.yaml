@@ -10,12 +10,15 @@ info:
     cwe-id: CWE-200
     cpe: cpe:2.3:o:telesquare:tlr-2005ksh_firmware:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 1
-    product: tlr-2005ksh_firmware
-    shodan-query: http.html:"TLR-2005KSH"
-    vendor: telesquare
     verified: true
-  tags: panel,router,telesquare
+    max-request: 1
+    vendor: telesquare
+    product: tlr-2005ksh_firmware
+    shodan-query:
+      - http.html:"TLR-2005KSH"
+      - http.html:"tlr-2005ksh"
+    fofa-query: body="tlr-2005ksh"
+  tags: panel,router,telesquare,discovery
 
 http:
   - method: GET
@@ -32,4 +35,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100a384b1c271ff45939eb938d34091fdebf83d5698504e7a6ebdbfbbb1d0c6a1b0022100efd396080988e78b54e582c0f012c930736afb523a075f57b657c3bfb96c13c9:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220110043afbbdd4f507a7e70946da205c30a785d156ad6b1690b289185e92de5fe022100c75d1cef519170a7967c5b191c401d725f08149a02201b29db1e41308cb4d7f5:922c64590222798bb761d5b6d8e72950

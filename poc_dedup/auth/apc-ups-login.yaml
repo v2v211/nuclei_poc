@@ -12,7 +12,7 @@ info:
   metadata:
     max-request: 1
     shodan-query: title:"APC | Log On"
-  tags: iot,panel
+  tags: iot,panel,discovery
 
 http:
   - method: GET
@@ -29,5 +29,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402205da82c9d57d3d08507d0ad710c327f7b96877a56b8fd6821e5300942ce071fdd022028cc8e18ec271a2a0b591529944e329e95e63b2204d3bc2b3047a891ab17b30e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502207514d22f4f1281fb62b2793e1ea1594560c71ad7437859315e32184d67b2dc0702210093398e0afad9f32be877ba752ab68eeb3c1e322d9967e23bbc0f37f1a137e2b3:922c64590222798bb761d5b6d8e72950

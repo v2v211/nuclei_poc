@@ -1,11 +1,12 @@
 id: gopher
 info:
-  name: Internet Gopher Server
+  name: Windows gopherd
   author: nmap,cn-kali-team
   tags: detect,tech,gopher,service
   severity: info
   metadata:
-    info: Gopher+ protocol; GopherWeb $1
+    info: German
+    operating_system: Windows
     rarity: 1
 tcp:
 - name: get-request
@@ -18,4 +19,4 @@ tcp:
   - name: gopher
     type: regex
     regex:
-    - '^HTTP/1\.0 200 Ok\r\nMIME-Version: 1\.0\r\nServer: GopherWEB/(\d[-.\w]+)\r\n'
+    - ^3 --6 Ung\xfcltige Anforderung\. \r\n\.\r\n$

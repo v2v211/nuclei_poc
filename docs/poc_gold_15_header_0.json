@@ -1,1 +1,1 @@
-["header-blind-ssrf.yaml"]
+["based_sqli_header_injection.yaml","header-blind-xss-injection.yaml","header-reflection.yaml","header-sqli-1.yaml","header-time-sqli.yaml","reflect-xss-header.yaml"]

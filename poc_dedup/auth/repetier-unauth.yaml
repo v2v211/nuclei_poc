@@ -15,7 +15,7 @@ info:
     product: repetier-server
     shodan-query: title:"Repetier-Server"
     fofa-query: title="repetier-server"
-  tags: repetier,dashboard,unauth,misconfig,intrusive,vuln
+  tags: repetier,dashboard,unauth,misconfig
 
 http:
   - method: GET
@@ -36,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402204b1c446e1f93f4b137ea6250ba34ec0b45d9b2dbab6d79480350cace0a395d79022019aa8023636c3971ac6024c55804585ff17d1349dd3aae1f08d276f960c35e4c:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205819f5c52118748c051b0a084a9f914f22be45d4305f75994a9f40e7c29906cc02201a99709aa9e921b49411fddda46d2aa681861c95c44c7be8d866c024072dadaf:922c64590222798bb761d5b6d8e72950
