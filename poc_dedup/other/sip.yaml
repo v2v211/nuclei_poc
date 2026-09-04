@@ -1,16 +1,17 @@
 id: sip
 info:
-  name: Genexis DRG $1 SIP
+  name: Zoiper VoIP software
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: broadband router
     fallback:
     - get-request
-    - httpoptions
+    product: zoiper
     rarity: 5
-    version: $2
+    vendor: securax
+    verified: true
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -22,4 +23,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 400 Invalid Via Port 0\r\n(?:[^\r\n]+\r\n)*?User-Agent: drgos-drg(\d+)-([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Zoiper (rev\.\d+)\r\n'

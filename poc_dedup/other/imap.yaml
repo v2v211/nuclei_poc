@@ -1,11 +1,14 @@
 id: imap
 info:
-  name: cPanel Courier imapd
+  name: Dovecot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    product: dovecot
     rarity: 1
+    vendor: dovecot
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^GET NO Error in IMAP command received by server\.\r\n
+    - ^\* OK .*\r\nGET BAD Error in IMAP command received by server\.\r\n\* BAD Error in IMAP command received by server\.\r\n

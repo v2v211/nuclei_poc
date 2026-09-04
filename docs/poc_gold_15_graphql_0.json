@@ -1,1 +1,1 @@
-["graphql-depth-bomb.yaml","graphql-depth-limit.yaml","graphql-injection.yaml","hasura-graphql-psql-exec.yaml","hidden-graphql-query-complexity.yaml"]
+["Graphql-Playground-Exposure.yaml","graphql-depth-bomb.yaml","graphql-depth-limit.yaml","graphql-get-method.yaml","graphql-injection.yaml","hidden-graphql-query-complexity.yaml"]

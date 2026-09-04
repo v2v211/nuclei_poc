@@ -1,12 +1,16 @@
 id: jabber
 info:
-  name: Facebook Chat XMPP
+  name: ejabberd
   author: nmap,cn-kali-team
   tags: detect,tech,jabber,service
   severity: info
   metadata:
     hostname: $1
+    info: Protocol $2
+    product: ejabberd
     rarity: 1
+    vendor: process-one
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +22,4 @@ tcp:
   - name: jabber
     type: regex
     regex:
-    - ^<\?xml version=\"1\.0\"\?><stream:stream id=\"none\" from=\"([\w._-]+)\" xmlns=\"jabber:client\" xmlns:stream=\"http://etherx\.jabber\.org/streams\" version=\"1\.0\"><stream:error><xml-not-well-formed xmlns=\"urn:ietf:params:xml:ns:xmpp-streams\"/></stream:error></stream:stream>$
+    - ^<\?xml version='1\.0'\?><stream:stream xmlns='jabber:client' xmlns:stream='http://etherx\.jabber\.org/streams' id='\d+' from='([\w._-]+)' version='([\d.]+)'>

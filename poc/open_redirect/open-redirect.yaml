@@ -1,132 +1,45 @@
-id: open-redirect-generic
+id: Open-Redirect
 
 info:
-  name: Open Redirect - Detection
-  author: afaq,melbadry9,Elmahdi,pxmme1337,Regala_,andirrahmani1,geeknik
-  severity: medium
-  description: An open redirect vulnerability was detected. An attacker can redirect a user to a malicious site and possibly obtain sensitive information, modify data, and/or execute unauthorized operations.
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cwe-id: CWE-601
-  metadata:
-    max-request: 93
-  tags: redirect,generic
+  name: Open Redirect Issues
+  description: This template can be used to detect Open Redirect vulnerability in the host.
+  author: rahulkadavil
+  severity: low
+  tags: Open Redirect
 
-http:
+requests:
   - method: GET
     path:
-      - "{{RootURL}}/{{redirect}}"
-
-    payloads:
-      redirect:
-        - '%0a/oast.me/'
-        - '%0d/oast.me/'
-        - '%00/oast.me/'
-        - '%09/oast.me/'
-        - '%5C%5Coast.me/%252e%252e%252f'
-        - '%5Coast.me'
-        - '%5coast.me/%2f%2e%2e'
-        - '%5c{{RootURL}}oast.me/%2f%2e%2e'
-        - '../oast.me'
-        - '.oast.me'
-        - '/%5coast.me'
-        - '////\;@oast.me'
-        - '////oast.me'
-        - '///oast.me'
-        - '///oast.me/%2f%2e%2e'
-        - '///oast.me@//'
-        - '///{{RootURL}}oast.me/%2f%2e%2e'
-        - '//;@oast.me'
-        - '//\/oast.me/'
-        - '//\@oast.me'
-        - '//\oast.me'
-        - '//\toast.me/'
-        - '//oast.me/%2F..'
-        - '//oast.me//'
-        - '//%6f%61%73%74%2e%6d%65'
-        - '//oast.me@//'
-        - '//oast.me\toast.me/'
-        - '//https://oast.me//'
-        - '/<>//oast.me'
-        - '/\/\/oast.me/'
-        - '/\/oast.me'
-        - '/\oast.me'
-        - '/oast.me'
-        - '/oast.me/%2F..'
-        - '/oast.me/'
-        - '/oast.me/..;/css'
-        - '/https:oast.me'
-        - '/{{RootURL}}oast.me/'
-        - '/〱oast.me'
-        - '/〵oast.me'
-        - '/ゝoast.me'
-        - '/ーoast.me'
-        - '/ｰoast.me'
-        - '<>//oast.me'
-        - '@oast.me'
-        - '@https://oast.me'
-        - '\/\/oast.me/'
-        - 'oast%E3%80%82me'
-        - 'oast.me'
-        - 'oast.me/'
-        - 'oast.me//'
-        - 'oast.me;@'
-        - 'https%3a%2f%2foast.me%2f'
-        - 'https:%0a%0doast.me'
-        - 'https://%0a%0doast.me'
-        - 'https://%09/oast.me'
-        - 'https://%2f%2f.oast.me/'
-        - 'https://%3F.oast.me/'
-        - 'https://%5c%5c.oast.me/'
-        - 'https://%5coast.me@'
-        - 'https://%23.oast.me/'
-        - 'https://.oast.me'
-        - 'https://////oast.me'
-        - 'https:///oast.me'
-        - 'https:///oast.me/%2e%2e'
-        - 'https:///oast.me/%2f%2e%2e'
-        - 'https:///oast.me@oast.me/%2e%2e'
-        - 'https:///oast.me@oast.me/%2f%2e%2e'
-        - 'https://:80#@oast.me/'
-        - 'https://:80?@oast.me/'
-        - 'https://:@\@oast.me'
-        - 'https://:@oast.me\@oast.me'
-        - 'https://;@oast.me'
-        - 'https://\toast.me/'
-        - 'https://oast.me/oast.me'
-        - 'https://oast.me/https://oast.me/'
-        - 'https://www.\.oast.me'
-        - 'https:/\/\oast.me'
-        - 'https:/\oast.me'
-        - 'https:/oast.me'
-        - 'https:oast.me'
-        - '{{RootURL}}oast.me'
-        - '〱oast.me'
-        - '〵oast.me'
-        - 'ゝoast.me'
-        - 'ーoast.me'
-        - 'ｰoast.me'
-        - 'redirect/oast.me'
-        - 'cgi-bin/redirect.cgi?oast.me'
-        - 'out?oast.me'
-        - 'login?to=http://oast.me'
-        - '1/_https@oast.me'
-        - 'redirect?targeturl=https://oast.me'
-
-    stop-at-first-match: true
+      - "{{BaseURL}}/?url=http://evil.com"
+      - "{{BaseURL}}/?to=http://evil.com"
+      - "{{BaseURL}}/?forward=http://evil.com"
+      - "{{BaseURL}}/?page=http://evil.com"
+      - "{{BaseURL}}/?checkout=http://evil.com"
+      - "{{BaseURL}}/?dest=http://evil.com"
+      - "{{BaseURL}}/?destination=http://evil.com"
+      - "{{BaseURL}}/?dest_url=http://evil.com"
+      - "{{BaseURL}}/?redirect=http://evil.com"
+      - "{{BaseURL}}/?visit=http://evil.com"
+      - "{{BaseURL}}/?go=http://evil.com"
+      - "{{BaseURL}}/?move=http://evil.com"
+      - "{{BaseURL}}/?target=http://evil.com"
+      - "{{BaseURL}}/?flow=http://evil.com"
+      - "{{BaseURL}}/?out=http://evil.com"
+      - "{{BaseURL}}/?login=http://evil.com"
+      - "{{BaseURL}}/?reach=http://evil.com"
+      - "{{BaseURL}}/?route=http://evil.com"
+      - "{{BaseURL}}/?reroute=http://evil.com"
+      - "{{BaseURL}}/?domain=http://evil.com"
+      - "{{BaseURL}}/?Location=http://evil.com"
+      
 
     matchers-condition: and
-    matchers:
-      - type: regex
-        part: header
-        regex:
-          - '(?m)^(?:Location\s*?:\s*?)(?:https?:\/\/|\/\/|\/\\\\|\/\\)(?:[a-zA-Z0-9\-_\.@]*)oast\.me\/?(\/|[^.].*)?$' # https://regex101.com/r/ZDYhFh/1
-
+    matchers:   
       - type: status
         status:
-          - 301
           - 302
-          - 307
-          - 308
-        condition: or
+
+      - type: regex 
+        regex:
+          - '(?m)^(?:Location\s*?:\s*?)(?:http?://|//)?(?:[a-zA-Z0-9\-_\.@]*)evil\.com.*$'
+        part: header

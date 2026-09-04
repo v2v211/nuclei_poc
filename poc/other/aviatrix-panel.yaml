@@ -9,19 +9,11 @@ info:
     - https://docs.aviatrix.com/HowTos/controller_config.html
   classification:
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:aviatrix:controller:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 1
-    vendor: aviatrix
-    product: controller
-    shodan-query:
-      - http.title:"Aviatrix Cloud Controller"
-      - http.title:"aviatrix cloud controller"
-    fofa-query: title="aviatrix cloud controller"
-    google-query: intitle:"aviatrix cloud controller"
-  tags: panel,aviatrix,discovery
+    shodan-query: http.title:"Aviatrix Cloud Controller"
+  tags: panel,aviatrix
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -38,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a0048304602210093e8570a423b92df72ca2971d2e2349493cc25879a35458bd41e2ca6394dcbbb022100c01c3aad37e29fe47a0857e33b2eb35f0faeeacf4f56f4197eae54a6c4feb2f6:922c64590222798bb761d5b6d8e72950
+# Enhanced by mp on 2022/03/23

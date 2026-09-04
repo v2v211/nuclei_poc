@@ -8,7 +8,7 @@ info:
     fallback:
     - get-request
     hostname: $2
-    info: 'name: $1; afpserver: $3; protocol 3.1; Mac OS X 10.6.3'
+    info: 'name: $1; protocol 3.1; Mac OS X 10.2.*'
     operating_system: Mac OS X
     product: afp_server
     rarity: 1
@@ -25,4 +25,4 @@ tcp:
   - name: afp
     type: regex
     regex:
-    - (?i)^\x01\x03\x00\x00........\x00\x00\x00\x00........\x8f\xfb.([^\x00\x01]+)[\x00\x01].*\tVMware7,1\x04\x06AFP3\.3\x06AFP3\.2\x06AFP3\.1\x06AFPX03.\tDHCAST128\x04DHX2\x06Recon1\rClient\x20Krb\x20v2\x00\x00.*[\x04\x05]([\w.-]+)\x01.afpserver/([\w.@-]+)\x00
+    - (?i)^\x01\x03\x00\x00........\x00\x00\x00\x00........\x83\xfb.([^\x00\x01]+)[\x00\x01].*\tMacintosh\x06\x06AFP3\.1\x06AFPX03\x06AFP2\.2\x0eAFPVersion 2\.1\x0eAFPVersion 2\.0\x0eAFPVersion 1\.1.\tDHCAST128.*[\x04\x05]([\w.-]+)\x00

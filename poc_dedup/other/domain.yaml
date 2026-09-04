@@ -20,4 +20,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?x)\x07version\x04bind\x00\x00\x10\x00\x03\xc0\x0c\x00\x10\x00\x03.{7}unbound$
+    - ^(?:..)?\0\x06\x81\x85\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03

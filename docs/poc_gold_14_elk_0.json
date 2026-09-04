@@ -1,1 +1,1 @@
-["exposed-kibana1.yaml","kibana-unauth.yaml","logstash-log4j-rce.yaml"]
+["kibana-detect.yaml","kibana-panel.yaml"]

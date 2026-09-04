@@ -9,7 +9,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 2
-  tags: tech,waf,dns
+  tags: tech,waf,dns,discovery
 
 dns:
   - name: "{{FQDN}}"
@@ -198,4 +198,4 @@ dns:
         name: ksyun
         words:
           - ".ksyunwaf.com"
-# digest: 490a00463044022005bf81b04ee9a74169b2ea8baf29b776c3da72d7bf13cdf16f62a84baa003daf0220758d7619504e7c6a45cc29f1e7f3c71f7cbba93b4444cf419ddc9b01d486d265:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202d6b0a4ecb80e69908171bf267bd764cff21e1ef12bea69b8cecb86fa57c1c5e02202990cfc63494db19cdd412996b085a17cb0ba2421432bb29cf6eb8bb1578c053:922c64590222798bb761d5b6d8e72950
