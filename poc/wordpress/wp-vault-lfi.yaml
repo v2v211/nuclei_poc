@@ -1,11 +1,19 @@
 id: wp-vault-local-file-inclusion
 
 info:
-  name: WP Vault 0.8.6.6 – Local File Inclusion
+  name: WordPress Vault 0.8.6.6 - Local File Inclusion
   author: 0x_Akoko
   severity: high
-  reference: https://www.exploit-db.com/exploits/40850
-  tags: wp-plugin,wordpress,lfi
+  description: WordPress Vault 0.8.6.6 is vulnerable to local file inclusion.
+  reference:
+    - https://www.exploit-db.com/exploits/40850
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 7.5
+    cwe-id: CWE-22
+  metadata:
+    max-request: 1
+  tags: lfi,edb,wp-plugin,wordpress
 
 http:
   - method: GET
@@ -14,11 +22,11 @@ http:
 
     matchers-condition: and
     matchers:
-
       - type: regex
         regex:
-          - "root:.*:0:0"
+          - "root:.*:0:0:"
 
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022100869207aaa861f34b668b27986e9d989d72a7afa8643305ab0df54bade6fe62830220439a7eb8410b06ab43846e1ab1ecfdd73635c9524af27e86683b03ff48443d4a:922c64590222798bb761d5b6d8e72950

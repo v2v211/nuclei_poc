@@ -1,1 +1,1 @@
-["APACHE-Ambari-weakPass.yaml","Apache-NiFi-rce.yaml","Apache-Ofbiz-XML-RPC-RCE.yaml","apache-filename-brute-force.yaml","apache-spark-rce.yaml","apache-spark-shell-rce.yaml","default-apache-test-all.yaml"]
+["APACHE-Ambari-weakPass.yaml","Apache-NiFi-rce.yaml","Apache-Ofbiz-XML-RPC-RCE.yaml","apache-Struts-S2-016-rce.yaml","apache-spark-enviroment-exposure.yaml"]
