@@ -1,1 +1,1 @@
-["privesc-ruby.yaml","rails-host-redirect.yaml","rails-secret-key-leak.yaml","rails-secret-token.yaml","ruby-dev-environment-check.yaml","ruby-help-desk.yaml","ruby_help_desk-fd741e2d-5478-4b9a-83ab-7ccafdc5d12f.yaml"]
+["privesc-ruby.yaml","rails-host-redirect.yaml","rails-secret-key-leak.yaml","rails-secret-token.yaml","ruby-dev-environment-check.yaml","ruby-help-desk.yaml","ruby-secrets-file.yaml","ruby_help_desk-fd741e2d-5478-4b9a-83ab-7ccafdc5d12f.yaml"]
