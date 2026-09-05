@@ -1,1 +1,1 @@
-["magento-config.yaml","magento-config1.yaml","magento-config2.yaml","magento-information-disclosure.yaml","magento-polyshell-rce.yaml","magento-unprotected-dev-files-2.yaml","magento-unprotected-dev-files1.yaml"]
+["magento-config.yaml","magento-polyshell-rce.yaml","magento-sqli.yaml"]

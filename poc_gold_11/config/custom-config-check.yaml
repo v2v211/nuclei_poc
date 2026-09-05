@@ -1,10 +1,4 @@
-id: custom-config-check
-info:
-  author: SirBugs
-  description: Check for common database configuration keys.
-  name: DataBase Configuration Check
-  severity: critical
-requests:
+http:
 - matchers:
   - part: body
     type: word
@@ -17,3 +11,9 @@ requests:
   method: GET
   path:
   - '{{BaseURL}}/config/parameters.yml'
+id: custom config check
+info:
+  author: SirBugs
+  description: Check for common database configuration keys.
+  name: DataBase Configuration Check
+  severity: critical

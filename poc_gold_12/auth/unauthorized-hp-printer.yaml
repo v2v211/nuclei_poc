@@ -7,7 +7,7 @@ info:
   description: HP Printer is exposed.
   metadata:
     max-request: 1
-  tags: hp,iot,unauth,misconfig,intrusive,vuln
+  tags: hp,iot,unauth,misconfig
 
 http:
   - method: GET
@@ -25,4 +25,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022067077f41bb43a578e7c3310d15cac3ed60f7e295ad9a9d576bf3e1db7733a727022100d0edc28d35b98a6ed60ecd2115182fde94cabe3af14c48c42797ad5253a3acc8:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220654fd3b4279985b791be4b9f4c50ad3d3cd66637da1c1221eceb461d001ffa9f02200a9906b296c3dcbb6a3b446f833c67519ca1a9cb7d55a67e036d23035a9c9d04:922c64590222798bb761d5b6d8e72950
