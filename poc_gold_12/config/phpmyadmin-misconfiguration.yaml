@@ -11,8 +11,6 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
     cwe-id: CWE-200
-  metadata:
-    max-request: 2
   tags: phpmyadmin,misconfig,edb
 
 http:
@@ -22,7 +20,6 @@ http:
       - "{{BaseURL}}/phpMyAdmin/index.php?db=information_schema"
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word
@@ -34,4 +31,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502206115d8e8626268b2d6cb1142b41ab6ee7962b4e11f407ad91006bd0e160d92fe02210092c3621751aeb8b4127760ef10f92850f7cab1161bb97ca79a97a11aa35f3f51:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/04/06
