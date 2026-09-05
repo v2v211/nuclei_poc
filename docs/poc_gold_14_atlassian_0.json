@@ -1,1 +1,1 @@
-["jira-login-check.yaml","poc-yaml-Confluence-ognl-rce.yaml"]
+["jira-login-check.yaml","jira-plugin-sqli.yaml","poc-yaml-Confluence-ognl-rce.yaml"]
