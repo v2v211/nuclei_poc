@@ -1,1 +1,1 @@
-["redis-exception-error.yaml","redis-hll-exploit.yaml","redis-pass-brute.yaml","redis-weak-credentials.yaml"]
+["redis-hll-exploit.yaml","redis-pass-brute.yaml","redis-weak-credentials.yaml"]
