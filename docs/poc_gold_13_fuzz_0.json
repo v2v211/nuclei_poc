@@ -1,1 +1,1 @@
-["config-json-exposure-fuzz.yaml","fuzz-blind-rce.yaml","fuzz-rce-linux.yaml","fuzz-type.yaml","generic-lfi-fuzzing.yaml","lfi-fuzz.yaml","lfi-fuzzing-parameter-download.yaml","lfi-fuzzing-parameter-template.yaml","linux-lfi-fuzzing.yaml","log4j-fuzz.yaml","ssrf-fuzz.yaml","ssti-fuzz.yaml","windows-lfi-fuzzing.yaml"]
+["fuzz-blind-rce.yaml","fuzz-oauth.yaml","fuzz-rce-linux.yaml","fuzz-type.yaml","fuzz-xxe.yaml","generic-lfi-fuzzing.yaml","lfi-fuzzing-parameter-download.yaml","lfi-fuzzing-parameter-template.yaml","linux-lfi-fuzzing.yaml","windows-lfi-fuzzing.yaml"]
