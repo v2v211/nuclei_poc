@@ -1,1 +1,1 @@
-["Cmseasy-Http-Head-sqli.yaml","Springboot-Httptrace.yaml","crystal-live-http-server-lfi.yaml","hidden-http-header-injection.yaml","http-headers-cross-origin-embedder-policy.yaml","ibm-http-server.yaml","spnego-http.yaml"]
+["Cmseasy-Http-Head-sqli.yaml","Springboot-Httptrace.yaml","apache-httpd-rce.yaml","crystal-live-http-server-lfi.yaml","hidden-http-header-injection.yaml","spnego-http.yaml","unauth-lfd-zhttpd.yaml"]
