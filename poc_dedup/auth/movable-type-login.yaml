@@ -19,7 +19,7 @@ info:
       - http.title:"サインイン | movable type pro"
     fofa-query: title="サインイン | movable type pro"
     google-query: intitle:"サインイン | movable type pro"
-  tags: panel,movable,sixapart
+  tags: panel,movable,sixapart,discovery
 
 http:
   - method: GET
@@ -39,4 +39,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022065eb531516cd1257a888672ed82879ab5bee65cfd387c45e25146151fe985c7a022100e5271dc6943830cd931eb1266c768e589d2c73547f9109516865c95a3f9b27b0:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022073552c365df9a5eb6bb7902878fd288d936fb74aeee7ef140ff918d6eb5a3ad1022100c59cfaffb12b590805c78a5a456a9ad3cd862a23f558394a0c19aa64cdd6655c:922c64590222798bb761d5b6d8e72950

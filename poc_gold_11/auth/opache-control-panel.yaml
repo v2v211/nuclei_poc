@@ -9,7 +9,7 @@ info:
     verified: true
     max-request: 2
     shodan-query: http.title:"Opcache Control Panel"
-  tags: misconfig,opache,exposure,vuln
+  tags: misconfig,opache,exposure
 
 http:
   - method: GET

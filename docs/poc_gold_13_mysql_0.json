@@ -1,1 +1,1 @@
-["EOffice_mysql_config_information_leak.yaml","ScanMySQLiErrorBased.yaml","cyberpanel-upgrademysqlstatus-rce.yaml","ec2-unrestricted-mysql.yaml","esafenet-mysql-fileread.yaml","exposed-mysql-initial.yaml","mysql-audit-disabled.yaml","weaver-mysql-config-exposure.yaml"]
+["ScanMySQLiErrorBased.yaml","ec2-unrestricted-mysql.yaml","mysql-audit-disabled.yaml","weaver-mysql-config-exposure.yaml"]
