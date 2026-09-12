@@ -2,14 +2,14 @@ id: dark-mode
 
 info:
   name: >
-    WP Markdown Editor (Formerly Dark Mode) < 1.7 - Stored Cross-Site Scripting
+    Appsero <= 1.2.1 - Missing Authorization
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6830f98b-21f8-4089-9091-1dcd31697425?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/84003388-c47c-41db-8d2d-4643aa375a89?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.7')
+          - compare_versions(version, '<= 4.1.2')

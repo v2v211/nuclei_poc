@@ -1,4 +1,4 @@
-id: 294
+id: 295
 info:
   author: 0xAwali
   name: Blind SSRF
@@ -10,9 +10,7 @@ http:
     words:
     - Your Match
   raw:
-  - 'GET http://{{Host}}.{{Port}}.BSSRF-126.{{MY-DOMAIN}}/ HTTP/1.1
-
-    Host: {{Hostname}}
+  - 'GET {{Scheme}}://{{Host}}.{{Port}}.BSSRF-127.{{MY-DOMAIN}}/ HTTP/0.9
 
     Cache-Control: no-transform
 
