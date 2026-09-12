@@ -1,31 +1,38 @@
 id: wp-gtranslate-open-redirect
-info:
-  name: GTranslate < 2.8.11 - Unauthenticated Open Redirect
-  author:
-  - l0ne1y
-  description: |-
-    WordPress Plugin GTranslate 存在URL重定向漏洞
-    WordPress是Wordpress基金会的一套使用PHP语言开发的博客平台。该平台支持在PHP和MySQL的服务器上架设个人博客网站。WordPress plugin是WordPress开源的一个应用插件。
 
-    WordPress GTranslate 2.8.11版本及之前版本的gtranslate.php存在输入验证错误漏洞，导致用户重定向到它之前不验证的url地址。
+info:
+  name: GTranslate < 2.8.11 - Open Redirect
+  author: DhiyaneshDk,ritikchaddha
   severity: medium
-  remediation: |-
-    官方修复方案：：
-    1、建议用户到官方获取最新补丁或者最新版本程序：https://wordpress.com/zh-cn/install-plugins/
-    临时修复方案：
-    1、代码固定跳转地址，不让用户控制变量。
-    2、跳转目标地址采用白名单映射机制、只对合法的 URL 做跳转。
-    3、合理充分的校验校验跳转的目标地址，非己方地址时告知用户跳转风险。
-requests:
-- matchers:
-  - type: word
-    part: header
-    words:
-    - 'Location: www.pluginvulnerabilities.com'
-  - type: status
-    status:
-    - 301
-  matchers-condition: and
-  path:
-  - '{{BaseURL}}/wp-content/plugins/gtranslate/url_addon/gtranslate.php?glang=en&gurl=/www.pluginvulnerabilities.com'
-  method: GET
+  description: |
+    The Translate WordPress with GTranslate WordPress plugin was affected by an Unauthenticated Open Redirect security vulnerability.
+  impact: |
+    Allows attackers to redirect to the malicious site.
+  remediation: |
+    Update GTranslate plugin to the fixed version 2.8.11
+  reference:
+    - https://wpscan.com/vulnerability/d4da110e-4351-49b8-b7a1-8be24895d2fa/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cwe-id: CWE-601
+    cpe: cpe:2.3:a:gtranslate:gtranslate:*:*:*:*:*:wordpress:*:*
+  metadata:
+    max-request: 1
+    vendor: gtranslate
+    product: gtranslate
+    framework: wordpress
+    fofa-query: body="/wp-content/plugins/gtranslate"
+  tags: wordpress,wp,wp-plugin,gtranslate,redirect
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/gtranslate/url_addon/gtranslate.php?glang=en&gurl=/oast.me"
+
+    matchers:
+      - type: regex
+        part: header
+        regex:
+          - '(?m)^(?:Location\s*?:\s*?)(?:https?:\/\/|\/\/|\/\\\\|\/\\)?(?:[a-zA-Z0-9\-_\.@]*)oast\.me\/?(\/|[^.].*)?$'
+# digest: 4a0a00473045022100a21949d28c479094cbed17e4431431ee1bf6d364c69c49c9b367cacd26087d7602204c89daa6b6b8e37a8cc18bff58aef3f13d5cb91c2712c0ec372f43ef00806d2d:922c64590222798bb761d5b6d8e72950
