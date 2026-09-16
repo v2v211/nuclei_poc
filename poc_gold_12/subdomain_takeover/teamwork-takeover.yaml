@@ -4,6 +4,7 @@ info:
   name: Teamwork Takeover Detection
   author: pdteam
   severity: high
+  description: Teamwork takeover was detected.
   metadata:
     max-request: 1
   tags: takeover,teamwork
@@ -23,4 +24,8 @@ http:
         words:
           - "Oops - We didn't find your site."
 
-# digest: 4a0a0047304502201fa4cc6ba44dd45ec30ff70bc0339fdc72ed8f3568ea051e60794edaed3304cc022100ead7cf3e0f15ecb00c5949d369a3a0e1fbae082f7488b23c511eba3e7b0207d0:922c64590222798bb761d5b6d8e72950
+    extractors:
+      - type: dsl
+        dsl:
+          - cname
+# digest: 4a0a00473045022026cbd67838caea09de977f8cc0754c3afc29748fb86d28383fcf38136f280daa022100f8344edfba4ab4fb832c49d4daac6da091a1f901abc9250e54df7c27ffcb45ac:922c64590222798bb761d5b6d8e72950
