@@ -1,1 +1,1 @@
-["cache-redis-encryption-disabled.yaml","cache-redis-multiaz-disabled.yaml","redis-exporter-metrics.yaml","redis-hll-exploit.yaml","redis-pass-brute.yaml","redis-weak-credentials.yaml"]
+["redis-exception-error.yaml","redis-hll-exploit.yaml","redis-pass-brute.yaml","redis-weak-credentials.yaml"]
