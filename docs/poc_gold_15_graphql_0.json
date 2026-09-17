@@ -1,1 +1,1 @@
-["graphql-depth-bomb.yaml","hidden-graphql-query-complexity.yaml"]
+["graphql-depth-bomb.yaml","graphql-depth-limit.yaml","graphql-injection.yaml","hidden-graphql-query-complexity.yaml"]
