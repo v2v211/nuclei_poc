@@ -10,13 +10,14 @@ info:
     verified: true
     max-request: 15
     shodan-query: title:"COMPALEX"
-  tags: tech,php,compalex,sql,panel,discovery
+  tags: tech,php,compalex,sql,panel
 
 http:
   - method: GET
     path:
       - '{{BaseURL}}'
       - '{{BaseURL}}/{{paths}}/'
+      - '{{paths}}.{{BaseURL}}/'
 
     payloads:
       paths:
@@ -40,4 +41,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100900599772a1de18659c0876ace1b91d811d02e47ff3aa822645deff6134a22ad022026bab969b4e137e81231a2e805ad5a10531f0eac9557f8870f4477ec796eee8c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502207b4df4c351195049490e6da75397200640f1dfe082708202d08a32f2a07b67a8022100dd03d23778bc40314fb8a97094018657658f9095d0a0aff27ec090b74bf3f0b2:922c64590222798bb761d5b6d8e72950
