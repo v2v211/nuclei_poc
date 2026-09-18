@@ -1,33 +1,21 @@
 id: freelancer
-
 info:
-  name: Freelancer User Name Information - Detect
-  author: dwisiswant0
+  name: Freelancer
+  author: nmap,cn-kali-team
+  tags: detect,tech,freelancer,service
   severity: info
-  description: Freelancer user name information check was conducted.
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
-    cwe-id: CWE-200
   metadata:
-    max-request: 1
-  tags: osint,osint-business,freelancer
-
-self-contained: true
-
-http:
-  - method: GET
-    path:
-      - "https://www.freelancer.com/u/{{user}}"
-
-    matchers-condition: and
-    matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        part: body
-        words:
-          - "> joined"
-# digest: 490a0046304402206bdc32fc49f4fd45d26ae0a2e0af2fb846bbd36f3087bb364543eb5a4c2731c8022007c83f291944a28fe6fc331d602194b77e20a2ae9032f1182df9823e421dcf2d:922c64590222798bb761d5b6d8e72950
+    info: 'name: $P(1); description: $P(2)'
+    rarity: 9
+tcp:
+- name: freelancer-status
+  inputs:
+  - data: \x00\x02\xf1\x26\x01\x26\xf0\x90\xa6\xf0\x26\x57\x4e\xac\xa0\xec\xf8\x68\xe4\x8d\x21
+  host:
+  - '{{Hostname}}'
+  port: '2302'
+  extractors:
+  - name: freelancer
+    type: regex
+    regex:
+    - (?i)^\x00\x03\xf1\x26.{88}(.*)\x00\x00(?:.*?:){5}(.*)\x00\x00$
