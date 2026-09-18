@@ -5,11 +5,9 @@ info:
   author: geeknik
   severity: high
   description: This template detects Generic Blind XXE.
-  classification:
-    cwe-id: CWE-611
   metadata:
     max-request: 1
-  tags: xxe,generic,blind,vuln
+  tags: xxe,generic,blind
 
 http:
   - raw:
@@ -28,4 +26,4 @@ http:
         part: interactsh_protocol
         words:
           - "http"
-# digest: 4b0a00483046022100ddf30d870a6ba5c4a1e4a451e36c1f79ffa0c55b26f7003e56a9b74789adb689022100c428e11f2814a90037c24a71d064962f8227467d9037c4d12b78d2fa306d68a9:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009e5f371b8577a787cb831f079905639d7093b07caa9d1c4190fe58aa9afb8e820221008da8844c0a4a0cf51627ff87b81681891e88f9753026a339cdbd0a6bbaa2c679:922c64590222798bb761d5b6d8e72950

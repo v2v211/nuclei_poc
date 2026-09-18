@@ -1,11 +1,9 @@
 id: mongo-express-web-gui
-
 info:
   name: Mongo Express Web GUI
   author: puzzlepeaches
   severity: info
-
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/"
