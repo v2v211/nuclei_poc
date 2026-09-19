@@ -8,10 +8,10 @@ info:
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
     cvss-score: 9.3
-    cwe-id: CWE-918
+    cwe-id: CWE-441
   metadata:
     max-request: 2
-  tags: digitalocean,ssrf,vuln
+  tags: digitalocean,ssrf
 
 http:
   - raw:
@@ -39,4 +39,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100a75af669fad696f82f5c39b7ce20665c86e8c1133f7ae651fe153a527532d47a0221008d59fd18f21846b8434b78f0ad9ed3b1de3ca207df3a4040ca350b56d769e820:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022035e60e285bae85849c1abd54781163d4b8b557a0716ac1f7cf3941c9cc9782ea02203419ddc23c5292b54c434f13f21211538b34cc51f5ae7101c32a4caa08ba5c38:922c64590222798bb761d5b6d8e72950

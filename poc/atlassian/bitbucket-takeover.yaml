@@ -4,12 +4,11 @@ info:
   name: Bitbucket Takeover Detection
   author: pdteam
   severity: high
-  description: Bitbucket takeover was detected.
   reference:
     - https://github.com/EdOverflow/can-i-take-over-xyz
   metadata:
     max-request: 1
-  tags: takeover,vuln
+  tags: takeover
 
 http:
   - method: GET
@@ -32,8 +31,4 @@ http:
           - "text/plain"
         part: header
 
-    extractors:
-      - type: dsl
-        dsl:
-          - cname
-# digest: 4b0a00483046022100a9bead36a322da1b9ea512cb229fda870d7b65bc5fa977c01152c935a396004f022100ef74cfb98b1827a8c8cf0a42fc62c89fed01edc9738e75c1856350ff1df09f40:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205b7987c056997dd8161cbd726a93029f3a2d206d66578330bd5fba78acdbb0b302201841488659a4fbf01a69e02d721787a50df41e386528a826981c64d5c2154306:922c64590222798bb761d5b6d8e72950
