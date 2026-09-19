@@ -10,7 +10,7 @@ info:
     max-request: 1
     shodan-query: title="Laser Printer"
     verified: true
-  tags: dell,iot,unauth,misconfig,printer,vuln,discovery
+  tags: dell,iot,unauth,misconfig,printer,intrusive,vuln,discovery
 
 flow: http(1) && http(2)
 
@@ -44,4 +44,4 @@ http:
           - "contains_all(body, 'Security','Security')"
         condition: and
         internal: true
-# digest: 490a0046304402201aba90f2a5f670324470dc2330456cfe5c4bff8467b1b2a38c7e63c11df9024a02200d0f104edbf3eb9f1c0309fdb1da2b900fadfae210c2d89f6fd10c248014a272:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d91f58f0d9fc8f04eac145caf29ff6c8563637872846aa085887fae1de56e1f5022100e8e6b952f4c46410605a86660d9d55d5297d3a1ed4d359b2efc7440ade744bce:922c64590222798bb761d5b6d8e72950

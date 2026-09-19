@@ -10,7 +10,7 @@ info:
     verified: true
     max-request: 4
     shodan-query: title:"Zebra"
-  tags: zebra,default-login,misconfig,printer
+  tags: zebra,default-login,misconfig,printer,intrusive,vuln
 
 http:
   - raw:
@@ -40,4 +40,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402206ac0debcf1a8ca63f094cbad372e13e5bec854820b9a2810208c0bdccdbba0b00220187a53def13da0cdd0f594ba6fe370467f93ec2c817e2b8d30e82fabea12e0f1:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ceb57f5bf1e8f5cfd5c774fac1b3a4c3fc273e9ade1e98e9eaec2dd67584348f022100914483fe1a40ce9f35ec0e82b188c369f7c390e488c2ef45c23a068c15dc6a6c:922c64590222798bb761d5b6d8e72950

@@ -13,10 +13,10 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
-    cwe-id: CWE-77
+    cwe-id: CWE-94
   metadata:
     max-request: 1
-  tags: php,backdoor,rce,zerodium
+  tags: php,backdoor,rce,zerodium,vuln
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
         part: body
         words:
           - "int(77777355556)"
-# digest: 4b0a00483046022100ca8784274a12ca70d56c3352a1b4b4ba79bca3e5a499618fab8eb468ec057f22022100802d506b094fb87890aa511739d18e0cbf1bdea1d713502e896b20097ab66cca:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022070c3bc2ea2d6b35d335175e05bf4b89a7e5e30f2cf6b1f445316fb1f66011ab4022028ba0f677770d528f5e4fb681bbf16fca60e44a5f554a8865669225722ee400c:922c64590222798bb761d5b6d8e72950
