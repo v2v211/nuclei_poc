@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 3
     shodan-query: http.html:"E-Mobile&nbsp"
-  tags: panel,e-mobile,discovery
+  tags: panel,e-mobile
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
         group: 1
         regex:
           - 'E-Mobile&nbsp;([0-9.]+)'
-# digest: 4a0a00473045022100e2bcf2c13d3c9f85d6478e8fc156afd2dd87f05c489e2f2fdcfa58ef0c7b320902202b3155c637948faba22b7ea5d09a86f72eb26e5a09ad11a850c58f889bcf4c35:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100aa885928d69f48a7b882e431890f950f61523757f0861862db63ca92f2cf2b6d022100da46abadbe7dccf260371baa3ef481acda21cb2ee306ec7bfd957c4328cc6446:922c64590222798bb761d5b6d8e72950

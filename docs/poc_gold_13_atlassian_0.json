@@ -1,1 +1,1 @@
-["atlassian-login-default.yaml","bitbucket-oauth-exposure.yaml","bitbucket-takeover.yaml","jira-login-check.yaml","jira-servicedesk-signup.yaml","jira-setup.yaml","poc-yaml-Confluence-ognl-rce.yaml"]
+["Confluence-SSRF.yaml","atlassian_confluence_CVE_2022_26134_RCE.yaml","confluence-installer.yaml","confluence-xslt-macro-ssrf.yaml","jira-cve-2017-9506.yaml","jira-setup.yaml","poc-yaml-Confluence-ognl-rce.yaml","unsecured-jira-panel.yaml"]

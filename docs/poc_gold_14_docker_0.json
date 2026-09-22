@@ -1,1 +1,1 @@
-["docker-registry-1.yaml","exposed-kubernetes-dashboard-ultra-advanced.yaml","kubernetes-kustomization-disclosure.yaml"]
+["container-registry-exposure.yaml","docker-compose-config-6.yaml","docker-compose-config.yaml","docker-compose-config2.yaml","docker-registry-1.yaml","dockercfg-config-1.yaml","dockercfg.yaml","dockerfile-hidden-disclosure.yaml","dockerfile-hidden-disclosure2.yaml","exposed-kubernetes-dashboard-ultra-advanced.yaml","kubernetes-api-exposure.yaml","kubernetes-version.yaml"]

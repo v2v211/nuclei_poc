@@ -15,7 +15,7 @@ info:
     product: livezilla
     shodan-query: http.html:livezilla
     fofa-query: body=livezilla
-  tags: panel,livezilla,login,discovery
+  tags: panel,livezilla,login
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
       - type: word
         words:
           - 'LiveZilla'
-# digest: 4a0a004730450220065237a30885a0ec530e331d3998c97591e7af51cb1d06352306e3795e71601e0221009020457638a50de9ef01afb48d82e1c1a6460daaf4590c13d21b5bdc11dc783b:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207c3146e9150023574b8c138321cf50cbfc63c84d7dae7b938a390d6033619d76022067389c871f1e114394d18e8cb9c2658ed46155f0673478de9eea9c482f4febad:922c64590222798bb761d5b6d8e72950

@@ -11,7 +11,7 @@ info:
     vendor: fastcgi
     product: fcgi
     shodan-query: http.title:"FastCGI"
-  tags: tech,fastcgi,discovery
+  tags: tech,fastcgi
 
 http:
   - method: GET
@@ -23,4 +23,4 @@ http:
         words:
           - "<title>TurnKey NGINX PHP FastCGI Server</title>"
         part: body
-# digest: 4b0a00483046022100e129b3a6422b6283e7ae5261c8c427b353206a801a54dbfe8a24f7f7725f309302210095ef31e4432b77e4085006fa0bb3f1ee3a1620c329dab99bcfe5354d1f443c6b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100b888e09a4ec12b91bbbf04b5dab83f27201e3ed4cab57200c6d1d00b327aea5f022018810a06779ba39aa91ad10e39d61b8a185f5a1c4d0e6ce6caab93c80b988931:922c64590222798bb761d5b6d8e72950

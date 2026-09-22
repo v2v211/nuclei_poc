@@ -1,14 +1,13 @@
 id: domain
 info:
-  name: Unbound
+  name: Incognito DNS Service
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: unbound
+    info: $2
     rarity: 1
-    vendor: nlnetlabs
-    verified: true
+    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?x)\x07version\x04bind\x00\x00\x10\x00\x03\xc0\x0c\x00\x10\x00\x03.{7}unbound$
+    - (?i)\x07version\x04bind\x00\x00\x10\x00\x03\xc0\x0c\x00\x10\x00\x03.{7}Incognito DNS Service ([\d.]+) \((built \w{3} \d+ \d{4})\)

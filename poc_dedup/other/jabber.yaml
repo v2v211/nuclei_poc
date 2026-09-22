@@ -1,12 +1,14 @@
 id: jabber
 info:
-  name: Facebook Chat XMPP
+  name: Isode M-Link Jabber server
   author: nmap,cn-kali-team
   tags: detect,tech,jabber,service
   severity: info
   metadata:
-    hostname: $1
+    product: m-link
     rarity: 1
+    vendor: isode
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: jabber
     type: regex
     regex:
-    - ^<\?xml version=\"1\.0\"\?><stream:stream id=\"none\" from=\"([\w._-]+)\" xmlns=\"jabber:client\" xmlns:stream=\"http://etherx\.jabber\.org/streams\" version=\"1\.0\"><stream:error><xml-not-well-formed xmlns=\"urn:ietf:params:xml:ns:xmpp-streams\"/></stream:error></stream:stream>$
+    - ^<\?xml version='1\.0'\?><stream:stream xmlns='jabber:server' xmlns:db='jabber:server:dialback' xmlns:stream='http://etherx\.jabber\.org/streams' id='error-id'><stream:error><invalid-xml xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>

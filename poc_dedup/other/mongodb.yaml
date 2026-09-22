@@ -5,12 +5,11 @@ info:
   tags: detect,tech,mongodb,service
   severity: info
   metadata:
-    info: 'not authorized; database: $1'
+    info: need to login
     product: mongodb
     rarity: 8
     vendor: mongodb
     verified: true
-    version: 2.3.2 - 4.1.0
 tcp:
 - name: mongodb
   inputs:
@@ -22,4 +21,4 @@ tcp:
   - name: mongodb
     type: regex
     regex:
-    - '(?i)^.\x00\x00\x00....:0\x00\x00\x01\x00\x00\x00\x08\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00.\x00\x00\x00\x01ok\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02errmsg\x00.\x00\x00\x00not authorized on (\S+) to execute command \{ serverStatus: 1\.0 \}\x00\x10code\x00\r\x00\x00\x00'
+    - (?i)^.\0\0\0....:0\0\0\x01\0\0\0\x08\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x01\0\0\0\+\0\0\0\x02errmsg\0\x0e\0\0\0need to login\0\x01ok\0\0\0\0\0\0\0\0\0\0

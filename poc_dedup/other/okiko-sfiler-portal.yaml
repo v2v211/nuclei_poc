@@ -1,23 +1,25 @@
 id: okiko-sfiler-portal
 
 info:
-  name: OKIOK S-Filer Portal Login Panel - Detect
+  name: OKIKO S-Filer Portal Detect
   author: johnk3r
   severity: info
-  description: OKIOK S-Filer Portal login panel was detected.
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cwe-id: CWE-200
-  metadata:
-    max-request: 1
-    shodan-query: http.title:"S-Filer"
+  reference: https://www.shodan.io/search?query=sfiler
   tags: okiko,panel
 
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/sfiler/Login.action"
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET /sfiler/Login.action HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Accept-Encoding: gzip, deflate
+        Accept: */*
     matchers-condition: and
     matchers:
       - type: word
@@ -35,4 +37,3 @@ http:
         group: 1
         regex:
           - '<br\/>S\-Filer\/([A-Za-z 0-9.]+)<\/p>'
-# digest: 4a0a00473045022100cc5011a4b2c8c108db1b333d2a48fe52d1ae5d028193e6f3239326b0193c91c3022078d03d63dae3e6e73f883a2dba4269beb27432a23ea127caff5566caf41bf38c:922c64590222798bb761d5b6d8e72950
