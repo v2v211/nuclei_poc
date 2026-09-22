@@ -15,7 +15,7 @@ info:
     cwe-id: CWE-77
   metadata:
     max-request: 2
-  tags: cnvd2021,cnvd,beanshell,rce,yonyou,vuln
+  tags: cnvd,cnvd2021,beanshell,rce,yonyou
 
 http:
   - raw:
@@ -47,4 +47,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022054ff15bb2fa9d61bb8455941a58bf7d3bb88f654ba5cf6cb86abbe231fe8acad022100f463d07451e117c23371548015935ec8ed301a5a224642a653596baaaa8d1ce8:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022075851a06d033f726653dc465d8edecb38faafda19c132555fc9696ecb02992d7022020a632b9d53f6a468b8d01d87e238496e6284c3b5331e5ea7f0a868c534cac22:922c64590222798bb761d5b6d8e72950

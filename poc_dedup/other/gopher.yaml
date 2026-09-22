@@ -5,6 +5,7 @@ info:
   tags: detect,tech,gopher,service
   severity: info
   metadata:
+    info: German
     operating_system: Windows
     rarity: 1
 tcp:
@@ -18,4 +19,4 @@ tcp:
   - name: gopher
     type: regex
     regex:
-    - ^3 --6 Bad Request\. \r\n\.\r\n$
+    - ^3 --6 Ung\xfcltige Anforderung\. \r\n\.\r\n$

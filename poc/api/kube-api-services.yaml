@@ -1,12 +1,15 @@
 id: kube-api-services
+
 info:
   name: Kube API Services
   author: sharath
   severity: info
   description: Scans for kube services
   tags: tech,k8s,kubernetes,devops,kube
+  metadata:
+    max-request: 1
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/v1/namespaces/default/services"

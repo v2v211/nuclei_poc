@@ -1,12 +1,15 @@
 id: kube-api-deployments
+
 info:
   name: Kube API Deployments
   author: sharath
   severity: info
   description: Scans for kube deployments
   tags: tech,k8s,kubernetes,devops,kube
+  metadata:
+    max-request: 1
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/apis/apps/v1/namespaces/default/deployments"

@@ -1,1 +1,1 @@
-["drupal-install.yaml","drupal-user-enum-ajax-2.yaml","drupal-user-enum-ajax1.yaml","drupal-user-enum-ajax3.yaml"]
+["drupal-avatar-xss.yaml","drupal-sql-injection.yaml","drupal7-elfinder-rce.yaml"]
