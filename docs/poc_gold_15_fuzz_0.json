@@ -1,1 +1,1 @@
-["fuzz-xxe.yaml","generic-lfi-fuzzing.yaml","log4j-fuzz.yaml"]
+["lfi-fuzz.yaml","ssrf-fuzz.yaml","ssti-fuzz.yaml"]
