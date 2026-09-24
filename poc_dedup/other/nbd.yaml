@@ -20,4 +20,4 @@ tcp:
   - name: nbd
     type: regex
     regex:
-    - ^NBDMAGICIHAVEOPT\x00\x01
+    - ^NBDMAGICIHAVEOPT\0\x01

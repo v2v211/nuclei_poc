@@ -1,14 +1,12 @@
 id: textui
 info:
-  name: Alibaba Dubbo remoting telnetd
+  name: Vizio television textui
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    product: dubbo
+    device_type: media device
     rarity: 1
-    vendor: alibaba
-    verified: true
 tcp:
 - name: generic-lines
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^dubbo>$
+    - ^too many clients, shut down int 15 seconds\n

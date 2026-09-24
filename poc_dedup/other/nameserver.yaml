@@ -18,4 +18,4 @@ tcp:
   - name: nameserver
     type: regex
     regex:
-    - ^help\r\n\r\n\xff\xbf\xf8\xb0\xff7\x00\x18\x00\x00\x00\x01\x00\x00\x00\x00
+    - ^help\r\n\r\n\xff\xbf\xf8\xb0\xff7\0\x18\0\0\0\x01\0\0\0\0

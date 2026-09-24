@@ -1,23 +1,24 @@
 id: irc
 info:
-  name: InspIRCd
+  name: ircu ircd inter-server port
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     hostname: $1
-    product: inspircd
-    rarity: 0
-    vendor: inspire_ircd
+    product: ircu
+    rarity: 3
+    vendor: undernet
     verified: true
 tcp:
-- name: 'null'
+- name: help
   inputs:
-  - data: ''
+  - data: HELP\r\n
   host:
   - '{{Hostname}}'
+  port: 1,7,21,25,79,113,119,515,587,1111,1311,12345,2401,2627,3000,3493,6560,14690,22490,6666-6670
   extractors:
   - name: irc
     type: regex
     regex:
-    - '^:([-\w_.]+) NOTICE \w+ :\*\*\* .*\r\nERROR :Closing link: \([\w._-]+@[\w._-]+\) \[Z-Lined: Your IP range has been attempting to connect too many times in too short a duration\. Wait a while, and you will be able to connect\.\]\r\n$'
+    - ^:([-\w_.]+) 451 \*  :Register first\.\r\n

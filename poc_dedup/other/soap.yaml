@@ -1,13 +1,17 @@
 id: soap
 info:
-  name: SMC $1 Barricade WAP soap
+  name: gSOAP
   author: nmap,cn-kali-team
   tags: detect,tech,soap,service
   severity: info
   metadata:
     device_type: WAP
+    info: Sagem F@st 3464 WAP soap
+    product: gsoap
     rarity: 1
-    version: $2
+    vendor: genivia
+    verified: true
+    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -19,4 +23,4 @@ tcp:
   - name: soap
     type: regex
     regex:
-    - '(?i)^HTTP/1\.1 200 OK\r\nContent-Type: text/xml; charset=utf-8\r\nConnection: close\r\nContent-Length: \d+\r\n\r\n<\?xml version=\"1\.0\" encoding=\"utf-8\"\?>.*<ModelName>(SMC\w+)</ModelName>\n<FirmwareVersion>V([\w._-]+)</FirmwareVersion>'
+    - '(?i)^HTTP/1\.1 401 Unauthorized\r\nWWW-Authenticate: Digest realm=\"gSOAP_Web_Service\",.*Server: gSOAP/([\d.]+)\r\n.*<SOAP-ENV:Fault><faultcode>Client</faultcode><faultstring>HTTP Error: 401 Unauthorized</faultstring></SOAP-ENV:Fault>'

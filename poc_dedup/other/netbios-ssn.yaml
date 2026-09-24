@@ -1,15 +1,17 @@
 id: netbios-ssn
 info:
-  name: Netapp ONTAP smbd
+  name: Samba smbd
   author: nmap,cn-kali-team
   tags: detect,tech,netbios-ssn,service
   severity: info
   metadata:
+    hostname: $P(2)
     info: 'workgroup: $P(1)'
-    product: data_ontap
+    product: samba
     rarity: 4
-    vendor: netapp
+    vendor: samba
     verified: true
+    version: 3.X - 4.X
 tcp:
 - name: smbprog-neg
   inputs:
@@ -21,4 +23,4 @@ tcp:
   - name: netbios-ssn
     type: regex
     regex:
-    - (?i)^\0\0\0.\xffSMBr\0\0\0\0\x98\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0@\x06\0\0\x01\0\x11\x07\0.*(?:[^\0]|[^_A-Z0-9-]\0)((?:[-\w]\0){2,50})
+    - (?i)^\x00\x00\x00.\xffSMBr\x00\x00\x00\x00\x88..\x00\x00[-\w. ]*\x00+@\x06\x00\x00\x01\x00\x11\x06\x00.{42}(.*)\x00\x00(.*)\x00\x00$
