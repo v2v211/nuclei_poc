@@ -16,9 +16,14 @@ info:
     max-request: 1
     vendor: keking
     product: kkfileview
-    shodan-query: http.html:"kkFileView"
-    fofa-query: app="kkFileView"
-  tags: ssrf,kkfileview
+    shodan-query:
+      - http.html:"kkFileView"
+      - http.html:"kkfileview"
+    fofa-query:
+      - app="kkFileView"
+      - app="kkfileview"
+      - body="kkfileview"
+  tags: ssrf,kkfileview,keking
 
 http:
   - method: GET
@@ -36,5 +41,4 @@ http:
       - type: dsl
         dsl:
           - contains(base64_decode(data), "Disallow")
-
-# digest: 4a0a00473045022100fa4bc22bd8a6287ccda109cdc8373e4ab323a1b64df2541bb2b62e666ff5842a0220528f42df714332aa522045f204ab35c21a384fb90507f9e946c38ffa3e1b2fce:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203104a5653f3f50da4291322ff4224015f6cd23f6e97d789a69aa3d423911ee010221009db4f8c63e39ca3fbfbe87fe6211ea41d4b270b48dcffffdd06f490dec0118eb:922c64590222798bb761d5b6d8e72950

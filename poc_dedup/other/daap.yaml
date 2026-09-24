@@ -1,16 +1,11 @@
 id: daap
 info:
-  name: Apple iTunes DAAP
+  name: forked-daapd
   author: nmap,cn-kali-team
   tags: detect,tech,daap,service
   severity: info
   metadata:
-    operating_system: $2
-    product: itunes
     rarity: 1
-    vendor: apple
-    verified: true
-    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: daap
     type: regex
     regex:
-    - '^HTTP/1\.1 400 Bad Request\r\n(?:Date: .*\r\n)?DAAP-Server: iTunes/(\d[-.\w]+) \((.*)\)\r\n'
+    - '^HTTP/1\.0 401 Unauthorized\r\nWWW-Authenticate: Basic realm=\"forked-daapd web interface\"\r\nContent-Type: text/html; charset=ISO-8859-1\r\n\r\n<html><head><title>401 Unauthorized</title></head><body>Authorization required</body></html>$'

@@ -1,14 +1,15 @@
 id: sip
 info:
-  name: Genexis DRG $1 SIP
+  name: Polycom SoundPoint $1
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: broadband router
+    device_type: VoIP phone
     fallback:
     - get-request
     - httpoptions
+    info: 'MAC: $3'
     rarity: 5
     version: $2
 tcp:
@@ -22,4 +23,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 400 Invalid Via Port 0\r\n(?:[^\r\n]+\r\n)*?User-Agent: drgos-drg(\d+)-([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 (?:[^\r\n]*\r\n(?!\r\n))*?User-Agent: PolycomSoundPointIP-SPIP_(\d+)-UA/([\d.]+)_(\w+)\r\n'

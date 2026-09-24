@@ -2,7 +2,7 @@ id: iis-shortname
 
 info:
   name: iis-shortname
-  author: coffin
+  author: r3dcl1ff
   severity: low
   description: When IIS uses an old .Net Framework it's possible to enumeration folder with the symbol ~.
   reference:

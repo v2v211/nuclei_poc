@@ -10,14 +10,14 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cwe-id: CWE-22
+    cwe-id: CWE-23
     cpe: cpe:2.3:a:3cx:3cx:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
     shodan-query: http.title:"3CX Phone System Management Console"
     product: 3cx
     vendor: 3cx
-  tags: 3cx,lfi,voip
+  tags: 3cx,lfi,voip,vuln
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
           - "fonts"
           - "extensions"
         condition: and
-# digest: 4a0a00473045022100b70d987d07af7fde7f4db3d1eeb77bf978b60f1ff0e051cc50e730b46e70014c022005c2968a392bc6f0355108656dd1e1942defea4de65e7a2311993c06b7d4d0f5:922c64590222798bb761d5b6d8e72950
+# digest: 480a00453043021f57d4878d9634fd144b5157eea19eb480662cff120b35d146a0999239aca05f02204649c46a02526346989810e12a984547a081d1197fc410d38192389096dd9208:922c64590222798bb761d5b6d8e72950

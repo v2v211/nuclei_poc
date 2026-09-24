@@ -12,14 +12,14 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
     cve-id: CVE-2021-44228
-    cwe-id: CWE-77,CWE-502
+    cwe-id: CWE-77
     cpe: cpe:2.3:a:citrix:xenapp:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: html:"/citrix/xenapp"
     product: xenapp
     vendor: citrix
-  tags: cve,cve2021,rce,jndi,log4j,citrix,oast,kev,vuln
+  tags: cve,cve2021,rce,jndi,log4j,citrix,oast,kev
 variables:
   rand1: '{{rand_int(111, 999)}}'
   rand2: '{{rand_int(111, 999)}}'
@@ -65,4 +65,4 @@ http:
         regex:
           - '\d{6}\.([a-zA-Z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+' # Print extracted ${:-{{rand1}}}${:-{{rand2}}}.${hostName} in output
         part: interactsh_request
-# digest: 4a0a0047304502203849eb6e23041df823fbff989f68d248dda058dcf3a676ea29706a16536e454f022100dc97ad7931877164d1fd1fd2157e466bddb99b28db3a6fe08dbee613e88289a5:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022024ce9b4d0b77f7905806cb82b6033fd620d0fd7d1e31d3038b84fa11013b26da0220226353492f1db00aaad29244a9cad0750b1777a36b9aeffd906a9f4ec7f491c5:922c64590222798bb761d5b6d8e72950
