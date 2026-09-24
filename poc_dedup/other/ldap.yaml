@@ -1,15 +1,15 @@
 id: ldap
 info:
-  name: OpenLDAP
+  name: Lotus Domino 6.x LDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    product: openldap
+    info: access denied
+    product: lotus_domino
     rarity: 6
-    vendor: openldap
+    vendor: ibm
     verified: true
-    version: 2.4.X
 tcp:
 - name: ldapbind-req
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0\x84\0\0\0I\x02\x01\x01a\x84\0\0\0@\n\x01\x02\x04\0\x049historical protocol version requested, use LDAPv3 instead$
+    - ^0\.\x02\x01\x01a\)\n\x010\x04\0\x04\"Failed, anonymous bind not allowed$

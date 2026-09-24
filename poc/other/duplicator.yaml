@@ -1,7 +1,7 @@
 id: wordpress-duplicator
 
 info:
-  name: Duplicator – Migration & Backup Plugin Detection
+  name: Duplicator – Backups & Migration Plugin – Cloud Backups, Scheduled Backups, & More Detection
   author: ricardomaia
   severity: info
   reference:

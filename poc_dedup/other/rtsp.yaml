@@ -1,14 +1,12 @@
 id: rtsp
 info:
-  name: Helix DNA Server
+  name: Helix Mobile Server rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    info: SunOS $2 sparc
-    operating_system: SunOS
     rarity: 5
     version: $1
 tcp:
@@ -22,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '(?i)^RTSP/1\.0 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?Server: Helix [\w ]*Server Version ([\d.]+) \(sunos-([\d.]+)-sparc-server\)'
+    - '(?i)^RTSP/1\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: Helix Mobile Server Version ([\w._-]+) \(win32\) \(RealServer compatible\)\r\nPublic: OPTIONS, DESCRIBE, PLAY, PAUSE, SETUP, GET_PARAMETER, SET_PARAMETER, TEARDOWN\r\nTurboPlay: 1\r\nRealChallenge1: [0-9a-f]+\r\nStatsMask: 8\r\n\r\n$'

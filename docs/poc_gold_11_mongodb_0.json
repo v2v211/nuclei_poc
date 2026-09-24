@@ -1,1 +1,1 @@
-["azure-nsg-mongodb-unrestricted.yaml","file-mongodb-audit-log-disabled.yaml","file-mongodb-ssl-disabled.yaml","mongodb-exporter-metrics.yaml","robomongo-credential-1.yaml","robomongo-credential.yaml","robomongo-credential2.yaml","robomongo.yaml"]
+["azure-nsg-mongodb-unrestricted.yaml","mongodb-exporter-metrics.yaml","robomongo-credential-1.yaml","robomongo-credential.yaml","robomongo-credential2.yaml","robomongo.yaml"]

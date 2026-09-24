@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"NoEscape - Login"
-  tags: panel,noescape,discovery
+  tags: panel,noescape
 
 http:
   - method: GET
@@ -25,4 +25,4 @@ http:
         part: body
         words:
           - 'NoEscape - Login'
-# digest: 4a0a00473045022006ae0b04a18f3426e7a79a45990459aa21f7c233562fb7a4bb5c732ef616bd20022100fc341202c0d24b36c9fe5f3cd97f76d83fe0cf01d3534ebe7e55ec80bab43312:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a91b004ba758b714b7e5c9950279561f2efa84f26fd2261e79eda1a2600327ee022100b39d7ddf7ae323ea9d58e3d32bdc0e39ecfabcc23ea9a177b1d2d73c31f1004f:922c64590222798bb761d5b6d8e72950

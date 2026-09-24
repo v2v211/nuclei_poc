@@ -9,8 +9,8 @@ info:
     - https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/aem2.txt
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:adobe:experience_manager:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     vendor: adobe
@@ -18,7 +18,12 @@ info:
     shodan-query:
       - http.title:"AEM Sign In"
       - http.component:"Adobe Experience Manager"
-  tags: panel,aem,adobe
+      - http.component:"adobe experience manager"
+      - http.title:"aem sign in"
+      - cpe:"cpe:2.3:a:adobe:experience_manager"
+    fofa-query: title="aem sign in"
+    google-query: intitle:"aem sign in"
+  tags: panel,aem,adobe,discovery
 
 http:
   - method: GET
@@ -39,4 +44,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022015818dd99871bfff4c18447f158b5a4bbf6659bf9f3fbdd237680fbc383673e6022100972e20fd370aa9dbf7576d917f0a54ba538d5428a2850fc421093c6c2db8a0f3:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206ddfe39915fc86dc47543c25628ea2ee1b57e715c14b03c0d22c4d59e5628c82022100f4e25ae7a712ebaac4ef2d924c91e16e55cd7a4ebb4c5c96ea14da5c95a6307e:922c64590222798bb761d5b6d8e72950

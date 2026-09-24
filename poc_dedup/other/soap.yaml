@@ -1,13 +1,15 @@
 id: soap
 info:
-  name: SMC $1 Barricade WAP soap
+  name: gSOAP
   author: nmap,cn-kali-team
   tags: detect,tech,soap,service
   severity: info
   metadata:
-    device_type: WAP
+    product: gsoap
     rarity: 1
-    version: $2
+    vendor: genivia
+    verified: true
+    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: soap
     type: regex
     regex:
-    - '(?i)^HTTP/1\.1 200 OK\r\nContent-Type: text/xml; charset=utf-8\r\nConnection: close\r\nContent-Length: \d+\r\n\r\n<\?xml version=\"1\.0\" encoding=\"utf-8\"\?>.*<ModelName>(SMC\w+)</ModelName>\n<FirmwareVersion>V([\w._-]+)</FirmwareVersion>'
+    - '(?i)^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?Server: gSOAP/([\d.]+)\r\n'

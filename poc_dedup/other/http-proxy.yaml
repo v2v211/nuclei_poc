@@ -1,13 +1,14 @@
 id: http-proxy
 info:
-  name: Squid http proxy
+  name: Cisco Application Control Engine XML gateway
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    product: squid
+    device_type: load balancer
+    product: application_control_engine_software
     rarity: 1
-    vendor: squid-cache
+    vendor: cisco
     verified: true
 tcp:
 - name: get-request
@@ -20,4 +21,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - '(?i)^HTTP/1\.0 503 Service Unavailable\r\n(?:[^\r\n]+\r\n)*?X-Squid-Error: ERR_CONNECT_FAIL 111\r\n'
+    - '^HTTP/1\.0 404 No service found\r\nDate: .*\r\nServer: ACE XML Gateway\r\nContent-Type: text/plain\r\nConnection: close\r\nContent-Length: 30\r\n\r\nNo service matched the request'

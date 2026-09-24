@@ -1,12 +1,12 @@
 id: ipp
 info:
-  name: Fuji Xerox DocuCentre-V ipp
+  name: Canon printer http config
   author: nmap,cn-kali-team
   tags: detect,tech,ipp,service
   severity: info
   metadata:
-    device_type: printer
     rarity: 1
+    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ipp
     type: regex
     regex:
-    - '^HTTP/1\.0 301 Moved Permanently\r\nDate: .*\r\nPragma: no-cache\r\nLocation: http:///\r\nContent-Length: 109\r\nContent-Type: text/html\r\n\r\n<html><head><title>301 Moved Permanently</title></head>\t\t<body><h1>301 Moved Permanently</h1></body></html>\r\n'
+    - '^HTTP/1\.1 \d\d\d .*\r\nDate: .*\r\nServer: Canon Http Server (\d[-.\w ]+)\r\n'

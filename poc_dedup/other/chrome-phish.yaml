@@ -8,9 +8,8 @@ info:
     A chrome phishing website was detected
   reference:
     - https://www.google.com/intl/en_uk/chrome/
-  metadata:
-    max-request: 1
   tags: phishing,chrome,osint
+
 http:
   - method: GET
     path:
@@ -32,4 +31,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"google.com")'
-# digest: 490a00463044022049f93d3986482770780448b6dadd1deb3a0f9a6a18ad025feed4663a24befb3902203213aace2c2bdd5cc206175451dfcc5367cc1a0531a6bb6ab74a87e8864cdb54:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009c0bf2e0e47df63d66cda4397ead2229b9390a489143bc2fa7a656c5cef26ce4022100ad12521a083f842b717a69809979be22e75bec76df26e7f3a816d09f1d6e42db:922c64590222798bb761d5b6d8e72950
