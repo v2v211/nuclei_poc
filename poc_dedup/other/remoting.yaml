@@ -19,4 +19,4 @@ tcp:
   - name: remoting
     type: regex
     regex:
-    - '(?i)^\.NET\x01\x00\x02\x00\x00\x00\x00\x00\x00\x00\x02\x00\x03\x01\x00\x03\x00\x01\x01..\x00\x00System\.Runtime\.Remoting\.RemotingException: Tcp channel protocol violation: expecting preamble\.\r\n'
+    - ^\.NET\x01\x00\x02\x00\x00\x00\x00\x00\x00\x00\x02\x00\x03\x01\x00\x03\x00\x01\x01..\x00\x00Server encountered an internal error\. To get more info turn on customErrors in the server's config file\.\x05\x00\x00\x00\x00

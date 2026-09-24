@@ -1,15 +1,12 @@
 id: http
 info:
-  name: Werkzeug httpd
+  name: Enigma2 Dreambox http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    info: Python $2
-    product: python
+    device_type: media device
     rarity: 1
-    vendor: python
-    verified: true
     version: $1
 tcp:
 - name: get-request
@@ -22,4 +19,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '(?i)^HTTP/1\.[01] \d\d\d [A-Z ]*\r\n(?:[^\r\n]*\r\n(?!\r\n))*?Server: Werkzeug/([\w._-]+) Python/([\w._-]+)\r\n'
+    - '(?i)^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?Server: Enigma2 WebInterface Server ([\w._-]+) \r\n'

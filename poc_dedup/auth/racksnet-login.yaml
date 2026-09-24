@@ -15,7 +15,7 @@ info:
     max-request: 1
     shodan-query: http.title:"My Datacenter - Login"
     google-query: intitle:"My Datacenter - Login"
-  tags: panel,racksnet,discovery
+  tags: panel,racksnet
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402207eef28cd21cc883634022f0b51c8075a811f387829cc6e288bbc6958d796d11a0220435d95e5d2a507fbf2732e971d23c2c7b11c38d984fb81c58c04e0a210c5d13a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022069ee90efed0a2b42344373b2690cf9a5941564f599e03906623d57562a88c22c02210088f306e99908289863574e3580eceaad914e24628eb28e28757013c1dda04f74:922c64590222798bb761d5b6d8e72950

@@ -1,1 +1,1 @@
-["Express-LFR-json.yaml","api-npm.yaml","node-nunjucks-ssti.yaml","node-red-path-traversal.yaml","npm-shrinkwrap-exposure.yaml","npmrc.yaml"]
+["Express-LFR-GET.yaml","Node-RED-Traversal.yaml","api-npm.yaml","mongo-express-2.yaml","node-env.yaml","node-red-path-traversal.yaml","pnpm-lock-yaml.yaml"]

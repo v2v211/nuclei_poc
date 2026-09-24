@@ -1,1 +1,1 @@
-["E-message-database.yaml","cobubrazor_v8-commonDbfix-info.yaml","db-schema.yaml","influxdb-version.yaml","springboot-h2-db-rce.yaml","yongyou-jdbcRead.yaml"]
+["E-message-database.yaml","cobubrazor_v8-commonDbfix-info.yaml","database-error.yaml","database-username-and-password.yaml","db-schema-1.yaml","db-schema-2.yaml","db-schema-3.yaml","dbeaver-credentials.yaml","exist-db-dashboard-access.yaml","yongyou-jdbcRead.yaml"]
