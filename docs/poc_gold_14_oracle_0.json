@@ -1,1 +1,1 @@
-["brotli-compression-oracle-attack.yaml","default-oracle-application-page.yaml","oracle-ebs-credentials.yaml","oracle-ebs-sqllog-disclosure.yaml","oracle-ebs-xss1.yaml","oracle-ebs-xss3.yaml","oracle-siebel-xss.yaml"]
+["brotli-compression-oracle-attack.yaml","oracle-ebs-credentials-disclosure.yaml","oracle-ebs-xss-2.yaml","oracle-fatwire-lfi.yaml"]
