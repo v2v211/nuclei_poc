@@ -1,19 +1,15 @@
 id: afp
 info:
-  name: Apple AFP
+  name: Apple Airport Extreme AFP
   author: nmap,cn-kali-team
   tags: detect,tech,afp,service
   severity: info
   metadata:
+    device_type: WAP
     fallback:
     - get-request
-    hostname: $2
-    info: 'name: $1; afpserver: $3; protocol 3.1; Mac OS X 10.3.*'
-    operating_system: Mac OS X
-    product: afp_server
+    info: 'name: $1; protocol 3.1'
     rarity: 1
-    vendor: apple
-    verified: true
 tcp:
 - name: sslsession-req
   inputs:
@@ -25,4 +21,4 @@ tcp:
   - name: afp
     type: regex
     regex:
-    - (?i)^\x01\x03\x00\x00........\x00\x00\x00\x00........\x83\xfb.([^\x00\x01]+)[\x00\x01].*\tMacintosh\x03\x06AFP3\.1\x06AFPX03\x06AFP2\.2.\tDHCAST128.*[\x04\x05]([\w.-]+)\x01.afpserver/([\w.@-]+)\x00
+    - (?i)^\x01\x03\x00\x00........\x00\x00\x00\x00........\x8f\xfa.([^\x00\x01]+)[\x00\x01].*\tMacintosh\x01\x06AFP3\.1.\tDHCAST128

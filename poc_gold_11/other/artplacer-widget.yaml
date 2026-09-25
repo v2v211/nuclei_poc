@@ -2,14 +2,14 @@ id: artplacer-widget
 
 info:
   name: >
-    ArtPlacer Widget <= 2.21.1 - Cross-Site Request Forgery
+    ArtPlacer Widget <= 2.21.1 - Missing Authorization to Widget Deletion
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/19e7a841-e7b0-410d-ae33-f31811efd919?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/77d69631-9159-4619-9891-745dc2327e7c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/artplacer-widget/"
     google-query: inurl:"/wp-content/plugins/artplacer-widget/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,artplacer-widget,medium
+  tags: cve,wordpress,wp-plugin,artplacer-widget,high
 
 http:
   - method: GET
