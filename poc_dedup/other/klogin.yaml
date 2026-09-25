@@ -1,14 +1,13 @@
 id: klogin
 info:
-  name: HP-UX kerberized rlogin
+  name: AIX kerberized rlogin
   author: nmap,cn-kali-team
   tags: detect,tech,klogin,service
   severity: info
   metadata:
     fallback:
     - dnsversion-bind-req
-    info: disabled
-    operating_system: HP-UX
+    operating_system: AIX
     rarity: 3
 tcp:
 - name: dnsversion-bind-req-tcp
@@ -21,4 +20,4 @@ tcp:
   - name: klogin
     type: regex
     regex:
-    - '^\x01rlogind: Kerberos Authentication not enabled\.\.\r\n'
+    - '^\x01krlogind: Kerberos Authentication Failed\.\r\n\x00'

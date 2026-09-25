@@ -1,12 +1,14 @@
 id: ipp
 info:
-  name: Netia Spot ipp
+  name: Web-Server httpd
   author: nmap,cn-kali-team
   tags: detect,tech,ipp,service
   severity: info
   metadata:
-    device_type: broadband router
+    device_type: printer
+    info: NRG copier or Ricoh Aficio printer http config
     rarity: 1
+    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ipp
     type: regex
     regex:
-    - '^HTTP/1\.0 405 Method Not Allowed\r\nContent-Type: text/html\r\nCache-Control: public,max-age=86400\r\nPragma: cache\r\nExpires: .*\r\nDate: .*\r\nLast-Modified: .*\r\nAccept-Ranges: bytes\r\nConnection: close\r\n\r\n'
+    - '^HTTP/1\.0 404 Not Found\r\nCache-Control: no-cache\r\nDate: .*\r\nPragma: no-cache\r\nContent-Type: text/html\r\nContent-Length: 91\r\nServer: Web-Server/([\d.]+)\r\n\r\n<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD>\n<BODY><H1>404 Not Found</H1></BODY></HTML>\x00'

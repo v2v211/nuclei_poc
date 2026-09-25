@@ -19,4 +19,4 @@ tcp:
   - name: caigos-fundus
     type: regex
     regex:
-    - '^\x00\x00\x00\x00\x00\x00\x00;r\x00\x00\x00\x00\x00\x00\x00h\xd52\t\x10\x00\x00\x00FUNDUS_PG([\w._-]+)\x1b\x00\x00\x00unbekannter Code: 154326376$'
+    - '^\0\0\0\0\0\0\0;r\0\0\0\0\0\0\0h\xd52\t\x10\0\0\0FUNDUS_PG([\w._-]+)\x1b\0\0\0unbekannter Code: 154326376$'

@@ -1,6 +1,6 @@
 id: whois
 info:
-  name: Public Interest Registry whois server
+  name: gwhois
   author: nmap,cn-kali-team
   tags: detect,tech,whois,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: whois
     type: regex
     regex:
-    - ^Query may not be an empty string\n
+    - '^Process query: ''''\nQuery recognized as IP\.\n'

@@ -1,11 +1,10 @@
 id: ident
 info:
-  name: ''
+  name: widentd
   author: nmap,cn-kali-team
   tags: detect,tech,ident,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 1
 tcp:
 - name: generic-lines
@@ -18,4 +17,4 @@ tcp:
   - name: ident
     type: regex
     regex:
-    - '^ : USERID : UNIX : [a-z]{4,8}\r\n$'
+    - '^1 , 1 : USERID : OTHER : chuck-the-bsd-deamon\r\n$'

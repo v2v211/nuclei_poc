@@ -1,16 +1,16 @@
 id: ssl
 info:
-  name: OpenSSL
+  name: Microsoft IIS SSL
   author: nmap,cn-kali-team
   tags: detect,tech,ssl,service
   severity: info
   metadata:
     fallback:
     - get-request
-    info: SSLv3
-    product: openssl
+    operating_system: Windows
+    product: internet_information_services
     rarity: 1
-    vendor: openssl
+    vendor: microsoft
     verified: true
 tcp:
 - name: sslsession-req
@@ -23,4 +23,4 @@ tcp:
   - name: ssl
     type: regex
     regex:
-    - ^\x16\x03\0\0J\x02\0\0F\x03\0
+    - (?i)^\x16\x03\0..\x02\0\0F\x03\0

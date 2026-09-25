@@ -1,1 +1,1 @@
-["E-message-database.yaml","database-username-and-password.yaml","dbeaver-credentials.yaml","yongyou-jdbcRead.yaml"]
+["E-message-database.yaml","db-schema.yaml","influxdb-version.yaml","yongyou-jdbcRead.yaml"]

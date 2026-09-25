@@ -1,11 +1,11 @@
 id: login
 info:
-  name: LSI Series 4 RAID controller logind
+  name: ACT VoIP wifi phone logind
   author: nmap,cn-kali-team
   tags: detect,tech,login,service
   severity: info
   metadata:
-    device_type: storage-misc
+    device_type: VoIP phone
     fallback:
     - dnsversion-bind-req
     rarity: 3
@@ -20,4 +20,4 @@ tcp:
   - name: login
     type: regex
     regex:
-    - '(?i)^\x00\^A\^@\^@\^@\^@\^@\^@\^Gversion\^Dbind\^@\^@\^P\^@\n\r\n\r\n\r\n\r#+\n\r### +###\n\r###  LSI Logic Series 4 SCSI RAID Controller  ###.*Serial number:  1T84210104 '
+    - '^\x00\r\n-> trcStack aborted: error in top frame\r\ntShell restarted\.\r\n\r\n-> !1 echo_recv: -1\.\r\n'

@@ -9,6 +9,7 @@ info:
     rarity: 1
     vendor: prosody
     verified: true
+    version: 0.8.0 or newer
 tcp:
 - name: get-request
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: jabber
     type: regex
     regex:
-    - ^<\?xml version='1\.0'\?><stream:stream xmlns:stream='http://etherx\.jabber\.org/streams' xml:lang='en' xmlns:db='jabber:server:dialback' xmlns='jabber:server'><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>
+    - ^<\?xml version='1\.0'\?><stream:stream xmlns:stream='http://etherx\.jabber\.org/streams' xmlns='jabber:server' version='1\.0' id=''><stream:error><not-well-formed xmlns='urn:ietf:params:xml:ns:xmpp-streams'/></stream:error></stream:stream>$

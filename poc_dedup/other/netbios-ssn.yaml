@@ -1,11 +1,11 @@
 id: netbios-ssn
 info:
-  name: IOGear GMFPSU22W6 print server smbd
+  name: NetWare 6 SMB Services
   author: nmap,cn-kali-team
   tags: detect,tech,netbios-ssn,service
   severity: info
   metadata:
-    device_type: print server
+    operating_system: NetWare
     rarity: 4
 tcp:
 - name: smbprog-neg
@@ -18,4 +18,4 @@ tcp:
   - name: netbios-ssn
     type: regex
     regex:
-    - (?i)^\x00\x00\x00M\xffSMBr\x00\x00\x00\x00\x98. \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x11\x07\x00\x03\x32\x00\x01\x00....\x00\x00\x01\x00....\xf4\xc2\x00\x00
+    - ^\0\0\0M\xffSMBr\0\0\0\0\x80\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0@\x06\0\0\x01\0\x11\x07\0\x032\0\x01\0\xff\xff\0\0\0\0\x01\0

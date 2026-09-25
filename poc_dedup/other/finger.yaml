@@ -1,12 +1,10 @@
 id: finger
 info:
-  name: Solaris 10 fingerd
+  name: Cfingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    info: Nobody logged in
-    operating_system: Solaris
     rarity: 1
 tcp:
 - name: generic-lines
@@ -19,4 +17,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - '^finger: /var/adm/lastlog open error\nNo one logged on\r\n'
+    - ^Gathering system data\.\.\.\nUsername Real name                      Idletime TTY Remote console location\n

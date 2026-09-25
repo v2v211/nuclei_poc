@@ -6,7 +6,7 @@ info:
   severity: info
   metadata:
     hostname: $2
-    info: Good Messaging Server gddomsyncsrv
+    info: Good Messaging Server gdpushproc
     product: gsoap
     rarity: 1
     vendor: genivia
@@ -23,4 +23,4 @@ tcp:
   - name: soap
     type: regex
     regex:
-    - '(?i)^HTTP/1\.0 500 Internal Server Error\r\nServer: gSOAP/([\w._-]+)\r\n.* xmlns:gmmiws=\"https://([\w._-]+):\d+/glsinternal\.wsdl\" .*<faultstring>HTTP GET method not implemented</faultstring>'
+    - '(?i)^HTTP/1\.0 500 Internal Server Error\r\nServer: gSOAP/([\w._-]+)\r\n.* xmlns:pushws=\"https://([\w._-]+):\d+/pushws\">.*<faultstring>HTTP GET method not implemented</faultstring>'

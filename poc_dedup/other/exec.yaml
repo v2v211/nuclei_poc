@@ -1,12 +1,13 @@
 id: exec
 info:
-  name: ''
+  name: HP-UX rexecd
   author: nmap,cn-kali-team
   tags: detect,tech,exec,service
   severity: info
   metadata:
     fallback:
     - dnsversion-bind-req
+    operating_system: HP-UX
     rarity: 3
 tcp:
 - name: dnsversion-bind-req-tcp
@@ -19,4 +20,4 @@ tcp:
   - name: exec
     type: regex
     regex:
-    - ^\x01Login incorrect\.\n$
+    - '^\x01rexecd: Couldn''t look up address for your host\n$'
