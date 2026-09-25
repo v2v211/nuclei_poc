@@ -3,9 +3,9 @@ id: graphql
 info:
   name: GraphQL API
   author: NkxxkN
-  severity: info
+  severity: low
 
-http:
+requests:
   - method: POST
     path:
       - "{{BaseURL}}/graphql"

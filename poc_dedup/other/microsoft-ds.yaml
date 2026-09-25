@@ -1,11 +1,11 @@
 id: microsoft-ds
 info:
-  name: IBM OS/400 microsoft-ds
+  name: Microsoft Windows 2000 microsoft-ds
   author: nmap,cn-kali-team
   tags: detect,tech,microsoft-ds,service
   severity: info
   metadata:
-    operating_system: OS/400
+    operating_system: Windows 2000
     rarity: 4
 tcp:
 - name: smbprog-neg
@@ -18,4 +18,4 @@ tcp:
   - name: microsoft-ds
     type: regex
     regex:
-    - (?i)^\0\0\0.\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0\0\0@\x06\0\0\x01\0\x11\x07\0.\x05\0\x01\0\x04\x11\0\0\0\0\x01\0\xad\x05\0\0
+    - (?i)^\0\0\0.\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0\0\0@\x06\0\0\x01\0\x11\x07\0.[}2]\0\x01\0\x04A\0\0\0\0\x01\0\0\0\0\0\xfd[\xe3\xf3]\0\0

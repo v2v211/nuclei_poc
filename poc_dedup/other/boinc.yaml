@@ -17,4 +17,4 @@ tcp:
   - name: boinc
     type: regex
     regex:
-    - ^<error>unrecognized op</error/>\n\x03$
+    - ^<boinc_gui_rpc_reply>\n<error>unrecognized op</error>\n</boinc_gui_rpc_reply>\n\x03

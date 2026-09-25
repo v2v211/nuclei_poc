@@ -1,13 +1,15 @@
 id: pop3
 info:
-  name: hMailServer pop3d
+  name: SurgeMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
+    product: surgemail
     rarity: 1
+    vendor: netwin
+    verified: true
 tcp:
 - name: generic-lines
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([\w._-]+)\r\n-ERR Invalid command in current state\.\r\n-ERR Invalid command in current state\.\r\n
+    - ^\+OK ([\w._-]+) Welcome\r\n-ERR Invalid command \(\) \(\) p1=\(\)\r\n-ERR Invalid command \(\) \(\) p1=\(\)\r\n

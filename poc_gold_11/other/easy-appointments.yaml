@@ -2,14 +2,14 @@ id: easy-appointments
 
 info:
   name: >
-    Easy Appointments <= 3.11.0 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Easy Appointments <= 3.11.9 - Cross-Site Request Forgery via multiple AJAX actions
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bfe8d13b-f387-4c82-ba9f-efadda18c882?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/461cec8c-77e4-4f20-8dff-c4f675dc235f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/easy-appointments/"
     google-query: inurl:"/wp-content/plugins/easy-appointments/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,easy-appointments,low
+  tags: cve,wordpress,wp-plugin,easy-appointments,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.11.0')
+          - compare_versions(version, '<= 3.11.9')

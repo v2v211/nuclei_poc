@@ -1,14 +1,15 @@
 id: ssl/http
 info:
-  name: Nessus vulnerability scanner http UI
+  name: nginx
   author: nmap,cn-kali-team
   tags: detect,tech,ssl/http,service
   severity: info
   metadata:
-    product: nessus
+    product: nginx
     rarity: 1
-    vendor: tenable
+    vendor: igor_sysoev
     verified: true
+    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: ssl/http
     type: regex
     regex:
-    - '^HTTP/1\.1 400 Bad Request\r\nConnection: close\r\nContent-Type: text/html\r\nContent-Length: 349\r\nServer: NessusWWW\r\nDate: : '
+    - '(?i)^HTTP/1.1 400 Bad Request\r\n.*?Server: nginx/([\d.]+)[^\r\n]*?\r\n.*<title>400 The plain HTTP request was sent to HTTPS port</title>'

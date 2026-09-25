@@ -1,15 +1,12 @@
 id: telnet
 info:
-  name: Precise RTCS telnetd
+  name: IBM BladeCenter 4-Port Gb switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: remote management
-    info: Liebert OpenComms remote management
-    operating_system: MQX RTOS
+    device_type: switch
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x03\xff\xfd\x03\xff\xfb\x01\r\nPrecise/RTCS v([\d.]+) Telnet server\r\n\r\0\r\nService Port Manager Active\r\0\r\n<Esc> Ends Session\r\0\r\n
+    - ^\xff\xfb\x01\xff\xfd\x03\xff\xfb\x03\x1b\[0m\x1b\[2J\x1b\[0m\x1b\[2J\x1b\[2;66H\x1b\[1m\x1b\[21;1H\x1b\[0m-+\x1b\[22;2H\x1b\[0mFunction:\x1b\[23;2H\x1b\[0mMessage:\x1b\[24;2H\x1b\[7mCTRL\+R = Refresh +\x1b\[8;12H\x1b\[0mIBM BladeCenter 4-Port Gb Ethernet Switch Module Console
