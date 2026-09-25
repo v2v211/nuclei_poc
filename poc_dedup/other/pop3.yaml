@@ -6,7 +6,7 @@ info:
   severity: info
   metadata:
     hostname: $2
-    info: Korean
+    info: Chinese (Traditional)
     operating_system: Windows
     product: exchange_server
     rarity: 0
@@ -23,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Microsoft Exchange Server 2003 POP3 \xbc\xad\xb9\xf6 \xb9\xf6\xc0\xfc ([\d.]+) \(([-\w_.]+)\)
+    - ^\+OK Microsoft Exchange Server 2003 POP3 \xa6\xf8\xaaA\xbe\xb9\xaa\xa9\xa5\xbb ([\d.]+) \(([-\w_.]+)\) \xa5i\xa5H\xa8\xcf\xa5\xce\xa1C\r\n

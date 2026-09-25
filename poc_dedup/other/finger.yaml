@@ -1,15 +1,13 @@
 id: finger
 info:
-  name: efingerd
+  name: Solaris 10 fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    info: who -uHw
-    product: efingerd
+    info: Nobody logged in
+    operating_system: Solaris
     rarity: 1
-    vendor: radovan_garabik
-    verified: true
 tcp:
 - name: generic-lines
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - ^\nHello [\w.@-]*,\nusers currently logged in are:\n\nNAME       LINE         TIME             IDLE          PID COMMENT\n\n\r\n
+    - '^finger: /var/adm/lastlog open error\nNo one logged on\r\n'

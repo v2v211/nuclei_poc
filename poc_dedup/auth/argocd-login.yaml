@@ -2,10 +2,9 @@ id: argocd-login
 
 info:
   name: Argo CD Login Panel
-  author: Adam Crosser,daffainfo,aringo,righettod
+  author: Adam Crosser,daffainfo,aringo
   severity: info
-  description: |
-     ArgoCD was detected - A declarative, GitOps continuous delivery tool for Kubernetes.
+  description: An Argo CD login panel was discovered.
   reference:
     - https://argoproj.github.io/cd/
   classification:
@@ -16,15 +15,13 @@ info:
     shodan-query: http.title:"Argo CD"
     product: argo_cd
     vendor: argoproj
-  tags: panel,argocd,login,kubernetes,discovery
+  tags: panel,argocd,login,kubernetes
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}"
-      - "{{BaseURL}}/swagger.json"
-      - "{{BaseURL}}/api/v1/settings"
       - "{{BaseURL}}/api/version"
+      - "{{BaseURL}}/api/v1/settings"
 
     stop-at-first-match: true
 
@@ -32,30 +29,18 @@ http:
     matchers:
       - type: dsl
         dsl:
-          - contains(to_lower(body_1), '<title>argo cd</title>')
+          - contains(to_lower(header_1), 'grpc-metadata-content-type')
           - status_code_1 == 200
         condition: and
 
       - type: dsl
         dsl:
-          - contains(to_lower(body_2), 'argocd control plane')
-          - status_code_2 == 200
-        condition: and
-
-      - type: dsl
-        dsl:
-          - contains(to_lower(body_3), 'argocd.argoproj.io')
-          - status_code_3 == 200
-        condition: and
-
-      - type: dsl
-        dsl:
-          - contains(to_lower(header_4), 'grpc-metadata-content-type')
-          - status_code_4 == 200
+          - contains(body_2, 'appLabelKey')
+          - contains(body_2, 'resourceOverrides')
         condition: and
 
     extractors:
       - type: json
         json:
           - .Version
-# digest: 4b0a00483046022100c36ca31848e38eda3096905b44b9ddca8ac1a59e5421d6a3f9d3a20654cdbfca02210096d184e6f905b8db2fe9cdecaa37b2644ba0f2840ff3c76e86e45e4fcebf457f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203911ee320d7fe1122300fa7d8b2508245e9159301240b45724a291712f577e81022100a56cd5d6054033bc950bc76ebae38beb95629a7b4353c8de7cccdb0d954ffd29:922c64590222798bb761d5b6d8e72950

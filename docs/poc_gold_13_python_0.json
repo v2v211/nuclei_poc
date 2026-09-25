@@ -1,1 +1,1 @@
-["Django-Debug-Disclosure-9285ab60.yaml","Django-Debug-Disclosure.yaml","django-debug-exposure.yaml","django-debug-v2.yaml","django-secret-key.yaml","django-settings-exposure.yaml","flask-debug-exposure.yaml","local-settings-python.yaml","rce-python-body.yaml"]
+["Django-Debug-Disclosure.yaml","django-debug-exposure.yaml","django-secret-key.yaml","django-settings-exposure.yaml","flask-debug-exposure.yaml","local-settings-python.yaml","python-code-injection.yaml","rce-python-body.yaml"]

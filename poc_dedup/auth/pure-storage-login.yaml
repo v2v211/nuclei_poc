@@ -18,7 +18,7 @@ info:
       - http.title:"pure storage login"
     fofa-query: title="pure storage login"
     google-query: intitle:"pure storage login"
-  tags: panel,purestorage,discovery
+  tags: panel,purestorage
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100b48f5c573fa1e7e644310fe3ae75ff1accce3c97cfaa278d6eb1ebb2f5080b5802210090b6a4ac813ed9ed84f4dc5b745c8169db0ceb40348ca3332a2b75523eaec1a6:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022059ce6f6f4d94fed496c26b18d1d331be46689910c92a4f0c601e19fe381364d702202043878befaba01038311715aabaf611cee53bfa114239b60e25eeaa155c93d5:922c64590222798bb761d5b6d8e72950

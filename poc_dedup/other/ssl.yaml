@@ -1,13 +1,17 @@
 id: ssl
 info:
-  name: multi-vendor SSL
+  name: OpenSSL
   author: nmap,cn-kali-team
   tags: detect,tech,ssl,service
   severity: info
   metadata:
     fallback:
     - get-request
+    info: SSLv3
+    product: openssl
     rarity: 1
+    vendor: openssl
+    verified: true
 tcp:
 - name: sslsession-req
   inputs:
@@ -19,4 +23,4 @@ tcp:
   - name: ssl
     type: regex
     regex:
-    - ^\x15\x03[\x01\x00]\0\x02\x01\0$
+    - ^\x16\x03\0\0J\x02\0\0F\x03\0

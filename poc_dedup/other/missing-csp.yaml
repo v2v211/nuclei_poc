@@ -5,8 +5,7 @@ info:
   severity: info
   description: Checks if there is a CSP header
   tags: misc
-
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}'

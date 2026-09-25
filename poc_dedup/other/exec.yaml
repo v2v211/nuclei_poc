@@ -1,13 +1,12 @@
 id: exec
 info:
-  name: AIX rexecd
+  name: ''
   author: nmap,cn-kali-team
   tags: detect,tech,exec,service
   severity: info
   metadata:
     fallback:
     - dnsversion-bind-req
-    operating_system: AIX
     rarity: 3
 tcp:
 - name: dnsversion-bind-req-tcp
@@ -20,4 +19,4 @@ tcp:
   - name: exec
     type: regex
     regex:
-    - '^\x01rexecd: [-\d]+ The login is not correct\.\n'
+    - ^\x01Login incorrect\.\n$

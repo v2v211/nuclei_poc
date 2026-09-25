@@ -6,7 +6,7 @@ info:
   severity: info
   metadata:
     rarity: 1
-    version: 1.5.2 or earlier
+    version: 1.5.3 or later
 tcp:
 - name: generic-lines
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: pgbouncer
     type: regex
     regex:
-    - ^E\0\0\0&SERROR\0C08P01\0Mbad packet header\0\0
+    - '^E\x00\x00\x002SERROR\x00C08P01\x00Mbad packet header: ''0d0a0d0a''\x00\x00'

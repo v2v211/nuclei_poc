@@ -1,17 +1,16 @@
 id: x11
 info:
-  name: XFree86
+  name: X.Org
   author: nmap,cn-kali-team
   tags: detect,tech,x11,service
   severity: info
   metadata:
-    info: Connectiva Linux
-    operating_system: Linux
-    product: xfree86
+    info: open
+    operating_system: Unix
+    product: x.org_x11
     rarity: 4
-    vendor: xfree86
+    vendor: x
     verified: true
-    version: $1 patch level $2
 tcp:
 - name: x11-probe
   inputs:
@@ -23,4 +22,4 @@ tcp:
   - name: x11
     type: regex
     regex:
-    - (?i)^\x01\0\x0b\0\0.*Conectiva Linux \(XFree86 ([\d.]+), patch level (\w+)\)
+    - (?i)^\x01\x00\x0b\x00\x00\x00......\x00\x00.*The X\.Org Foundation
