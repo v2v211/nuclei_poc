@@ -1,21 +1,25 @@
-id: forms
+id: form-tag
+
 info:
-  name: forms
-  author: cn-kali-team
-  tags: detect,tech,forms
+  name: Form Detection Template
+  author: foulenzer
   severity: info
-  metadata:
-    fofa-query:
-    - body="com_baforms"
-    product: forms
-    vendor: balbooa
-    verified: true
-http:
-- method: GET
-  path:
-  - '{{BaseURL}}/'
-  matchers:
-  - type: word
-    words:
-    - com_baforms
-    case-insensitive: true
+  description: Searches Response body for form-tags
+  tags: form,input
+
+requests:
+  - method: GET
+    redirects: true
+    max-redirects: 1
+    path:
+      - "{{BaseURL}}/"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - '<form'
+
+      - type: status
+        status:
+          - 200

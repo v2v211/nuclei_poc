@@ -1,25 +1,24 @@
 id: honeywell-web-controller
 
 info:
-  name: Honeywell XL Web Controller
+  name: Honeywell Excel Web Control Login Panel - Detect
   author: dhiyaneshDK
   severity: info
-  reference: https://www.exploit-db.com/ghdb/7130
-  tags: panel
+  description: Honeywell Excel Web Control login panel was detected.
+  reference:
+    - https://www.exploit-db.com/ghdb/7130
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+  metadata:
+    max-request: 1
+  tags: edb,panel
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/standard/default.php'
 
-    raw:
-      - |
-        GET /standard/default.php HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
     matchers-condition: and
     matchers:
       - type: word
@@ -29,3 +28,4 @@ requests:
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022078c9c54501f92cfaae971258b25a65a188c91e83c95443f4fbec5fe06e649d8c022100fe95de24639d48a6f1e08622d11e270268a2513199af197216239064ea0b49b0:922c64590222798bb761d5b6d8e72950

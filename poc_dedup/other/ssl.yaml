@@ -1,6 +1,6 @@
 id: ssl
 info:
-  name: PGP Corporation product SSL
+  name: VMware ESXi Server httpd
   author: nmap,cn-kali-team
   tags: detect,tech,ssl,service
   severity: info
@@ -8,6 +8,7 @@ info:
     fallback:
     - get-request
     rarity: 1
+    version: $1
 tcp:
 - name: sslsession-req
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: ssl
     type: regex
     regex:
-    - (?i)^\x16\x03\x00\x00\+\x02\x00\x00'\x03\x00...\?
+    - (?i)^\x16\x03\x00\x00\*\x02\x00\x00&\x03.*vCenterServer_([\w._-]+)

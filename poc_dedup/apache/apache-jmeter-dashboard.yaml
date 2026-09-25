@@ -19,7 +19,7 @@ info:
       - http.title:"apache jmeter dashboard"
     fofa-query: title="apache jmeter dashboard"
     google-query: intitle:"apache jmeter dashboard"
-  tags: apache,jmeter,panel
+  tags: apache,jmeter,panel,discovery
 
 http:
   - method: GET
@@ -38,4 +38,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402207ab028aa0be07b3845dda723e535ab34d9c61dbbdf98094d5aa929c9342a2a100220048d88a44c7b980b1c99ed057bda0a22f7712a6d25c7531dadf2280f52c4565c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ab4c4c2cadf4dcdd6cd28d338effecfca9e71ae5fd2e62c6d39dae344633f2620220156034babb9649b3764af579bcbe169299c1991a1253f37d7a489a5e323df67a:922c64590222798bb761d5b6d8e72950

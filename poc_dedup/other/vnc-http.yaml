@@ -1,15 +1,12 @@
 id: vnc-http
 info:
-  name: Ultr@VNC
+  name: Axeda Desktop Viewer
   author: nmap,cn-kali-team
   tags: detect,tech,vnc-http,service
   severity: info
   metadata:
-    info: 'resolution: $1x$2; VNC TCP port: $3'
-    product: ultravnc
+    info: Resolution $1x$2
     rarity: 1
-    vendor: ultravnc
-    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: vnc-http
     type: regex
     regex:
-    - '^HTTP/1\.0 200 OK\n\n<HTML>\n  <HEAD><TITLE>Ultr@VNC Desktop \[[-. \w]+\] ------- Ultr@VNC Home Page is  http://ultravnc\.sf\.net -------</TITLE></HEAD>\n  <BODY>\n  <SPAN style=''position: absolute; top:0px;left:0px''>\n    <APPLET CODE=VncViewer\.class ARCHIVE=VncViewer\.jar WIDTH=(\d+) HEIGHT=(\d+)>\n      <PARAM NAME=PORT VALUE=(\d+)>\n      <PARAM NAME=ENCODING VALUE=Tight>\n    </APPLET>  </SPAN>\n  </BODY>\n'
+    - '^HTTP/1\.0 200 OK\n\n<HTML>\n  <HEAD><TITLE> \[[\w._-]+\] </TITLE></HEAD>\n  <BODY>\n  <SPAN style=''position: absolute; top:0px;left:0px''>\n<OBJECT \n    ID=''AxedaDesktopViewer''\n    classid = ''clsid:8AD9C840-044E-11D1-B3E9-00805F499D93''\n    codebase = ''http://java\.sun\.com/update/1\.4\.2/jinstall-1_4-windows-i586\.cab#Version=1,4,0,0''\n    WIDTH = (\d+) HEIGHT = (\d+) >\n'

@@ -1,13 +1,14 @@
 id: finger
 info:
-  name: BSD fingerd
+  name: efingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    product: fingerd
+    operating_system: Unix
+    product: efingerd
     rarity: 1
-    vendor: bsd
+    vendor: radovan_garabik
     verified: true
 tcp:
 - name: get-request
@@ -20,4 +21,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - '^finger: HTTP/1\.0: no such user\.\r\n'
+    - '^finger: GET / HTTP/1\.0: no such user\n'

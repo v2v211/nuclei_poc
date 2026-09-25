@@ -14,7 +14,7 @@ info:
     fofa-query: title="Directum"
     product: directum
     vendor: directum
-  tags: directum,panel
+  tags: directum,panel,discovery
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100f8b394320cdab375775ca1492e31caa7c0682a09c2a58d99022e0240cb2ff5bb0221008e319ff66d86491f7a57e159bc7a16298f3362712b6f1816cb5c03679e6f1153:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009cde7cd0fb41913495d855b3500ddc92eae1575f10d2d50a0d1863319cd28139022100ca18828fa9d1f436f12695bae54688a624093d63d760e694c0111b8d88d66031:922c64590222798bb761d5b6d8e72950

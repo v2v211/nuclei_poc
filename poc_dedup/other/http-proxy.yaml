@@ -1,14 +1,16 @@
 id: http-proxy
 info:
-  name: Tengine http proxy
+  name: Microsoft ISA Server Web Proxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
     hostname: $1
-    product: tengine
+    info: Chinese (Traditional)
+    operating_system: Windows
+    product: isa_server
     rarity: 1
-    vendor: alibaba
+    vendor: microsoft
     verified: true
 tcp:
 - name: get-request
@@ -21,4 +23,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - (?i)^HTTP/1\.1 502 Bad Gateway\r\n(?:[^\r\n]+\r\n)*?\r\n<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2\.0//EN">\r\n<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor="white">\r\n<h1>502 Bad Gateway</h1>\r\n<p>The proxy server received an invalid response from an upstream server\. Sorry for the inconvenience\.<br/>\r\nPlease report this message and include the following information to us\.<br/>\r\nThank you very much!</p>\r\n<table>\r\n<tr>\r\n<td>URL:</td>\r\n<td>[^<]*</td>\r\n</tr>\r\n<tr>\r\n<td>Server:</td>\r\n<td>([^<]+)</td>\r\n</tr>\r\n<tr>\r\n<td>Date:</td>\r\n<td>[^<]+</td>\r\n</tr>\r\n</table>\r\n<hr/>Powered by Tengine</body>\r\n</html>\r\n$
+    - '^HTTP/1\.1 502 Proxy Error \( \xe7\xb5\xb1\xe4\xb8\x80\xe8\xb3\x87\xe6\xba\x90\xe5\xae\x9a\xe4\xbd\x8d\xe5\x99\xa8 \(URL\) \xe6\xb2\x92\xe6\x9c\x89\xe4\xbd\xbf\xe7\x94\xa8\xe5\xb7\xb2\xe8\xbe\xa8\xe8\xad\x98\xe7\x9a\x84\xe9\x80\x9a\xe8\xa8\x8a\xe5\x8d\x94\xe5\xae\x9a\xe3\x80\x82\xe5\xa6\x82\xe6\x9e\x9c\xe4\xb8\x8d\xe6\x98\xaf\xe4\xb8\x8d\xe6\x94\xaf\xe6\x8f\xb4\xe9\x80\x9a\xe8\xa8\x8a\xe5\x8d\x94\xe5\xae\x9a\xef\xbc\x8c\xe5\xb0\xb1\xe6\x98\xaf\xe9\x8d\xb5\xe5\x85\xa5\xe7\x9a\x84\xe8\xa6\x81\xe6\xb1\x82\xe4\xb8\x8d\xe6\xad\xa3\xe7\xa2\xba\xe3\x80\x82\xe8\xab\x8b\xe7\xa2\xba\xe8\xaa\x8d\xe4\xbd\xbf\xe7\x94\xa8\xe4\xb8\xad\xe7\x9a\x84\xe9\x80\x9a\xe8\xa8\x8a\xe5\x8d\x94\xe5\xae\x9a\xe6\x9c\x89\xe6\x95\x88 \(\xe4\xbe\x8b\xe5\xa6\x82 Web \xe8\xa6\x81\xe6\xb1\x82\xe7\x9a\x84 HTTP\)\xe3\x80\x82  \)\r\nVia: 1\.1 ([\w.-]+)\r\n'

@@ -15,7 +15,7 @@ info:
     shodan-query: http.html:"Telerik Report Server"
     product: telerik_report_server
     vendor: progress
-  tags: telerik,panel
+  tags: telerik,panel,discovery
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402203745fa03bfcc349fcc69e49965e6858fbc37c5da85f5582ccf9b22e7634d5e9c0220195c1298816c31a111eae2ce5cca460e6a9dc573453fc1d84666f00c4dd6b453:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100bbd83b206c398932e0e0474f7c9075aaffd60689ababe9f224b0361a2608af6b022100858150c1bd6e1f699fca8b59e506c1a18b1035a3e757a7d94634dd7cb7d9a909:922c64590222798bb761d5b6d8e72950
