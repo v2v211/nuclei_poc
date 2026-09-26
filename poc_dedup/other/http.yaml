@@ -1,11 +1,12 @@
 id: http
 info:
-  name: Edimax PS-1206P print server
+  name: Novell NetWare HTTP Stack
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: print server
+    info: HTTPSTK.NLM
+    operating_system: NetWare
     rarity: 1
 tcp:
 - name: get-request
@@ -18,4 +19,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 401 \r\nDate: .* GMT\r\nWWW-Authenticate: Basic realm=\"Default password:1234\"\r\n\r\n401 Unauthorized - User authentication is required\.$'
+    - '^HTTP/1.1 302 Object Moved Temporarily\r\nServer: NetWare HTTP Stack\r\n'

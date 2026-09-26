@@ -1,38 +1,32 @@
 id: magento-detect 2
 info:
-  author: TechbrunchFR
-  description: Identify Magento
   name: Magento Detect
+  author: TechbrunchFR
   severity: info
+  description: Identify Magento
   tags: magento
 requests:
-- attack: sniper
-  matchers:
-  - condition: and
-    dsl:
-    - contains(tolower(all_headers), "x-magento")
-    - status_code == 200
-    type: dsl
-  - condition: and
-    dsl:
-    - contains(body, "graphql-authorization")
-    - contains(body, "The current customer")
-    - status_code == 200
-    type: dsl
-  matchers-condition: or
-  payloads:
-    Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-  raw:
-  - 'GET /graphql?query=+{customerDownloadableProducts+{+items+{+date+download_url}}+}
-    HTTP/1.1
-
-    Host: {{Subdomains}}
-
-    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-
-    Accept-Encoding: gzip, deflate
-
-    Accept: */*
-
-    '
-  threads: 100
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
+    raw:
+      - |
+        GET /graphql?query=+{customerDownloadableProducts+{+items+{+date+download_url}}+} HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Accept-Encoding: gzip, deflate
+        Accept: */*
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        dsl:
+          - 'contains(tolower(all_headers), "x-magento")'
+          - 'status_code == 200'
+        condition: and
+      - type: dsl
+        dsl:
+          - 'contains(body, "graphql-authorization")'
+          - 'contains(body, "The current customer")'
+          - 'status_code == 200'
+        condition: and

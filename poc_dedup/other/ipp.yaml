@@ -1,14 +1,13 @@
 id: ipp
 info:
-  name: Web-Server httpd
+  name: HP $1 ipp
   author: nmap,cn-kali-team
   tags: detect,tech,ipp,service
   severity: info
   metadata:
     device_type: printer
-    info: NRG copier or Ricoh Aficio printer http config
+    info: model $2; serial $3
     rarity: 1
-    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: ipp
     type: regex
     regex:
-    - '^HTTP/1\.0 404 Not Found\r\nCache-Control: no-cache\r\nDate: .*\r\nPragma: no-cache\r\nContent-Type: text/html\r\nContent-Length: 91\r\nServer: Web-Server/([\d.]+)\r\n\r\n<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD>\n<BODY><H1>404 Not Found</H1></BODY></HTML>\x00'
+    - '^HTTP/1\.1 505 HTTP Version Not Supported\r\nServer: HP HTTP Server; HP ([^;]+?) - (\w+); Serial Number: (\w+); (?:[\w_]+ )?Built:[^{]+ {\w+, ASIC id 0x[\da-f]+}\r\n\r\n$'

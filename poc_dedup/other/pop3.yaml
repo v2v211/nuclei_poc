@@ -1,13 +1,15 @@
 id: pop3
 info:
-  name: ipopd
+  name: cbdev cmail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
+    product: cmail
     rarity: 1
-    version: $2
+    vendor: cbdev
+    verified: true
 tcp:
 - name: generic-lines
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 \[([-.\w]+)\] v(200[-.\w]+) server ready\r\n-ERR Null command\r\n-ERR Null command\r\n
+    - ^\+OK ([\w.-]+) POP3 ready\r\n-ERR Unkown command\r\n-ERR Unkown command\r\n
