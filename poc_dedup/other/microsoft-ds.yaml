@@ -1,12 +1,11 @@
 id: microsoft-ds
 info:
-  name: Canon Pixma printer smbd
+  name: Xerox WorkCentre 5225 printer microsoft-ds
   author: nmap,cn-kali-team
   tags: detect,tech,microsoft-ds,service
   severity: info
   metadata:
     device_type: printer
-    info: 'workgroup: $P(1)'
     rarity: 4
 tcp:
 - name: smbprog-neg
@@ -19,4 +18,4 @@ tcp:
   - name: microsoft-ds
     type: regex
     regex:
-    - ^\x00\x00\x00a\xffSMBr\x00\x00\x00\x00\x80\x00{16}@\x06\x00\x00\x01\x00\x11\x07\x00\x03\x01\x00\x14\x00@\x1e\x00\x00\xff\xff\x00\x00....\x14\x02\x00{10}..\x08\x1c\x00.{8}((?:(?!\x00\x00).)+?)\x00\x00
+    - (?i)^\0\0\0\x61\xffSMBr\0\0\0\0\x88\x03\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0@\x06\0\0\x01\0\x11\x06\0\x02\x0a\0\x01\0....\xff\xff\x00\x00....\0\x03\0\0\0

@@ -39,9 +39,8 @@ http:
   - '{{BaseURL}}/_profiler/phpinfo.php'
   - '{{BaseURL}}/_profiler/phpinfo'
   - '{{BaseURL}}/?phpinfo=1'
-  - '{{BaseURL}}/l.php?act=phpinfo'
   stop-at-first-match: true
-id: phpinfo files
+id: phpinfo-files
 info:
   author: pdteam,daffainfo,meme-lord,dhiyaneshDK,wabafet
   classification:
@@ -51,7 +50,7 @@ info:
 
     '
   metadata:
-    max-request: 22
+    max-request: 21
   name: PHPinfo Page - Detect
   remediation: Remove PHP Info pages from publicly accessible sites, or restrict access
     to authorized users only.
