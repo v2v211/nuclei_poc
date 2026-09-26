@@ -1,10 +1,11 @@
 id: ftp
 info:
-  name: pyftpd
+  name: berretz.de mini-ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 1
 tcp:
 - name: generic-lines
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Welcome to pyftpd\. Happy downloading\.\r\n500 I'm gonna ignore this command\.\.\. maybe later\.\.\.\r\n
+    - '^220 ICS FTP Server ready\r\n500 ''\r'': command not understood\.\r\n500 ''\r'': command not understood\.\r\n'

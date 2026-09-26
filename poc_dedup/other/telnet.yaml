@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: Nortel 5530 Ethernet Routing Switch telnetd
+  name: Juniper Mobility System Software telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
+    product: mobility_system_software
     rarity: 0
+    vendor: juniper
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\x1b\[\?25l\xff\xfb\x01\x1b\[2J\x1b\[11;26HSwitch Password:  \[ \*\*\*\*\*\*\*\*\*\*\*\*\*\*\* \]\x1b\[23;1H\x1b\[2KEnter text, press <Return> or <Enter> when complete\.\x1b\[14;1H\x1b\[2K\x1b\[14;26HEnter Password: '
+    - '^\xff\xfb\x01\xff\xfb\x03\r\n\r\nCopyright \(c\) 2002 - \d\d\d\d Juniper Networks, Inc\. All rights reserved\.\r\n\n\r\n\r\n\r\x00Username: '
