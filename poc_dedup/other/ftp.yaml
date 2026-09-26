@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: Blackbox PlayStation 3 ftpd
+  name: TBS embedded ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: game console
+    device_type: broadband router
     rarity: 1
 tcp:
 - name: generic-lines
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 BBPS3FTP ready\r\n500 command not recognized\r\n
+    - ^220 Welcome to TBS FTP Server\.\r\n(?:202 Command not implemented, superfluous at this site\.\r\n){2}

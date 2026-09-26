@@ -1,14 +1,17 @@
 id: telnet
 info:
-  name: Juniper Mobility System Software telnetd
+  name: BusyBox telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    product: mobility_system_software
+    device_type: media device
+    info: MacSense HomePod Wireless MP3 Player
+    product: busybox
     rarity: 0
-    vendor: juniper
+    vendor: busybox
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03\r\n\r\nCopyright \(c\) 2002 - \d\d\d\d Juniper Networks, Inc\. All rights reserved\.\r\n\n\r\n\r\n\r\0Username: '
+    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\r\n\r\n\r\nBusyBox v([-\w_.]+) \([^)]+\) Built-in shell \(ash\)\r\nEnter ''help'' for a list of built-in commands\.\r\n\r\n# '
