@@ -1,12 +1,14 @@
 id: http
 info:
-  name: Edimax PS-1206P print server
+  name: Ivideon Server httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: print server
+    product: ivideon_server
     rarity: 1
+    vendor: ivideon
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 401 \r\nDate: .* GMT\r\nWWW-Authenticate: Basic realm=\"Default password:1234\"\r\n\r\n401 Unauthorized - User authentication is required\.$'
+    - '^HTTP/1\.0 404 Not found\r\nServer: IVIDEON\r\nDate: .*\r\nContent-Type: text/html\r\nAccept-Range: bytes\r\nKeep-Alive: timeout=5, max=100\r\nContent-Length: 48\r\nAccess-Control-Allow-Origin: \*\r\nAccess-Control-Allow-Methods: GET, POST\r\nAccess-Control-Allow-Headers: \*\r\n\r\n<title>404 Not Found</title>\n<h1>Not Found</h1>\0'

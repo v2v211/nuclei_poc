@@ -1,13 +1,16 @@
 id: http-proxy
 info:
-  name: Pi-Soft SpoonProxy http proxy
+  name: Apache Traffic Server
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    product: traffic_server
     rarity: 1
-    version: $1
+    vendor: apache
+    verified: true
+    version: $2
 tcp:
 - name: get-request
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - '^HTTP/1\.0 500 Internal Server Error\r\nCache-control: no-cache\r\nContent-type: text/html\r\n\r\n<HTML><HEAD><TITLE>SpoonProxy V([\w._-]+) Error</TITLE>'
+    - '(?i)^HTTP/1\.0 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?Via: http/1\.[01] ([\w._-]+) \(ApacheTrafficServer[^)]*\)\r\nServer: ATS/([\w._-]+)\r\n'

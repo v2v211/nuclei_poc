@@ -1,11 +1,12 @@
 id: finger
 info:
-  name: ArGoSoft Mail fingerd
+  name: Dell $1 laser printer fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: printer
+    info: 'Status: $2'
     rarity: 1
 tcp:
 - name: generic-lines
@@ -18,4 +19,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - ^This is finger server\r\n\r\nPlease use username@domain format\.\r\n
+    - '^\r\nIntegrated port\r\nPrinter Type: Dell Laser Printer ([-\w+.]+)\r\nPrint Job Status: (.*)\r\n'
