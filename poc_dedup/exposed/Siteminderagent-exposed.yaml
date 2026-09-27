@@ -1,4 +1,4 @@
-id: Siteminderagent exposed
+id: Siteminderagent-exposed
 info:
   author: Clark
   name: Find siteminderagent exposed
@@ -18,3 +18,4 @@ http:
   method: GET
   path:
   - '{{BaseURL}}/siteminderagent/'
+t/'
