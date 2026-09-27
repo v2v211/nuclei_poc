@@ -1,25 +1,22 @@
 id: samba-config
 
 info:
-  name: Samba Config - Detect
+  name: Samba config file disclosure
   author: sheikhrishad
   severity: info
-  description: Samba configuration information was detected.
-  reference:
-    - https://www.samba.org/samba/docs/using_samba/ch06.html
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
-    cwe-id: CWE-200
-  metadata:
-    max-request: 1
-  tags: config,exposure,smb,samba,vuln
+  tags: config,exposure,smb
 
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/smb.conf"
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET /smb.conf HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55
     matchers-condition: and
     matchers:
       - type: word
@@ -31,4 +28,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100b8930bd8e3aaa595cfdb4e89c5cb4a7a7737614e3384961a2194bbc5060fca9f02210093282ca2af2d3bde9b248b28351c6c8e4526f3d4272acfbfe2308ea283b0b658:922c64590222798bb761d5b6d8e72950
