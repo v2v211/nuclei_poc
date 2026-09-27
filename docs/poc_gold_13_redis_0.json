@@ -1,1 +1,1 @@
-["exposed-redis.yaml","misconfigured-redis.yaml","redis-commander-default-login.yaml","redis-conf.yaml","redis-hll-exploit.yaml","unauth-redis-insight.yaml"]
+["cache-redis-encryption-disabled.yaml","exposed-redis.yaml","misconfigured-redis.yaml","open-redis-web.yaml","redis-commander-exposure.yaml","redis-conf.yaml","redis-hll-exploit.yaml","unauth-redis-insight.yaml"]

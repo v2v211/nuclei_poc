@@ -1,7 +1,7 @@
 id: wordpress-mailpoet
 
 info:
-  name: MailPoet – Newsletters, Email Marketing, and Automation Detection
+  name: MailPoet – emails and newsletters in WordPress Detection
   author: ricardomaia
   severity: info
   reference:
@@ -13,6 +13,7 @@ info:
 
 http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/mailpoet/readme.txt"
 
