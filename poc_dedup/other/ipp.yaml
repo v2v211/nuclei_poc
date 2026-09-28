@@ -1,14 +1,12 @@
 id: ipp
 info:
-  name: Web-Server httpd
+  name: Xerox or Samsung ipp
   author: nmap,cn-kali-team
   tags: detect,tech,ipp,service
   severity: info
   metadata:
     device_type: printer
-    info: NRG copier or Ricoh Aficio printer http config
     rarity: 1
-    version: $1
 tcp:
 - name: get-request
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: ipp
     type: regex
     regex:
-    - '^HTTP/1\.0 404 Not Found\r\nCache-Control: no-cache\r\nDate: .*\r\nPragma: no-cache\r\nContent-Type: text/html\r\nContent-Length: 91\r\nServer: Web-Server/([\d.]+)\r\n\r\n<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD>\n<BODY><H1>404 Not Found</H1></BODY></HTML>\x00'
+    - '^HTTP/1\.0 400 Bad Request\r\nConnection: close\r\nContent-Type: text/html\r\n(?:; charset=utf-8)?\r\nContent-Length: \d+\r\nCache-Control: (?:max-age=0, no-store, )?no-cache\r\n\r\n<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3\.2//EN">\n<HTML>\n<HEAD>\n<TITLE>Invalid Request</TITLE>\n</HEAD>\n\n<BODY BGCOLOR="#FFFFFF" TEXT="#000000">\n<CENTER>\n<FONT SIZE="\+2" COLOR="#FFFFFF" ALIGN="Center">\n</FONT>\n<B>Invalid Request\. Some Error</B>\n</BODY>\n\n</HTML>\n\n'
