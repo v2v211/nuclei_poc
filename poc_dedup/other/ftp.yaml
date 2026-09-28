@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: Canon imageRUNNER printer ftpd
+  name: Nortel CES1010E router ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    device_type: router
     rarity: 3
 tcp:
 - name: help
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Connection established\.\r\n214-The following commands are supported:\r\n\tUSER\tPORT\tTYPE\tABOR\tCWD \tLIST\r\n
+    - ^220 FTP server ready\r\n214-The following commands are recognized:\r\nHELP\tUSER\tPASS\tQUIT\tLIST\tNLST\nRETR\tSTOR\tCWD\tTYPE\tPORT\tPWD\nSTRU\tMODE\tALLO\tACCT\tPASV\tNOOP\nDELE\n214 End of command list\.\r\n
