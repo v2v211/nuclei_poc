@@ -1,12 +1,15 @@
 id: ftp
 info:
-  name: Nortel CES1010E router ftpd
+  name: FileZilla ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: router
+    operating_system: Windows
+    product: filezilla_server
     rarity: 3
+    vendor: filezilla-project
+    verified: true
 tcp:
 - name: help
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FTP server ready\r\n214-The following commands are recognized:\r\nHELP\tUSER\tPASS\tQUIT\tLIST\tNLST\nRETR\tSTOR\tCWD\tTYPE\tPORT\tPWD\nSTRU\tMODE\tALLO\tACCT\tPASV\tNOOP\nDELE\n214 End of command list\.\r\n
+    - ^220.*\r\n214-The following commands are recognized:\r\n   USER   PASS   QUIT   CWD    PWD    PORT   PASV   TYPE\r\n   LIST   REST   CDUP   RETR   STOR   SIZE   DELE   RMD \r\n   MKD    RNFR   RNTO   ABOR   SYST   NOOP   APPE   NLST\r\n   MDTM   XPWD   XCUP   XMKD   XRMD   NOP    EPSV   EPRT\r\n   AUTH   ADAT   PBSZ   PROT   FEAT   MODE   OPTS   HELP\r\n   ALLO   MLST   MLSD\r\n214 Have a nice day\.\r\n
