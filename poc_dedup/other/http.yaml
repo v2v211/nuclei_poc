@@ -1,12 +1,17 @@
 id: http
 info:
-  name: Edimax PS-1206P print server
+  name: Virata-EmWeb
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: print server
+    device_type: printer
+    info: HP Officejet Pro $2 http config
+    product: emweb
     rarity: 1
+    vendor: virata
+    verified: true
+    version: $SUBST(1,"_",".")
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +23,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 401 \r\nDate: .* GMT\r\nWWW-Authenticate: Basic realm=\"Default password:1234\"\r\n\r\n401 Unauthorized - User authentication is required\.$'
+    - '(?i)^HTTP/1\.1 200 OK\r\nServer: Virata-EmWeb/R([\d_]+)\r\n.*<title>HP Officejet Pro (\w+)(?: A\w+)?</title>\n'

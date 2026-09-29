@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.html:"webshell4"
-  tags: webshell4,panel,discovery
+  tags: webshell4,panel
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100d45779f6386af311584d375eda098eda65c196fccd8feb8ffc76e1f77d9249be02203341db82cc99a102371ad03dea909501a056e9df27aa04a96a924091ca8a6e84:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210083e37b2088a390053da9f6669adc35418c8e9806a9b37ca714beaf1b150b88ac022014b43673a355acf480f9fc8fba9a17b07d72a3b6f8611c938bebabfd6119be2e:922c64590222798bb761d5b6d8e72950

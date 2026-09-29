@@ -8,10 +8,10 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cwe-id: CWE-22,CWE-73
+    cwe-id: CWE-22
   metadata:
     max-request: 1
-  tags: vmware,lfi,vcenter,linux,vuln
+  tags: vmware,lfi,vcenter,linux
 
 http:
   - method: GET
@@ -22,4 +22,4 @@ http:
       - type: regex
         regex:
           - "root:.*:0:0:"
-# digest: 4b0a00483046022100851d2da597372ad1e46d3e0904373c41fb81e075e882e80319277ff0886bac0d02210099398cb7e7ee1156412a5506828607d4f61d1b961f349ecabe30d2ce4435836f:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022024205d4dffa7a9b12484b1419888c1482d3adc47103023d64db81ff9795c721302206e455b4d1c610ac4f11a7dc6b1e4dadc0693fbce747372b04001f268d609e4f2:922c64590222798bb761d5b6d8e72950

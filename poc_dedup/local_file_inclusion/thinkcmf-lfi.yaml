@@ -10,12 +10,12 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cwe-id: CWE-23,CWE-73
+    cwe-id: CWE-22
   metadata:
     max-request: 1
     win-payload: ../../../../../../../../../../../../../../../../windows/win.ini
     unix-payload: ../../../../../../../../../../../../../../../../etc/passwd
-  tags: thinkcmf,lfi,vuln
+  tags: thinkcmf,lfi
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100dd2ae845c411e68e3a9e94d8990f26e2724752ac7c1a289fa99d158db9d40094022100d7c30340a15c0d70484042e851c28f92ee01065908c37f8b4523ffca09a8fb45:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a33520236737b197ac62b46a6761bbd0f39360965442b2157a3fdc6ccca935220220429c6097b0c18079ac726315eaf1ed34783e1cfa158037df54286ea01e23dfb8:922c64590222798bb761d5b6d8e72950
