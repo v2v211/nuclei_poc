@@ -16,7 +16,7 @@ info:
     vendor: thoughtworks
     product: gocd
     shodan-query: http.title:"Create a pipeline - Go" html:"GoCD Version"
-  tags: go,gocd,exposure,misconfig
+  tags: go,gocd,exposure,misconfig,vuln
 
 http:
   - method: GET
@@ -42,4 +42,4 @@ http:
       - type: regex
         regex:
           - "([a-z0-9]){32}"
-# digest: 4a0a00473045022100cb660f1fd76b1e1142b3fb8a0d071123a2a41bba4c674ef070c22ce4fc99a6d502205227541ddc1d4fa6a00d2f476a44d6f8cf0c593b5fffe121e8db50ee00af7788:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220430ebc1e9681c84a0dd0b760d23703a90ded3004b1c673146994f6933fef52ae022075163d88466410da0cd1837307f1cefec5ba7879401107ffa809f5846ae59569:922c64590222798bb761d5b6d8e72950

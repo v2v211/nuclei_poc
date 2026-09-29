@@ -12,10 +12,10 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
-    cwe-id: CWE-77
+    cwe-id: CWE-77,CWE-502
   metadata:
     max-request: 3
-  tags: fastjson,rce,deserialization,oast
+  tags: fastjson,rce,deserialization,oast,vuln
 
 http:
   - raw:
@@ -60,4 +60,4 @@ http:
         negative: true
         status:
           - 200
-# digest: 4a0a004730450221009f7023f97ff7be0edbcb2b30379f8c26c2135fb0aa4aedd7c554bf42f55f085a022026bb83a789f64b175e44e964e85fe59bcf0aa9da02d3843dfb054a0df96225cc:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502200cdbd56d0c3e20d45c7a94698d9aba44aa82a132e72e186c7b20a9c067aa5daf0221008c96b1758d172402ece19ae01bcf66153ead99c638f2818b80a947a42fb63ea0:922c64590222798bb761d5b6d8e72950
