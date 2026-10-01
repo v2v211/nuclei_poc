@@ -1,4 +1,5 @@
 id: guacamole-default-login
+
 info:
   name: Guacamole Default Login
   author: r3dg33k
@@ -10,8 +11,11 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-  tags: guacamole,default-login
-requests:
+  metadata:
+    max-request: 1
+  tags: guacamole,default-login,vuln
+
+http:
   - raw:
       - |
         POST /api/tokens HTTP/1.1
@@ -21,12 +25,14 @@ requests:
         Referer: {{Hostname}}
 
         username={{username}}&password={{password}}
+
     payloads:
       username:
         - guacadmin
       password:
         - guacadmin
     attack: pitchfork
+
     matchers-condition: and
     matchers:
       - type: word
@@ -35,12 +41,13 @@ requests:
           - '"authToken"'
           - '"guacadmin"'
         condition: and
+
       - type: word
         words:
           - 'application/json'
         part: header
+
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/10
+# digest: 4a0a00473045022100b7e92db41c5e7d76773227a077fe113a0ed5964a84085b394a06dbf8bd54dd19022063c29d5bd23463a2c6a9ef8104631e7e46fcf5d60b19c4d97ca4b58d87acdfc1:922c64590222798bb761d5b6d8e72950
