@@ -2,14 +2,14 @@ id: mx-service-detector
 
 info:
   name: Email Service Detector
-  author: binaryfigments,rxerium
+  author: binaryfigments
   severity: info
   description: An email service was detected. Check the email service or spam filter that is used for a domain.
   classification:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: dns,service,discovery
+  tags: dns,service
 
 dns:
   - name: "{{FQDN}}"
@@ -21,7 +21,6 @@ dns:
         name: "Office 365"
         words:
           - "mail.protection.outlook.com"
-          - "mx.microsoft"
 
       - type: word
         name: "Google Apps"
@@ -82,39 +81,4 @@ dns:
         words:
           - "mx1-us1.ppe-hosted.com"
           - "mx2-us1.ppe-hosted.com"
-
-      - type: word
-        name: "Mimecast"
-        words:
-          - "mimecast.com"
-
-      - type: word
-        name: "Cisco IronPort"
-        words:
-          - "iphmx.com"
-
-      - type: word
-        name: "Trellix (FireEye)"
-        words:
-          - "fireeyecloud.com"
-
-      - type: word
-        name: "Symantec MessageLabs"
-        words:
-          - "messagelabs.com"
-
-      - type: word
-        name: "MailSpamProtection"
-        words:
-          - "mailspamprotection.com"
-
-      - type: word
-        name: "Retarus"
-        words:
-          - "retarus.com"
-
-      - type: word
-        name: "Rackspace Email"
-        words:
-          - "emailsrvr.com"
-# digest: 490a0046304402207f77075fdb2be2ac28a3217c8f2b522439c0eb2ddcbc800de7df163df61b59fc0220621eeebb779b4171af76f274e5542c523ecd160832398413f25fedd5a12d4885:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220653773085ed30afcfbc112fb6e5051441e49c562c8f20582ce27e4d80623ab060220156359a09c9cb231a96a25b2d9d5a4fce9de95573cd48e28590f8cf2a07eacee:922c64590222798bb761d5b6d8e72950

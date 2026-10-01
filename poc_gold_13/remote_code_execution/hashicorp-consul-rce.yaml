@@ -10,10 +10,10 @@ info:
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
-    cwe-id: CWE-78
+    cwe-id: CWE-77
   metadata:
     max-request: 1
-  tags: hashicorp,rce,oast,intrusive,edb,vuln
+  tags: hashicorp,rce,oast,intrusive,edb
 
 http:
   - raw:
@@ -38,4 +38,4 @@ http:
         part: interactsh_protocol # Confirms the DNS Interaction
         words:
           - "dns"
-# digest: 4b0a00483046022100e358945d15894b2cda8036f6aa1d139a49c8119aa004fd91b6f3810034a6c50e022100e3440a363c5786be3b37a3ff0f65af21a71b1151aa5e41644dd69e89ea7d39bf:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100addac7e5cfa5f50ccc115c3f34703b1c61f9d5138bb5772f444c695e81296d74022100d40e3e2ae93d966358b93273ad41bc446a03e5db879a76a2ef50a52fd67550e4:922c64590222798bb761d5b6d8e72950

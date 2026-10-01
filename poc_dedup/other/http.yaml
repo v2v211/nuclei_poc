@@ -1,11 +1,10 @@
 id: http
 info:
-  name: Edimax PS-1206P print server
+  name: TR-069 remote access
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: print server
     rarity: 1
 tcp:
 - name: get-request
@@ -18,4 +17,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 401 \r\nDate: .* GMT\r\nWWW-Authenticate: Basic realm=\"Default password:1234\"\r\n\r\n401 Unauthorized - User authentication is required\.$'
+    - '^HTTP/1\.1 200 OK\r\nConnection: close\r\nContent-Length: 0\r\n\r\n$'

@@ -7,7 +7,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: miscellaneous,misc,generic,vuln
+  tags: miscellaneous,misc,generic
 
 http:
   - method: GET
@@ -22,7 +22,7 @@ http:
       - type: word
         part: body
         words:
-          - '2026'
+          - '2024'
         negative: true
 
       - type: regex
@@ -41,4 +41,4 @@ http:
           - '© [1-9]\d* ?\-? ?[1-9]?\d*'
           - '&copy; [1-9]\d* ?\-? ?[1-9]?\d*'
           - '&#169; [1-9]\d* ?\-? ?[1-9]?\d*'
-# digest: 490a0046304402205893ba1cd2bc2023907317092917dbdd4c6221a92a2a97f833323505beb31b4d02200187d7b340cbc39b982a829da404cb5f794f775c8131bc2eef1e26340296355c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022074f1e4f66d9b7d98bccff1bbca178face7f506e796e62c1af4a4d224cc3886d8022100d76c956ad8ab7746e84886467fb5eee541811ead15c48beaf4173b1a46faf1e7:922c64590222798bb761d5b6d8e72950
