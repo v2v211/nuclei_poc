@@ -1,26 +1,31 @@
 id: nextcloud-detect 2
 info:
-  name: Nextcloud Detect
   author: skeltavik
-  severity: info
   description: Detects Nextcloud
-  tags: tech,nextcloud,storage
+  name: Nextcloud Detect
   reference: https://nextcloud.com
+  severity: info
+  tags: tech,nextcloud,storage
 requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
-    raw:
-      - |
-        GET /login HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-    matchers-condition: and
-    matchers:
-      - type: word
-        part: body
-        words:
-          - 'var nc_lastLogin'
+- attack: sniper
+  matchers:
+  - part: body
+    type: word
+    words:
+    - var nc_lastLogin
+  matchers-condition: and
+  payloads:
+    Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+  raw:
+  - 'GET /login HTTP/1.1
+
+    Host: {{Subdomains}}
+
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+
+    Accept-Encoding: gzip, deflate
+
+    Accept: */*
+
+    '
+  threads: 100
