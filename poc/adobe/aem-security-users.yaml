@@ -12,7 +12,7 @@ info:
     shodan-query:
       - http.title:"AEM Sign In"
       - http.component:"Adobe Experience Manager"
-  tags: misconfig,aem,adobe,exposure,vuln
+  tags: misconfig,aem,adobe,exposure
 
 http:
   - method: GET
@@ -35,4 +35,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100ab2e9be448cfd08db601443d17fd68a61ed5bb4ed7b908783c04ccb6cf7e9ce30220188484fa09371bbc309badde1d00c18165af767f97660d21f236eac02b232217:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207c0ef4a75696a9aa02c97e8339e466eac98a98efa4cc976c23e676607772b6ec022015efbf1e8a140927e639053bd0da7b5eb0a7463bd950d36391f99a51e6aff09c:922c64590222798bb761d5b6d8e72950

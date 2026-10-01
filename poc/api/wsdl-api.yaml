@@ -1,35 +1,26 @@
 id: wsdl-api
 
 info:
-  name: WSDL API - Detect
-  author: jarijaas,matejsmycka
+  name: wsdl-detect
+  author: jarijaas
   severity: info
-  description: WSDL API was detected.
-  reference:
-    - https://www.w3.org/TR/wsdl/
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
-    cwe-id: CWE-200
-  metadata:
-    max-request: 2
-  tags: exposure,api,discovery
+  tags: exposure,api
+  description: Detects web services that have WSDL (https://www.w3.org/TR/wsdl/)
 
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/?wsdl"
-      - "{{BaseURL}}?wsdl"
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
-    stop-at-first-match: true
-
-    matchers-condition: and
+    raw:
+      - |
+        GET /?wsdl HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Accept-Encoding: gzip, deflate
+        Accept: */*
     matchers:
       - type: word
         words:
           - "wsdl:definitions"
-
-      - type: status
-        status:
-          - 200
-# digest: 4b0a00483046022100ba8138d006f314c4f61f729538e0f8ec68c43507b345cf97e24a667fcd11723a02210082fa4fb5445aef37e685036a706ff7c41790fa45cb721b588f9186d4daf9d007:922c64590222798bb761d5b6d8e72950

@@ -13,7 +13,7 @@ info:
     product: cocoon
     shodan-query: http.html:"Apache Cocoon"
     fofa-query: app="APACHE-Cocoon"
-  tags: apache,cocoon,tech
+  tags: apache,cocoon,tech,discovery
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
         part: header
         regex:
           - 'X\-Cocoon\-Version:([ 0-9.]+)'
-# digest: 4a0a00473045022041752d483e64b11a3df54bb94751bb324ea9a8ac5fda239c3575547051e8fc24022100bc78482d799a009144da68b7f45b6b82c8ea7b1049f830c6e47a431a7f75930f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202184bf25142f8426ff54b71c010a841cb0829b06c9cf0c7d001f012f896f530f022100a11982cc17ab2119d0402498c141b707656123fbf28ba93ecf68c96866e45a72:922c64590222798bb761d5b6d8e72950

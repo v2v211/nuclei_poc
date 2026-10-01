@@ -7,11 +7,9 @@ info:
   description: XMLRPC Pingback leads to SSRF.
   reference:
     - https://hackerone.com/reports/406387
-  classification:
-    cwe-id: CWE-918
   metadata:
     max-request: 1
-  tags: xmlrpc,hackerone,ssrf,generic,vuln
+  tags: xmlrpc,hackerone,ssrf,generic
 
 http:
   - raw:
@@ -35,4 +33,4 @@ http:
         part: interactsh_protocol
         words:
           - "http"
-# digest: 490a004630440220078c158831ae48f7483e90f2652096a665d9e57aef745a0643289032a0015d6a0220127422cad9d2cf0cf0aa443db46e13710bfdeea1f0ce8f0cd0798ab9502525e6:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b9c0df7388577f0b020d925d4faf1d98344d0fed6488b6d1500c5e703b0f54a0022100ce92f1150040cc336adbdbe2e31a4363e1973409b27ec81c125c172c155d2886:922c64590222798bb761d5b6d8e72950

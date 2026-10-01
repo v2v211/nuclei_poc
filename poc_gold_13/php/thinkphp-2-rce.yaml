@@ -5,10 +5,13 @@ info:
   author: dr_set
   severity: critical
   description: ThinkPHP 2.x and 3.0 in Lite mode are susceptible to remote code execution via the s parameter. An attacker can execute malware, obtain sensitive information, modify data, and/or gain full control over a compromised system without entering necessary credentials.
-  reference: https://github.com/vulhub/vulhub/tree/0a0bc719f9a9ad5b27854e92bc4dfa17deea25b4/thinkphp/2-rce
+  reference:
+    - https://github.com/vulhub/vulhub/tree/0a0bc719f9a9ad5b27854e92bc4dfa17deea25b4/thinkphp/2-rce
+  classification:
+    cwe-id: CWE-95
   metadata:
     max-request: 1
-  tags: thinkphp,rce
+  tags: thinkphp,rce,vuln
 
 http:
   - method: GET
@@ -27,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402207a1e47ec839e7df0b7799bcc1a4e325ba342d7e4a193da3cb5c17990e36bbe850220086c895325c4e77c272c6fddb28d6c4c3fed87d2878dd1f6ef5f3db84d4786ce:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022005d340ef198bfb583bd4f7b2e1b7697bd23b29a08f8038acf1896e4b6ab8556a022029cddea6efc2c3c12bf607d91c0d67606c44943ac3b4def0c18df931051bba1a:922c64590222798bb761d5b6d8e72950

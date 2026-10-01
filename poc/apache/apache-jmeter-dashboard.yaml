@@ -7,19 +7,15 @@ info:
   description: Apache JMeter Dashboard login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:apache:jmeter:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     vendor: apache
     product: jmeter
-    shodan-query:
-      - title:"Apache JMeter Dashboard"
-      - http.title:"apache jmeter dashboard"
-    fofa-query: title="apache jmeter dashboard"
-    google-query: intitle:"apache jmeter dashboard"
-  tags: apache,jmeter,panel,discovery
+    shodan-query: title:"Apache JMeter Dashboard"
+  tags: apache,jmeter,panel
 
 http:
   - method: GET
@@ -38,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100ab4c4c2cadf4dcdd6cd28d338effecfca9e71ae5fd2e62c6d39dae344633f2620220156034babb9649b3764af579bcbe169299c1991a1253f37d7a489a5e323df67a:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022020688c3f50ac6ec7e740748d7f25fe6935c5efd5ea9a4872eaf871dd1252465602201f4af12e35131b7a602fa6531f9f680fbb5803165dbc0812d5dc1b052e2f93c4:922c64590222798bb761d5b6d8e72950

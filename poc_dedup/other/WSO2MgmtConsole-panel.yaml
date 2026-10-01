@@ -1,10 +1,12 @@
 id: WSO2MgmtConsole-panel
+
 info:
   name: WSO2MgmtConsole Panel
   author: wasp76b
   severity: low
   tags: panel,WSO2MgmtConsole
-requests:
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/carbon/admin/login.jsp/"
@@ -14,6 +16,7 @@ requests:
       - "{{BaseURL}}/carbon/admin/docs/userguide.html/"
       - "{{BaseURL}}/carbon/product/about.html/"
       - "{{BaseURL}}/carbon/docs/signin_userguide.html"
+
     stop-at-first-match: true
     matchers:
       - type: word
@@ -23,6 +26,7 @@ requests:
           - "<title>WSO2 API Manager - About"
           - "WSO2"
           - "Sign-In"
+
     extractors:
       - type: regex
         part: body
