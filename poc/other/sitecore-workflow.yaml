@@ -9,5 +9,5 @@ workflows:
   - template: technologies/sitecore-default-page.yaml
   - template: exposed-panels/sitecore-login.yaml
     subtemplates:
-      - tags: vulnerabilities/sitecore-pre-auth-rce.yaml
+      -
       - template: misconfiguration/sitecore-debug-page.yaml
