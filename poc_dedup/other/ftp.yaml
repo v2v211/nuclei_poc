@@ -1,16 +1,12 @@
 id: ftp
 info:
-  name: ProFTPD
+  name: Humax iHDR-5050C DVR ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: proftpd
+    device_type: media device
     rarity: 3
-    vendor: proftpd
-    verified: true
-    version: 1.2.8 - 1.2.9
 tcp:
 - name: help
   inputs:
@@ -22,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 .*\r\n214-The following commands are recognized \(\* =>'s unimplemented\)\.\r\n(?:214-| )USER    PASS    ACCT\*   CWD     XCWD    CDUP    XCUP    SMNT\*   \r\n(?:214-| )QUIT    REIN\*   PORT    PASV    TYPE    STRU    MODE    RETR    \r\n(?:214-| )STOR    STOU    APPE    ALLO\*   REST    RNFR    RNTO    ABOR    \r\n(?:214-| )DELE    MDTM    RMD     XRMD    MKD     XMKD    PWD     XPWD    \r\n(?:214-| )SIZE
+    - ^220 Welcome to connection\.\r\n214 FTP Server Help\.\r\n  HUMAX PVR FTP Server\. \r\n214 End\r\n
