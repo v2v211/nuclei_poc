@@ -1,12 +1,14 @@
 id: http
 info:
-  name: Edimax PS-1206P print server
+  name: Cisco Expressway E
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: print server
+    product: expressway_software
     rarity: 1
+    vendor: cisco
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 401 \r\nDate: .* GMT\r\nWWW-Authenticate: Basic realm=\"Default password:1234\"\r\n\r\n401 Unauthorized - User authentication is required\.$'
+    - '^HTTP/1\.[01] \d\d\d .*\r\nDate: .*\r\n(?:Connection: close\r\n)?Server: CE_E\r\n'
