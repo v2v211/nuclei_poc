@@ -1,11 +1,14 @@
 id: gnutella
 info:
-  name: Mutella Gnutella P2P client
+  name: LimeWire Gnutella P2P client
   author: nmap,cn-kali-team
   tags: detect,tech,gnutella,service
   severity: info
   metadata:
+    product: limewire
     rarity: 1
+    vendor: limewire
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: gnutella
     type: regex
     regex:
-    - '^HTTP/1\.0 200\r\nServer: Mutella\r\n'
+    - ^HTTP/1\.1 406 Not Acceptable\r\n(?:\r\n)?$

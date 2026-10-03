@@ -1,1 +1,1 @@
-["elasticsearch-log4j.yaml","elasticsearch-unauthorized-access.yaml","exposed-kibana1.yaml","logstash-log4j-rce.yaml"]
+["elasticsearch-cluster-health.yaml","elasticsearch-log4j.yaml","elasticsearch-unauthorized-access.yaml","elasticsearch5-log4j-rce.yaml","logstash-log4j-rce.yaml"]
