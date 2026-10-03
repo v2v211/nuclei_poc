@@ -7,15 +7,23 @@ info:
   description: Keycloak admin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:redhat:keycloak:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 3
     vendor: redhat
     product: keycloak
-    shodan-query: http.favicon.hash:-1105083093
-  tags: panel,keycloak
+    shodan-query:
+      - http.favicon.hash:-1105083093
+      - http.title:"keycloak"
+      - http.html:"keycloak"
+    fofa-query:
+      - icon_hash=-1105083093
+      - body="keycloak"
+      - title="keycloak"
+    google-query: intitle:"keycloak"
+  tags: panel,keycloak,redhat,discovery
 
 http:
   - method: GET
@@ -23,8 +31,11 @@ http:
       - "{{BaseURL}}"
       - "{{BaseURL}}/auth/admin"
       - "{{BaseURL}}/auth/admin/master/console/"
+      - "{{BaseURL}}/admin"
+      - "{{BaseURL}}/admin/master/console/"
 
     stop-at-first-match: true
+
     host-redirects: true
     max-redirects: 2
 
@@ -43,4 +54,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100dd6221af8f8b9f571a28611b54d652f7568da86dce1654fa1a73962e720bf2cf022100ed7bd96937ba0a702f5889f0827638671d3ffbd3e98bba852bd274542e59ae0f:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044021f76fb0bec3bbe6499d260c3cce723f779bf7f2813035d44f655c5bc52603c6b022100f3783335c90bde9bcb4d48150627998fb4a6a6190485e28d55d99efcc68c52f1:922c64590222798bb761d5b6d8e72950
