@@ -3,8 +3,9 @@ info:
   name: Graphql apiforwp Detect
   author: princechaddha
   severity: info
-  reference: https://github.com/dolevf/graphw00f/blob/main/graphw00f/lib.py
-  tags: tech,graphql,wordpress
+  reference:
+    - https://github.com/dolevf/graphw00f/blob/main/graphw00f/lib.py
+  tags: tech,graphql,wordpress,discovery
 
 http:
   - method: POST
@@ -29,4 +30,4 @@ http:
         words:
           - "Unexpected token \"END\""
         part: body
-# digest: 4a0a0047304502210087e520b6c1e8999aec877c08ca93f9dbe42fb024b79e70955e9022b776c56e14022048d98c0ed634599caa8b8b23ee976f6af210ddf45d07d5535cedecfe1ce61d24:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202bb8dc1dd574d9d34c81efa597619bfd73aca3f9f2fc2824ae4798f2f360f3b502210087d6286632f7178effeba86433e52d785297f01984bddc1610ca8fee139ede88:922c64590222798bb761d5b6d8e72950

@@ -1,31 +1,28 @@
 id: weatherlink-configuration
 
 info:
-  name: WeatherLinkIP Configuration Panel - Detect
+  name: WeatherLinkIP Configuration
   author: dhiyaneshDK
   severity: info
-  description: WeatherLinkIP configuration panel was detected.
-  reference:
-    - https://www.exploit-db.com/ghdb/6007
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cwe-id: CWE-200
-  metadata:
-    max-request: 1
-  tags: panel,edb
+  reference: https://www.exploit-db.com/ghdb/6007
+  tags: panel
 
-http:
-  - method: GET
-    path:
-      - '{{BaseURL}}'
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET / HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko)
     matchers-condition: and
     matchers:
       - type: word
         words:
           - '<title>WeatherLinkIP Configuration</title>'
-
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502205eb2b50bb8899ec2db960065939339ab3477fe40f6969caa1c8975c537fef8e4022100edd0cb8d9b062b40da662facdf9b2774c9c0e757ba14691eb1b322f641717953:922c64590222798bb761d5b6d8e72950
