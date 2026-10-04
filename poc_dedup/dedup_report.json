@@ -1,11 +1,11 @@
 {
   "auto_fixed_files": 0,
-  "cross_id_dup_removed": 44475,
-  "final_count": 157291,
-  "id_dup_removed": 68917,
+  "cross_id_dup_removed": 44283,
+  "final_count": 152992,
+  "id_dup_removed": 66175,
   "id_space_fixes": 0,
   "invalid_pocs": 0,
-  "renamed_files": 6204,
+  "renamed_files": 4288,
   "scoring_rules": {
     "cve_cnvd_match": 80,
     "id_match": 100,
@@ -20,8 +20,8 @@
   "severity_empty_fixes": 0,
   "severity_fixes": 0,
   "threshold": 70,
-  "total_files": 270683,
+  "total_files": 263450,
   "total_fixes": 0,
-  "total_removed": 113392,
-  "valid_pocs": 270683
+  "total_removed": 110458,
+  "valid_pocs": 263450
 }
