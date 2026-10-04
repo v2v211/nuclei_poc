@@ -7,15 +7,23 @@ info:
   description: Contao login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:contao:contao:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     vendor: contao
     product: contao
-    shodan-query: http.html:"Contao Open Source CMS"
-  tags: panel,contao
+    shodan-query:
+      - http.html:"Contao Open Source CMS"
+      - http.title:"contao"
+      - http.html:"contao open source cms"
+      - cpe:"cpe:2.3:a:contao:contao"
+    fofa-query:
+      - title="contao"
+      - body="contao open source cms"
+    google-query: intitle:"contao"
+  tags: panel,contao,discovery
 
 http:
   - method: GET
@@ -34,4 +42,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200cea8a18eb560d2c7b4bc451496a2ae1b59c14ab0947c74455e2d4b0ee0cae47022100a74740fcaecdf2d2eda3519947c1ee75c276d1ced5657f768d7a17b79cbdb6c2:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d4ac95df3403ec380c79d7d9d41f26dedf82b85ae2061eb6d11a78a8adbff593022100d02edbd5e14d6cc43b1b9528813bbe7b175b245b34d11e925702a9d583259003:922c64590222798bb761d5b6d8e72950

@@ -1,12 +1,15 @@
 id: http
 info:
-  name: Edimax PS-1206P print server
+  name: ZNC IRC bouncer http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: print server
+    info: not enabled
+    product: znc
     rarity: 1
+    vendor: znc
+    verified: true
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 401 \r\nDate: .* GMT\r\nWWW-Authenticate: Basic realm=\"Default password:1234\"\r\n\r\n401 Unauthorized - User authentication is required\.$'
+    - ^HTTP/1\.0 403 Access Denied\r\n\r\nWeb Access is not enabled\.\r\n$

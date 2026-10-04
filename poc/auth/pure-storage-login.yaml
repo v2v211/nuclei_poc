@@ -7,14 +7,18 @@ info:
   description: Pure Storage login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:purestorage:purity:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     vendor: purestorage
     product: purity
-    shodan-query: http.title:"Pure Storage Login"
-  tags: panel,purestorage
+    shodan-query:
+      - http.title:"Pure Storage Login"
+      - http.title:"pure storage login"
+    fofa-query: title="pure storage login"
+    google-query: intitle:"pure storage login"
+  tags: panel,purestorage,discovery
 
 http:
   - method: GET
@@ -30,4 +34,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220616098827c9811783a6500fa87d8890cbd7c8a19faf2559bcafd9beb3a04e67302202f3448608addb2b0a43bf13be1f5d50924450ff518b52f3e4d4260770884dc15:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b48f5c573fa1e7e644310fe3ae75ff1accce3c97cfaa278d6eb1ebb2f5080b5802210090b6a4ac813ed9ed84f4dc5b745c8169db0ceb40348ca3332a2b75523eaec1a6:922c64590222798bb761d5b6d8e72950
