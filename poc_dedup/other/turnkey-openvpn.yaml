@@ -1,34 +1,30 @@
+http:
+- matchers:
+  - condition: and
+    part: body
+    type: word
+    words:
+    - TurnKey OpenVPN
+    - Web Shell
+  - status:
+    - 200
+    type: status
+  matchers-condition: and
+  method: GET
+  path:
+  - '{{BaseURL}}'
 id: turnkey-openvpn
-
 info:
-  name: TurnKey OpenVPN Panel - Detect
   author: ritikchaddha
-  severity: info
-  description: TurnKey OpenVPN panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
+  description: TurnKey OpenVPN panel was detected.
   metadata:
-    verified: true
     max-request: 1
     shodan-query: http.title:"TurnKey OpenVPN"
+    verified: true
+  name: TurnKey OpenVPN Panel - Detect
+  severity: info
   tags: panel,openvpn,turnkey,webshell,vpn
-
-http:
-  - method: GET
-    path:
-      - '{{BaseURL}}'
-
-    matchers-condition: and
-    matchers:
-      - type: word
-        part: body
-        words:
-          - 'TurnKey OpenVPN'
-          - 'Web Shell'
-        condition: and
-
-      - type: status
-        status:
-          - 200
-# digest: 4a0a004730450220709b4b9f78e717dfecf7dd9c790815a471093fe1b0fce72e6791daf0c0a00b9e022100ee881d9685e6ebed19173ce1059fce508c0bf8fdaf72795b3ab8373c7d3d75ee:922c64590222798bb761d5b6d8e72950

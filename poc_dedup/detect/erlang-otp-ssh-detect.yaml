@@ -4,13 +4,11 @@ info:
   name: Erlang/OTP SSH Server - Detect
   author: darses
   severity: info
-  description: |
-    Erlang/OTP SSH server was detected.
+  description: Detects Erlang/OTP SSH servers and parses the version number from the banner.
+  tags: network,ssh,erlang,detect,detection,tcp
   metadata:
     shodan-query: "SSH-2.0-Erlang"
-    max-requests: 1
-    vendor: erlang_otp
-  tags: network,ssh,erlang,detect,tcp
+    max-request: 1
 
 tcp:
   - host:
