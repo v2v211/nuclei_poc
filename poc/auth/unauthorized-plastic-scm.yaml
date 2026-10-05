@@ -4,7 +4,7 @@ info:
   name: Unauthorized Access to Plastic Admin Console
   author: DEENA
   severity: critical
-  tags: plastic
+ 
   reference: https://infosecwriteups.com/story-of-google-hall-of-fame-and-private-program-bounty-worth-53559a95c468
 
 requests:
