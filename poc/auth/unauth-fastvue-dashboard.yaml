@@ -1,33 +1,27 @@
-http:
-- matchers:
-  - condition: or
-    type: word
-    words:
-    - <title>Fastvue Sophos Reporter</title>
-    - <title>Fastvue Reporter for SonicWall</title>
-  - part: body
-    type: word
-    words:
-    - Dashboard
-  - status:
-    - 200
-    type: status
-  matchers-condition: and
-  method: GET
-  path:
-  - '{{BaseURL}}/dashboard.aspx'
 id: unauth-fastvue-dashboard
 info:
+  name: Unauthenticated Fastvue Dashboard
   author: DhiyaneshDK
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    cvss-score: 5.3
-    cwe-id: CWE-200
-  description: Fastvue Dashboard panel was detected without authentication.
-  metadata:
-    max-request: 1
-    shodan-query: http.favicon.hash:-1117549627
-    verified: true
-  name: Fastvue Dashboard Panel - Unauthenticated Detect
   severity: medium
+  metadata:
+    verified: true
+    shodan-query: http.favicon.hash:-1117549627
   tags: panel,fastvue,unauth,misconfig
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/dashboard.aspx"
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "<title>Fastvue Sophos Reporter</title>"
+          - "<title>Fastvue Reporter for SonicWall</title>"
+        condition: or
+      - type: word
+        part: body
+        words:
+          - "Dashboard"
+      - type: status
+        status:
+          - 200

@@ -1,18 +1,17 @@
-id: Kronos wsdl found
+id: Kronos-wsdl-found
 info:
-  name: Find Kronos wsdl exposure (Try XXE)
   author: Clark
-  severity: meduim
+  name: Find Kronos wsdl exposure (Try XXE)
+  severity: medium
 http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/wfc/webservice/ReportConfigService?wsdl"
-      - "{{BaseURL}}/wfc/XmlService"
-      - "{{BaseURL}}/wfc/"
-
-    matchers:
-      - type: word
-        words:
-          - "xml-soap"
-          - "application/xml"
-        part: body
+- matchers:
+  - part: body
+    type: word
+    words:
+    - xml-soap
+    - application/xml
+  method: GET
+  path:
+  - '{{BaseURL}}/wfc/webservice/ReportConfigService?wsdl'
+  - '{{BaseURL}}/wfc/XmlService'
+  - '{{BaseURL}}/wfc/'
