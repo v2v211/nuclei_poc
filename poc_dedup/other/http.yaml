@@ -1,12 +1,15 @@
 id: http
 info:
-  name: Edimax PS-1206P print server
+  name: Prometheus exporter $1
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: print server
+    product: $1
     rarity: 1
+    vendor: prometheus
+    verified: true
+    version: $2
 tcp:
 - name: get-request
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 401 \r\nDate: .* GMT\r\nWWW-Authenticate: Basic realm=\"Default password:1234\"\r\n\r\n401 Unauthorized - User authentication is required\.$'
+    - '^HTTP/1\.0 200 OK\r\nDate: .* GMT\r\nContent-Length: \d+\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<html>\n<head><title>(\w+)</title></head>\n<body>\n<h1>[^<]*</h1>\n<p><a href="/metrics">Metrics</a></p>\n<p><i>\(version=([\d.]+),'
