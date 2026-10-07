@@ -1,26 +1,26 @@
 id: okta-panel
 
 info:
-  name: Okta Login Panel - Detect
+  name: Okta Login Panel
   author: pussycat0x
   severity: info
-  description: Okta login panel was detected.
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cwe-id: CWE-200
-  metadata:
-    max-request: 1
-    shodan-query: http.title:"okta"
-  tags: panel,okta,login
+  reference: https://www.shodan.io/search?query=http.title%3A%22okta%22
+  tags: panel,okta
 
-http:
-  - method: GET
-    path:
-      - '{{BaseURL}}'
 
-    host-redirects: true
-    max-redirects: 2
+requests:
+  - payloads:
+      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
+    attack: sniper
+    threads: 100
 
+    raw:
+      - |
+        GET / HTTP/1.1
+        Host: {{Subdomains}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
+        Accept-Encoding: gzip, deflate
+        Accept: */*
     matchers-condition: and
     matchers:
       - type: word
@@ -30,4 +30,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100bd0e0cfc25d1bedc1aaaf5315e66e8605f19a6a4b152f97bb80b047574d8b06902200702aed7ca4a17e7e4b2241acbaa94d0a1f999eb3e04255adf469545e44a4503:922c64590222798bb761d5b6d8e72950

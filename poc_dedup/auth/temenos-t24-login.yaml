@@ -17,7 +17,7 @@ info:
     verified: true
     product: t24
     vendor: temenos
-  tags: panel,exposure,temenos,discovery
+  tags: panel,exposure,temenos
 
 http:
   - method: GET
@@ -36,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100bccb9e72160ec670bab6b5be491ba8322484a6ff3da142da83fca912d06fc8b4022100b80507f1de0825ec873fe321d547abb9f95b7d12de4c5dbdf1a52eb05b287cd2:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210097c069ab2335b6d9d25999e7e53e8342f99765562a89bcab0c12da17781ccd1f0221009ae98199ec1420f7f4fc8f6ccd61497d264d3bd2f299c0c59b5dea2ad3779880:922c64590222798bb761d5b6d8e72950

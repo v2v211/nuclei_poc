@@ -9,7 +9,7 @@ info:
   metadata:
     plugin_namespace: image-optimization
     wpscan: https://wpscan.com/plugin/image-optimization
-  tags: tech,wordpress,wp-plugin,top-100,top-200,discovery
+  tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-

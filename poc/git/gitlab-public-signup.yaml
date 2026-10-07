@@ -1,23 +1,26 @@
 id: gitlab-public-signup
+
 info:
   name: GitLab public signup
-  author: pdteam
+  author: pdteam,axrk
   severity: info
-  tags: gitlab
+  classification:
+    cpe: cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 2
+    vendor: gitlab
+    product: gitlab
+    shodan-query: http.title:"GitLab"
+  tags: gitlab,misconfig
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/users/sign_in"
+      - "{{BaseURL}}/users/sign_up"
 
-    raw:
-      - |
-        GET /users/sign_in HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
+    stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: word
@@ -34,6 +37,7 @@ requests:
           - 200
 
       - type: word
+        negative: true
         words:
           - '<meta content="GitLab.com" property="og:description">'
-        negative: true
+# digest: 4a0a004730450220103e2ed3c063eba2a6644ebce8aa645698138381f1c488462ed1453819949d0e022100ff95275effa6aae1707c8fbd331f0aa05e49423374f01520bb1a289914722e5e:922c64590222798bb761d5b6d8e72950

@@ -20,7 +20,7 @@ info:
       - http.favicon.hash:81586312
       - product:"jenkins"
     fofa-query: icon_hash=81586312
-  tags: panel,jenkins
+  tags: panel,jenkins,discovery
 
 http:
   - method: GET
@@ -36,4 +36,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100c0496cee73be031e66397b4da052c3997ed24fd939af4be764577d9e080a38ac022100f26005df9565b50740201226b1f3e63788491e86c841f4892a8d2c2efec1ce47:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210084d642c326adc8755ccaa81a23a3b0a3f3243e771949313e406b85d39f5de3ba02207c65d9dadb4c9cc8320e223fe5bc81598f3034e3b1c6aa4cf475b0358be04c8a:922c64590222798bb761d5b6d8e72950
