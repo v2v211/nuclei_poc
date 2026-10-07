@@ -1,21 +1,17 @@
-id: phpinfo
+id: phpinfo-page
+
 info:
+  author: 25
   name: phpinfo
-  author: cn-kali-team
-  tags: detect,tech,phpinfo
-  severity: info
-  metadata:
-    product: phpinfo
-    vendor: 00_unknown
-    verified: false
-http:
-- method: GET
-  path:
-  - '{{BaseURL}}/'
-  matchers:
-  - type: word
-    words:
-    - <title>phpinfo
-    - virtual directory support
-    condition: and
-    case-insensitive: true
+  severity: medium
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/phpinfo.php"
+
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "PHP Version"
