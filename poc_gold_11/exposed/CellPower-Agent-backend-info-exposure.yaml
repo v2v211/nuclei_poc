@@ -1,17 +1,18 @@
-id: CellPower Agent backend info exposure
+id: CellPower-Agent-backend-info-exposure
 info:
   author: Clark
   name: CellPower Agent sensitive info exposure
   severity: high
-requests:
+http:
 - matchers:
-  - part: body
+  - condition: and
     type: word
     words:
     - array
-    - Server Error
-    - Undefined variable
-    - Undefined index
+  - status:
+    - 200
+    type: status
+  matchers-condition: and
   method: GET
   path:
   - '{{BaseURL}}/user/ajax'

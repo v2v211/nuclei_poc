@@ -21,7 +21,7 @@ javascript:
       let m = require("nuclei/ssh");
       let c = m.SSHClient();
       let response = c.ConnectSSHInfoMode(Host, Port);
-      Export(response);
+      to_json(response);
     args:
       Host: "{{Host}}"
       Port: "22"
@@ -43,4 +43,4 @@ javascript:
           - "hmac-md5-96"
           - "hmac-sha1-96"
         condition: or
-# digest: 4a0a00473045022100cf218b62b4faf52f96edb7800dacb7e86730046c4b6c1ec2eb43f6ac24323708022020ee69a84ba80957568922aff4c7ee3f1d2f08616f896d5c47c4f5818ec12006:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402200808b310f424b589a3a2f8857b11481b27e3141e21dd9ae12991cc026d7a1dff022059ffe406c18c198b90735f0a78b24d49fbb04a6152186b7d83ae9e775b0e2072:922c64590222798bb761d5b6d8e72950
