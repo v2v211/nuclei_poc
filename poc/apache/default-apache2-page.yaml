@@ -4,25 +4,23 @@ info:
   name: Apache2 Default Test Page
   author: dhiyaneshDk
   severity: info
+  classification:
+    cpe: cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    vendor: apache
+    product: http_server
+    shodan-query: http.title:"Apache2 Debian Default Page:"
   tags: tech,apache
-  reference: https://www.shodan.io/search?query=http.title%3A%22Apache2+Debian+Default+Page%3A+It+works%22
 
-requests:
-  - payloads:
-      Subdomains: /home/mahmoud/Wordlist/AllSubdomains.txt
-    attack: sniper
-    threads: 100
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}'
 
-    raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Subdomains}}
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0
-        Accept-Encoding: gzip, deflate
-        Accept: */*
-        
     matchers:
       - type: word
         words:
           - "<title>Apache2 Debian Default Page: It works</title>"
         part: body
+# digest: 490a004630440220397661bb052369d495a42687176f94d7119132aeef957ef506c231bb78d276ca022027b9f07f2cd66197e66c52d43b5524232f6f3cc23f5e8173dfc8db2c0a1383e1:922c64590222798bb761d5b6d8e72950
