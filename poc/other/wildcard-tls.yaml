@@ -7,7 +7,7 @@ info:
   description: |
     Checks a sites certificate to see if there are wildcard CN or SAN entries.
   reference:
-    - https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html#carefully-consider-the-use-of-wildcard-certificates
+    - https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html#carefully-consider-the-use-of-wildcard-certificates
   metadata:
     max-request: 1
   tags: ssl,tls,wildcard
@@ -23,4 +23,4 @@ ssl:
         dsl:
           - '"CN: " + subject_cn'
           - '" SAN: " + subject_an'
-# digest: 4a0a00473045022100d6245a99d40eed59cd8f7e4a1547670b87ea7c05dd8b59adedbad391eed66c350220701bfd0928ceb6ccc15364190231e82a7559261e862923e15b16151edc50358e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d212781d5e370a83cdcdcf7dca48f9a78bcfcee1408c49b01c2ab1c6fe52226402204be3b6749e1cafbb12f6e6a4a35a58af056b52164821096aaa4d8e3026e831b0:922c64590222798bb761d5b6d8e72950
